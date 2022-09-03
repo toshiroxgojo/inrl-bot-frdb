@@ -25,7 +25,7 @@ bots.bot(
             console.log(results[i].url);
             //editer
             const buttons = [
-        { buttonId: ".img", buttonText: { displayText: "ɴᴇxᴛ" }, type: 1, },
+        { buttonId: ".img" + text, buttonText: { displayText: "ɴᴇxᴛ" }, type: 1, },
       ]
     const templateButtons = {
       image: { url: results[i].url  },
