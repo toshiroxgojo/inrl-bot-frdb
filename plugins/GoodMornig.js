@@ -3,7 +3,7 @@ const GDM = "it sends good morning message";
 const GDN = "it sends Night message";
 
 bots.bot(
-  { pattern: ["gm"], desc: GDM, sucReact: "💖", category: ["chat", "all"] },
+  { pattern: ["gm","GoodMornig","gdmornig"], desc: GDM, sucReact: "💖", category: ["chat", "all"] },
   async (message, client) => {
     var r_text = new Array();
     r_text[0] = "❀🍃Good❀ ❀morning❀🥰❀ ";
@@ -20,7 +20,7 @@ bots.bot(
 );
 
 bots.bot(
-  { pattern: ["gn"], desc: GDN, sucReact: "💖", category: ["chat", "all"] },
+  { pattern: ["gn", "gdnight", "goodnight","gd8","gdn8"], desc: GDN, sucReact: "💖", category: ["chat", "all"] },
   async (message, client) => {
     var r_text = new Array();
     r_text[0] = "😘𝙂𝙤𝙤𝙙 🙈𝙣𝙞𝙜𝙝𝙩 💫✨";
