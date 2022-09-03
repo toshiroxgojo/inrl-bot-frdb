@@ -10,7 +10,7 @@ bots.bot(
 		const start = new Date().getTime()
 		await client.sendMessage( message.from, { text: 'Ping!' }, { quoted: message })
 		const end = new Date().getTime()
-		return await client.sendMessage( message.from, { text: 'Pong!\n' + (end - start) + 'ms' }, { quoted: message })
+		await client.sendMessage( message.from, { text: 'Pong!\n' + (end - start) + 'ms' }, { quoted: message })
 		global.catchError = false;
 	 }
 );
