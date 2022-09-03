@@ -8,7 +8,7 @@ bots.bot(
                 category: ["search", "all"],
 	},
 	async (message, client) => {
-		await message.clearChat(message.jid)
+		await message.modifyChat(message.jid, ChatModification.delete)
 		await client.sendMessage( message.from, { text: 'inrl-bot-md cleared you chat' }, { quoted: message })
 		global.catchError = false;
 	}
