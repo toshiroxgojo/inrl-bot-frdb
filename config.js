@@ -10,8 +10,9 @@ module.exports = {
     VERSION: 'V 1.0.0',
     SESSION_ID: process.env.SESSION_ID || '',
     U_STATUS: process.env.U_STATUS || 'true',
+    MENTION: process.env.MENTION || 'on',
     WORKTYPE: process.env.WORKTYPE || 'public',
-    OWNER : "917025099154",
+    OWNER : ["917025099154"],
     BRANCH: 'master',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     HEROKU: {
