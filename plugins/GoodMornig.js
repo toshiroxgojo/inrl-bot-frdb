@@ -20,6 +20,23 @@ bots.bot(
 );
 
 bots.bot(
+  { pattern: ["ge", "good evening", "evening"], desc: "good evening", sucReact: "💖", category: ["chat", "all"] },
+  async (message, client) => {
+    var r_text = new Array();
+r_text[0] = "😻ɢᴏᴏᴅ 💗ᴇᴠᴇɴɪɴɢ",
+r_text[1] = "❣️𝐺𝛩𝛩𝐷 💓𝛯𝛻𝛯𝛮𝛪𝛮𝐺",
+r_text[2] = "🥰ｇｏｏｄ 💞ｅｖｅｎｉｎｇ",
+r_text[3] = "🥳𝓰𝓸𝓸𝓭 💝𝓮𝓿𝓮𝓷𝓲𝓷𝓰",
+r_text[4] = "😍ムののり 💘乇√乇刀ﾉ刀ム",
+r_text[5] = "🤩ᎶᎧᎧᎴ 💕ᏋᏉᏋᏁᎥᏁᎶ",
+r_text[6] = "😛 ɠơơɖ 💔ɛ۷ɛŋıŋɠ"
+const i = Math.floor(7 * Math.random());
+    await client.sendMessage( message.from, { text: r_text[i] + message.client.pushName }, { quoted: message } );
+    global.catchError = false;
+  }
+);
+
+bots.bot(
   { pattern: ["gn", "gdnight", "goodnight","gd8","gdn8"], desc: GDN, sucReact: "💖", category: ["chat", "all"] },
   async (message, client) => {
     var r_text = new Array();
