@@ -28,6 +28,11 @@
             "required": false,
             "value":"public"
         },
+        "SUDO": {
+            "description": "some cmds only possble to use bot number && sudo, so you need to sudo use this",
+            "required": false,
+            "value":"917593919575,0"
+        },
         "HEROKU_APP_NAME": {
             "description": "Exact name which you gave at the top",
             "required": true,
