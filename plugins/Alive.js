@@ -1,6 +1,7 @@
 const os = require("os");
 const bots = require("../lib/perfix");
 const { runtime } = require("../lib/Function");
+const Config = require('../config');
 const lang = bots.getString("system_stats");
 const speed = require("performance-now");
 
@@ -25,8 +26,8 @@ bots.bot(
 │└───────────────┈ ⳹
 │ 「 BOT INFO 」
 │ ✪ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│ ✫ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ɪɴʀʟ-ᴍᴅ
-│ ✯ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ɪɴʀʟ
+│ ✫ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : Config.profile.botName
+│ ✯ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : Config.profile.ownerName
 │ ★ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${bots.config.exif.owner[0]}
 │ ߷ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
 │  𖦹 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
@@ -34,7 +35,7 @@ bots.bot(
 │ 𖣘 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁𝘀 : ${global.mydb.hits}
 └┬──────────────┈ ⳹
  │✑  D & T : ${ov_time}
- │✑  ɪɴʀʟ-ʙᴏᴛ
+ │✑  Config.profile.ownerName
  └───────────────┈ ⳹`;
 
       const buttons = [
