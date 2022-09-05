@@ -121,21 +121,21 @@ bots.bot({ pattern: ["desc"], usage: '<desc>', sucReact: "🙂", category: ["gro
 
 //  =========================================================================================
 
-bots.bot({ pattern: ["open", "g-close", "g-lock", "g-unlock"], sucReact: "⚙", category: ["group", "all"], },
+bots.bot({ pattern: ["unmute", "mute", "lock", "unlock"], sucReact: "⚙", category: ["group", "all"], },
   async (message, client) => {
     if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(bots.config.reply.owner) }, { quoted: message } ); };
     if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(bots.config.reply.group) }, { quoted: message } ); };
     try {
-        if (message.client.command == "g-open") {
+        if (message.client.command == "unmute") {
             await client.sendMessage( message.from, { text: bots.infoMessage("⚙ Opening group") }, { quoted: message } );
             await client.groupSettingUpdate(message.from, "not_announcement");
-        } else if (message.client.command == "g-close") {
+        } else if (message.client.command == "mute") {
             await client.sendMessage( message.from, { text: bots.infoMessage("⚙ Closing group") }, { quoted: message } );
             await client.groupSettingUpdate(message.from, "announcement");
-        } else if (message.client.command == "g-unlock") {
+        } else if (message.client.command == "unlock") {
             await client.sendMessage( message.from, { text: bots.infoMessage("⚙ Unlocking group") }, { quoted: message } );
             await client.groupSettingUpdate(message.from, "unlocked");
-        } else if (message.client.command == "g-lock") {
+        } else if (message.client.command == "lock") {
             await client.sendMessage( message.from, { text: bots.infoMessage("⚙ locking group") }, { quoted: message } );
             await client.groupSettingUpdate(message.from, "locked");
         }
@@ -149,7 +149,7 @@ bots.bot({ pattern: ["open", "g-close", "g-lock", "g-unlock"], sucReact: "⚙", 
 
 // =========================================================================================
 
-bots.bot({ pattern: ["lave"], sucReact: "👋", category: ["group", "all"], },
+bots.bot({ pattern: ["leftme"], sucReact: "👋", category: ["group", "all"], },
   async (message, client) => {
     if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(bots.config.reply.owner) }, { quoted: message } ); };
     if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(bots.config.reply.group) }, { quoted: message } ); };
@@ -165,7 +165,7 @@ bots.bot({ pattern: ["lave"], sucReact: "👋", category: ["group", "all"], },
   }
 );
 
-bots.bot({ pattern: ["link"], sucReact: "🔗", category: ["group", "all"], },
+bots.bot({ pattern: ["link","invite"], sucReact: "🔗", category: ["group", "all"], },
   async (message, client) => {
     if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(bots.config.reply.owner) }, { quoted: message } ); };
     if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(bots.config.reply.group) }, { quoted: message } ); };
@@ -214,7 +214,7 @@ bots.bot({ pattern: ["joing"], sucReact: "🆗", category: ["group", "all"], },
   }
 );
 
-bots.bot({ pattern: ["acpt", "g-accept"], sucReact: "🆗", category: ["group", "all"], },
+bots.bot({ pattern: ["acpt"], sucReact: "🆗", category: ["group", "all"], },
   async (message, client) => {
     if (!message.quoted || message.quoted == null) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage('Reply invite message.') }, { quoted: message } ); };
     if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(bots.config.reply.owner) }, { quoted: message } ); };
