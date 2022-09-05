@@ -21,9 +21,9 @@ module.exports = {
         APP_NAME: process.env.HEROKU_APP_NAME || ''
     },
     profile: {
-    ownerName: "inrl", 
+    ownerName: "ɪɴʀʟ-ʙᴏᴛ", 
     ownerNumb: "917025099154", 
-    botName: "inrl-bot-md", 
+    botName: "ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ", 
   },
     reply: {
     notFound: "This Command not created. it was creating",
