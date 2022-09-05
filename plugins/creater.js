@@ -1,5 +1,6 @@
 const bots = require("../lib/perfix");
 const lang = bots.getString("inrl-bot");
+const Config = require('../config');
 const fs = require("fs");
 const path = require("path");
 
@@ -18,9 +19,9 @@ bots.bot(
       ];
       const text = `------- ᴀʙᴏᴜᴛ ᴏᴡɴᴇʀ -------
 
-⚜ Name: ɪɴʀʟ.
-⚜ Web Site: https://frendpage.vercel.app/
-⚜ GitHub: https://.github.com/inrl-official 
+⚜ Name: Config.profile.ownerName
+⚜ Web Site: Config.WEB
+⚜ GitHub: Config.GIT
 ⚜ Instagram: https://instagram.com/mhd_fasweeh
 
 ----------------------------
