@@ -1,5 +1,6 @@
 const bots = require("../lib/perfix");
 const lang = bots.getString("github");
+const Config = require('../config');
 const axios = require("axios");
 
 bots.bot(
@@ -15,7 +16,7 @@ bots.bot(
 
     if (!uName) {
       global.catchError = true;
-      return await client.sendMessage( message.from, { text: "https://github.com/inrl-official/inrl-bot-md" }, { quoted: message } );
+      return await client.sendMessage( message.from, { text: Config.GIT }, { quoted: message } );
     }
 
     await axios.get(`${ezio.config.api.github.domain}/users/${uName}`)
