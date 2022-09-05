@@ -1,4 +1,5 @@
 const bots = require("../lib/perfix");
+const Config = require('../config');
 
 bots.bot(
   {
@@ -9,7 +10,7 @@ bots.bot(
   async (message, client) => {
     const caption = `------- ꜱᴜᴩᴩᴏʀᴛ ɢʀᴏᴜᴩ -------
 
-⚜ Work Group :- https://chat.whatsapp.com/GuoCHF6Wjci8rKPe6CKHsi
+⚜ Work Group :- Config.WAGRP
 
 --------------------------------`;
     const buttons = [
