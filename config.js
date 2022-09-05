@@ -70,6 +70,7 @@ module.exports = {
     DATABASE: DATABASE_URL === './bot.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
     NO_ONLINE: process.env.NO_ONLINE === undefined ? true : convertToBool(process.env.NO_ONLINE),
     SUDO: process.env.SUDO || '917593919575',
+    WAGRP : process.env.WAGRP || 'https://chat.whatsapp.com/GuoCHF6Wjci8rKPe6CKHsi',
     DEBUG: DEBUG,
     ACR_A: "ff489a0160188cf5f0750eaf486eee74",
     ACR_S: "ytu3AdkCu7fkRVuENhXxs9jsOW4YJtDXimAWMpJp"
