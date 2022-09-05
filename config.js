@@ -61,6 +61,12 @@ module.exports = {
     read: false, // Boolean | ===== It not created now ======
   },
     DATABASE_URL: DATABASE_URL,
+    FOOTER : process.env.SUDO || "ɪɴʀʟ-ᴍᴅ",
+    PACKNAME : process.env.PACKNAME || "ɪɴʀʟ-ʙᴏᴛ",
+    GIT : process.env.GIT || "https://github.com/inrl-official/inrl-bot-md",
+    WEB : process.env.WEB || "https://frendpage.vercel.app/",
+    YT : process.env.YT || "https://www.youtube.com/channel/null",
+    CAPTION : process.env.CAPTION || "*Cerated by inrlTeam*",
     DATABASE: DATABASE_URL === './bot.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
     NO_ONLINE: process.env.NO_ONLINE === undefined ? true : convertToBool(process.env.NO_ONLINE),
     SUDO: process.env.SUDO || '917593919575',
