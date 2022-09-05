@@ -10,7 +10,7 @@ bots.bot(
   async (message, client) => {
     const caption = `------- ꜱᴜᴩᴩᴏʀᴛ ɢʀᴏᴜᴩ -------
 
-⚜ Work Group :- Config.WAGRP
+⚜ Work Group :-`+ Config.WAGRP+`
 
 --------------------------------`;
     const buttons = [
