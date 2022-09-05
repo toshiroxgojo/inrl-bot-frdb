@@ -61,7 +61,7 @@ module.exports = {
     read: false, // Boolean | ===== It not created now ======
   },
     DATABASE_URL: DATABASE_URL,
-    FOOTER : process.env.SUDO || "ɪɴʀʟ-ᴍᴅ",
+    FOOTER : process.env.FOOTER || "ɪɴʀʟ-ᴍᴅ",
     PACKNAME : process.env.PACKNAME || "ɪɴʀʟ-ʙᴏᴛ",
     GIT : process.env.GIT || "https://github.com/inrl-official/inrl-bot-md",
     WEB : process.env.WEB || "https://frendpage.vercel.app/",
