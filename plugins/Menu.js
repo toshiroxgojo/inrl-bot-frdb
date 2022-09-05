@@ -2,7 +2,7 @@ const bots = require("../lib/perfix");
 const Lang = bots.getString("_whats");
 // const fs = require("fs");
 // const path = require("path");
-let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat", "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo", }
+let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat", "apks" : "apks" , "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo", }
 
 bots.bot({ pattern: ["menu", 'help', 'list'], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
   try {
@@ -29,7 +29,7 @@ bots.bot({ pattern: ["menu", 'help', 'list'], desc: Lang.DESCC, sucReact: "📰"
 bots.categories.map(category => {
   if (category == 'all') return;
   bots.bot({ pattern: [`${category}-menu`], sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
-  try {
+  
     let prefix = new String; 
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
@@ -46,7 +46,6 @@ bots.categories.map(category => {
     CMD_HELP += "│\n│ 💓 ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɪɴʀʟ-ʙᴏᴛ\n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: bots.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
-  } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
   });
 })
 
@@ -86,19 +85,19 @@ bots.bot({ pattern: [`cmds-count`], sucReact: "🆗", category: ["all", "system"
     });
     let text = `------- Command Count -------
 
-⚜ All Commands: ${all_cmd.toString()}
-⚜ Visible Commands: ${visible_cmd.toString()}
-⚜ Invisible Commands: ${invisible_cmd.toString()}
-⚜ Search Commands: ${system_cmd.toString()}
-⚜ Downloade Commands: ${downloade_cmd.toString()}
-⚜ Chat Commands: ${chat_cmd.toString()}
-⚜ System Commands: ${system_cmd.toString()}
-⚜ Fun Commands: ${fun_cmd.toString()}
-⚜ Adult Commands: ${eighteenplus_cmd.toString()}
-⚜ Owner Commands: ${owner_cmd.toString()}
-⚜ Create Commands: ${create_cmd.toString()}
-⚜ Group Commands: ${group_cmd.toString()}
-⚜ Logo Commands: ${logo_cmd.toString()}
+✌︎ All Commands: ${all_cmd.toString()}
+✌︎ Visible Commands: ${visible_cmd.toString()}
+✌︎ Invisible Commands: ${invisible_cmd.toString()}
+✌︎ Search Commands: ${system_cmd.toString()}
+✌︎ Downloade Commands: ${downloade_cmd.toString()}
+✌︎ Chat Commands: ${chat_cmd.toString()}
+✌︎ System Commands: ${system_cmd.toString()}
+✌︎ Fun Commands: ${fun_cmd.toString()}
+✌︎ Adult Commands: ${eighteenplus_cmd.toString()}
+✌︎ Owner Commands: ${owner_cmd.toString()}
+✌︎ Create Commands: ${create_cmd.toString()}
+✌︎ Group Commands: ${group_cmd.toString()}
+✌︎ Logo Commands: ${logo_cmd.toString()}
 
 💢 Count Of All Commands: ${countcmdOfCmd.toString()}
 `;
