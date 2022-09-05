@@ -19,9 +19,9 @@ bots.bot(
       ];
       const text = `------- ᴀʙᴏᴜᴛ ᴏᴡɴᴇʀ -------
 
-⚜ Name: Config.profile.ownerName
-⚜ Web Site: Config.WEB
-⚜ GitHub: Config.GIT
+⚜ Name: `+Config.profile.ownerName+`
+⚜ Web Site: `+Config.WEB+`
+⚜ GitHub:`+ Config.GIT+`
 ⚜ Instagram: https://instagram.com/mhd_fasweeh
 
 ----------------------------
