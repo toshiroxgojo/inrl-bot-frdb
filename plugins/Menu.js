@@ -5,7 +5,7 @@ const Lang = bots.getString("_whats");
 let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat", "apks" : "apks" , "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo", }
 
 bots.bot({ pattern: ["menu", 'help', 'list'], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
-  try {
+  
     let prefix = new String; 
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
@@ -17,12 +17,10 @@ bots.bot({ pattern: ["menu", 'help', 'list'], desc: Lang.DESCC, sucReact: "📰"
 `;
     bots.commands.map((command) => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
-      if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *🔥:-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
+      if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *🔥➪* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
     CMD_HELP += "│\n│ ✌︎ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɪɴʀʟ-ʙᴏᴛ\n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: bots.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
-    global.catchError = false;
-  } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
 });
 
 
@@ -41,7 +39,7 @@ bots.categories.map(category => {
 `;
     bots.commands.map((command) => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
-      if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *🌆 :-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
+      if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *🌆 ☞︎︎︎* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
     CMD_HELP += "│\n│ 💓 ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɪɴʀʟ-ʙᴏᴛ\n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: bots.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
