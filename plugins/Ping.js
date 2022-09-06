@@ -5,6 +5,7 @@ bots.bot(
 		pattern: ['ping'],
 		desc: 'To check ping',
                 sucReact: "🥱",
+                category: ["system", "all"],
 	   },
 	async (message, client) => {
              try {
