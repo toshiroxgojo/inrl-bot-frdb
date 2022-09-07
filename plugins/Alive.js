@@ -18,41 +18,25 @@ bots.bot(
     try {
       let timestampe = speed();
       let Wspeed = speed() - timestampe;
-      const Footer = bots.config.exif.footer;
-      const Content = `┌─❖
+const Message = {
+image: { url: bots.config.image.url.D_E_TMB },
+const caption = `┌─❖
 │「 𝚑𝚒 𝚋𝚛𝚘/𝚜𝚒𝚜 」
 └┬❖ 「 ${message.client.pushName} 」
 ┌┤✑  ɪᴀᴍ ᴀʟɪᴠᴇ ʙʀᴏ
 │└───────────────┈ ⳹
 │ 「 BOT INFO 」
-│ ✪ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│ ✫ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : `+Config.profile.botName+`
-│ ✯ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 :`+ Config.profile.ownerName+`
-│ ★ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${bots.config.exif.owner[0]}
-│ ߷ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│  𖦹 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│ 𖧷 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${global.mydb.users.length}
-│ 𖣘 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁𝘀 : ${global.mydb.hits}
+│ ☯︎ ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}
+│ ☯︎ ʙᴏᴛɴᴀᴍᴇ : `+Config.profile.botName+`
+│ ☯︎ ɢɪᴛʜᴜʙ  :`+Config.GIT+`
+│ ☯︎ ᴡᴀ-ɢʀᴩ :`+Config.WAGRP+`
+│ ☯︎ ᴡᴇʙꜱɪᴛᴇ :`+Config.WEB+`
 └┬──────────────┈ ⳹
  │✑  D & T : ${ov_time}
  │✑ `+ Config.profile.ownerName+`
  └───────────────┈ ⳹`;
-
-      const buttons = [
-        { buttonId: ".urls", buttonText: { displayText: "ᴜʀʟꜱ" }, type: 1, },
-        { buttonId: ".creater", buttonText: { displayText: "ᴄʀᴇᴀᴛᴇʀ" }, type: 1, },
-        { buttonId: ".menu", buttonText: { displayText: "ᴍᴇɴᴜ" }, type: 1, },
-      ]
-
-
-    const templateButtons = {
-      image: { url: bots.config.image.url.D_E_TMB },
-      caption: Content,
-      footer: bots.config.exif.footer,
-      buttons,
-    };
-
-    await client.sendMessage( message.from, templateButtons, { quoted: message })
+};
+    await client.sendMessage( message.from, Message , { quoted: message })
     global.catchError = false;
     } catch (error) {
       global.catchError = true;
