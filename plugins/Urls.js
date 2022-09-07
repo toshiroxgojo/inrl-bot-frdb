@@ -11,7 +11,7 @@ bots.bot(
   async (message, client) => {
      const Message = {
      image: { url: bots.config.image.url.D_E_TMB },
-    const caption = `------- ꜱᴜᴩᴩᴏʀᴛ -------
+     caption = `------- ꜱᴜᴩᴩᴏʀᴛ -------
 
  ⍟ ᴡᴏʀᴋ ɢʀᴘ :-`+ Config.WAGRP+`
  ⍟ ɢɪᴛ ʜᴜʙ   :-`+Config.GIT+`
