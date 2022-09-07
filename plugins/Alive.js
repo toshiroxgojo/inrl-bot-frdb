@@ -20,7 +20,7 @@ bots.bot(
       let Wspeed = speed() - timestampe;
 const Message = {
 image: { url: bots.config.image.url.D_E_TMB },
-const caption = `┌─❖
+caption = `┌─❖
 │「 𝚑𝚒 𝚋𝚛𝚘/𝚜𝚒𝚜 」
 └┬❖ 「 ${message.client.pushName} 」
 ┌┤✑  ɪᴀᴍ ᴀʟɪᴠᴇ ʙʀᴏ
