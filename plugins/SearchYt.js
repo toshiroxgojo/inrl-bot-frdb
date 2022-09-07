@@ -27,11 +27,6 @@ bots.bot(
       } else {
         results = await yts(message.client.text);
         result = results.videos[0];
-        buttons = [
-          { buttonId: `.ytmp3 ${result.url}`, buttonText: { displayText: "ᴀᴜᴅɪᴏ" }, type: 1, },
-          { buttonId: `.ytmp4 ${result.url}`, buttonText: { displayText: "ᴠɪᴅᴇᴏ" }, type: 1, },
-          { buttonId: `.rytplay ${message.client.text}`, buttonText: { displayText: "ɴᴇxᴛ ꜱᴏɴɢ" }, type: 1, },
-        ];
       }
       let Message = {
         image: { url: result.thumbnail },
@@ -48,8 +43,6 @@ bots.bot(
   ✰ ᴅɪsᴄʀɪᴘᴛɪᴏɴ : ${result.description}
   ✰ ʟɪɴᴋ : ${result.url}
   —————————————————————————`,
-        footer: bots.config.exif.footer,
-        buttons: buttons,
       };
 
       await client.sendMessage(message.from, Message, { quoted: message});
