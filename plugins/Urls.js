@@ -11,13 +11,13 @@ bots.bot(
   async (message, client) => {
      const Message = {
      image: { url: bots.config.image.url.D_E_TMB },
-     caption = `------- ꜱᴜᴩᴩᴏʀᴛ -------
+     caption : `------- ꜱᴜᴩᴩᴏʀᴛ -------
 
  ⍟ ᴡᴏʀᴋ ɢʀᴘ :-`+ Config.WAGRP+`
  ⍟ ɢɪᴛ ʜᴜʙ   :-`+Config.GIT+`
  ⍟ ᴡᴇʙ sɪᴛᴇ  :-`+Config.WEB+`
 
---------------------------------`;
+--------------------------------`,
 };
     await client.sendMessage( message.from, Message, { quoted: message })
     global.catchError = false;
