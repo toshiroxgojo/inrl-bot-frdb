@@ -6,23 +6,20 @@ bots.bot(
     pattern: ["urls"],
     dontAddCommandList: true,
     sucReact: "🎟",
+    category: ["all"],
   },
   async (message, client) => {
-    const caption = `------- ꜱᴜᴩᴩᴏʀᴛ ɢʀᴏᴜᴩ -------
+     const Message = {
+     image: { url: bots.config.image.url.D_E_TMB },
+    const caption = `------- ꜱᴜᴩᴩᴏʀᴛ -------
 
-⚜ Work Group :-`+ Config.WAGRP+`
+ ⍟ ᴡᴏʀᴋ ɢʀᴘ :-`+ Config.WAGRP+`
+ ⍟ ɢɪᴛ ʜᴜʙ   :-`+Config.GIT+`
+ ⍟ ᴡᴇʙ sɪᴛᴇ  :-`+Config.WEB+`
 
 --------------------------------`;
-    const buttons = [
-        { buttonId: ".git", buttonText: { displayText: "ɢɪᴛʜᴜʙ" }, type: 1, },
-    ];
-    const templateButtons = {
-      image: { url: bots.config.image.url.D_E_TMB },
-      caption,
-      footer: bots.config.exif.footer,
-      buttons,
-    };
-    await client.sendMessage( message.from, templateButtons, { quoted: message })
+};
+    await client.sendMessage( message.from, Message, { quoted: message })
     global.catchError = false;
   }
 );
