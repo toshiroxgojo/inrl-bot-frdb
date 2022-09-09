@@ -25,7 +25,6 @@
     "Wa-Web": "github:adiwajshing/Baileys",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.10",
-    "imgur-uploader":"4.2.1",
     "child_process": "^1.0.2",
     "crypto": "^1.0.1",
     "heroku-client": "^3.1.0",
