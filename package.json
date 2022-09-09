@@ -5,7 +5,7 @@
 	"main": "index.js",
         "type": "commonjs",
         "scripts": {
-        "start": "supervisor -s index.js"
+           "start": "pm2 start . --attach --name ⛦"
         },
         "repository": {
         "type": "git",
@@ -30,6 +30,7 @@
     "heroku-client": "^3.1.0",
     "simple-git": "^2.37.0",
     "pg": "^8.7.3",
+    "pm2": "^5.2.0",
     "file-type": "^16.5.3",
     "fluent-ffmpeg": "^2.1.2",
     "form-data": "^4.0.0",
