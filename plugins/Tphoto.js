@@ -19,7 +19,7 @@ const bots = require("../lib/perfix");const maker = require("mumaker");let inrlt
 });bots.bot( { pattern: ["timg2"], sucReact: "🏖️", category: ['logo'], usage: '<word>', }, async (message, client) => {
   if (!message.client.args[0]) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(inrltext) }, { quoted: message } ); };
   if (message.client.text.length >= 15) { global.catchError = true; return await client.sendMessage( message.from, { text: bots.errorMessage(inrl) }, { quoted: message } ); };
-  await maker.textpro('https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html', [message.client.text, 'Ai Dark bots'])
+  await maker.textpro('https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html', [message.client.text, 'inrlmd'])
   .then( async (data) => { global.catchError = false; return await client.sendMessage( message.from, { image: { url: data }, caption: bots.config.exif.cap }, { quoted: message }); })
   .catch( async (err) => { global.catchError = true; return await client.sendErrorMessage( message.from, err, message.key, message ); });
 });bots.bot( { pattern: ["timg3"], sucReact: "🏖️", category: ['logo'], usage: '<word1/word2>', }, async (message, client) => {
