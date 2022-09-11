@@ -1,14 +1,9 @@
 {
-	"name": "inrl-bot-md",
-	"description": " Whatsapp bot.",
-	"keywords": [
-		"whatsapp",
-		"bot",
-                "multi-divice"
-	],
-	"repository": "https://github.com/inrl-official/inrl-bot-md",
-	"stack": "container",
-	"env": {
+  "name": "inrl-bot-md",
+  "description": "WhatsApp Bot",
+  "repository": "https://github.com/inrl-official/inrl-bot-MD",
+  "keywords": ["bot","whatsapp","whatsapp-bot"],
+  "env": {
        "SESSION_ID": {
             "description": "Your session id",
             "required": true       
@@ -38,10 +33,5 @@
             "required": true,
             "value":""
         }
-	},
-	"addons": [
-		{
-			"plan": "heroku-postgresql"
-		}
-                ]
+    }
 }
