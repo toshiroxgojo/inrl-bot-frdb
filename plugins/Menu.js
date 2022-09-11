@@ -17,7 +17,7 @@ bots.bot({ pattern: ["menu", 'help', 'list'], desc: Lang.DESCC, sucReact: "📰"
 `;
     bots.commands.map((command) => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
-      if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *🔥➪* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
+      if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *➪* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
     CMD_HELP += "│\n│ ✌︎ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɪɴʀʟ-ʙᴏᴛ\n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: bots.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
@@ -41,7 +41,7 @@ bots.categories.map(category => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
       if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *🌆 ☞︎︎︎* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
-    CMD_HELP += "│\n│ 💓 ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɪɴʀʟ-ʙᴏᴛ\n└─────────◉";
+    CMD_HELP += "│\n│ 💓 ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɪɴʀʟ-ʙᴏᴛ 💗\n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: bots.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   });
