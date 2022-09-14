@@ -1,8 +1,8 @@
-const fs = require('fs');
-if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
-function convertToBool(text, fault = 'true') {
-    return text === fault ? true : false;
-}
+const toBool = (x) => x == 'true'
+const { Sequelize } = require('sequelize')
+const { existsSync } = require('fs')
+if (existsSync('config.env')) require('dotenv').config({ path: './config.env' })
+const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : process.env.DATABASE_URL
 module.exports = {
     VERSION: 'V 1.0.0',
     SESSION_ID: process.env.SESSION_ID || '',
@@ -22,30 +22,13 @@ module.exports = {
     ownerNumb: "917593919575", 
     botName: "inrl-bot-md", 
   },
-    reply: {
-    notFound: "This Command not created. it was creating",
-    success: "Done ✓",
-    admin: "This Feature Is Only For Admin",
-    botAdmin: "Bot Must Be Admin First", 
-    owner: "This Feature Is Only For Owner",
-    group: "Feature Used Only For Groups!", 
-    private: "Features Used Only For Private Chat!", 
-    bot: "This Feature Is Only For Bot", 
-    wait: "In process..",
-    linkm: "", 
-    error: "Error!!", 
-    endLimit: "Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours",
-    ban: "You have been banned by the owner, if you want to be unbanned, chat owner", 
-    nsfw: "The nsfw feature has not been activated, please contact the admin to activate", 
-    banChat: "The bot was banned in this group, please contact the owner to unban", 
-  },
     setting: {
     blockchat: [], // Your block chat Jids
   },
   auto: {
     chat: {
-      group: false, 
-      inbox: false, 
+      group: false, // Chat Bot In Group | u can set true or false
+      inbox: false, // chat bot in inbox | u can set true or false
     },
     reply: {
       sticker: false, // Boolean | ===== It not created now ======
@@ -58,14 +41,14 @@ module.exports = {
     read: false, // Boolean | ===== It not created now ======
   },
     FOOTER : process.env.FOOTER || "ɪɴʀʟ-ᴍᴅ",
-    CHATBOT:process.env.CHATBOT || "off",
     PACKNAME : process.env.PACKNAME || "ɪɴʀʟ-ʙᴏᴛ",
     GIT : process.env.GIT || "https://tinyurl.com/3ex3e48e",
     WEB : process.env.WEB || "https://tinyurl.com/ycks3s8p",
     YT : process.env.YT || "https://www.youtube.com/channel/null",
-    CAPTION : process.env.CAPTION || "*created by inrl-bot-md*",
+    CAPTION : process.env.CAPTION || "*inrlbotmd*",
     SUDO: process.env.SUDO || '917593919575',
     WAGRP : process.env.WAGRP || 'https://tinyurl.com/dbtjh2vu',
+    DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
     ACR_A: "ff489a0160188cf5f0750eaf486eee74",
     ACR_S: "ytu3AdkCu7fkRVuENhXxs9jsOW4YJtDXimAWMpJp"
     };
