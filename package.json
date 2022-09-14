@@ -28,6 +28,10 @@
     "human-readable": "^0.2.1",
     "jimp": "^0.16.1",
     "jsdom": "^16.4.0",
+    "sequelize": "^6.21.3",
+    "simple-git": "^3.12.0"
+    "dotenv": "^16.0.2",
+    "sqlite3":"5.1.0",
     "link-preview-js": "^2.1.19",
     "lowdb": "^2.1.0",
     "moment-timezone": "^0.5.34",
@@ -50,6 +54,7 @@
     "supervisor": "^0.12.0",
     "util": "^0.12.4",
     "xfarr-api": "^1.0.2",
+    "inrl-db": "1.0.2",
     "yargs": "^17.4.0",
     "yt-search": "^2.10.2"
   },
