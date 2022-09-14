@@ -3,7 +3,7 @@ const Config = require("../config");
 inrl(
   {
     pattern: ["alive", "bot", "system_status"],
-    desc: "to check the bot status,
+    desc: "to check the bot status",
     sucReact: "🥰",
     category: ["system", "all"],
   },
