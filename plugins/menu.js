@@ -2,7 +2,7 @@ const { inrl } = require("../lib/perfix");
 const Lang = inrl.getString("_whats");
 // const fs = require("fs");
 // const path = require("path");
-let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat", "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner",'ff:Ff',"apk:Apk", 'create': "Create", 'group': "Group", "logo": "Logo", }
+let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat", "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner",'ff':"Ff",'apk':"Apk", 'create': "Create", 'group': "Group", "logo": "Logo", }
 
 inrl({ pattern: ["menu", 'help','list'], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
   try {
