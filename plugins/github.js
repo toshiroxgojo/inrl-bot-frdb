@@ -1,5 +1,5 @@
 const { inrl } = require("../lib/perfix");
-const Config = require("../config");
+const inRl = require("../config");
 inrl(
   {
     pattern: ["git"],
@@ -8,6 +8,5 @@ inrl(
     category: ["system", "all"],
   },
   async (message, client) => {
-const msg = Config.GIT
-    await client.sendMessage(message.from, msg, { quoted: message });
+    await client.sendMessage(message.from,{ text : inRl.GIT }, { quoted: message });
 });
