@@ -21,3 +21,4 @@ const Message = {
 ╰───────────────────`
     };
     await client.sendMessage(message.from, Message, { quoted: message });
+});
