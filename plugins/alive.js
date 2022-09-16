@@ -1,6 +1,6 @@
-const { inrl } = require("../lib/perfix");
+const bots = require("../lib/perfix");
 const Config = require("../config");
-inrl(
+bots.inrl(
   {
     pattern: ["alive", "bot", "system_status"],
     desc: "to check the bot status",
