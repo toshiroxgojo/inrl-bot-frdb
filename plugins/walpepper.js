@@ -1260,7 +1260,7 @@ bots.inrl(
     var i = Math.floor(r_text.length * Math.random());
     const Message = {
       image: { url: r_text[i] },
-      caption:inrl.config.exif.cap,
+      caption:bots.config.exif.cap,
     };
     await client.sendMessage(message.from, Message, { quoted: message });
     global.catchError = false;
