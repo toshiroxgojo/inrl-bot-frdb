@@ -1,8 +1,8 @@
-const { inrl } = require("../lib/perfix");
+const bots = require("../lib/perfix");
 const axios = require("axios");
 const conf = require("../lib/Data");
 
-inrl(
+bots.inrl(
   {
     pattern: ["wp"],
     desc: "for fun to get random photos",
