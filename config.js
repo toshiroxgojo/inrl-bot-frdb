@@ -42,6 +42,10 @@ module.exports = {
     read: false, // Boolean | ===== It not created now ======
   },
     FOOTER : process.env.FOOTER || "ɪɴʀʟ-ᴍᴅ",
+    ALIVE : "https://i.imgur.com/DyLAuEh.jpg",
+    IMG11 : "https://i.imgur.com/DyLAuEh.jpg",
+    IMG12 : "https://imgur.com/AelfUJg.jpg",
+    ERRIMG : "https://imgur.com/ggvhL6C.jpg",
     PACKNAME : process.env.PACKNAME || "ɪɴʀʟ-ʙᴏᴛ",
     GIT : process.env.GIT || "https://tinyurl.com/3ex3e48e",
     WEB : process.env.WEB || "https://tinyurl.com/ycks3s8p",
