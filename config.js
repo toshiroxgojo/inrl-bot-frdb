@@ -50,8 +50,8 @@ module.exports = {
     GIT : process.env.GIT || "https://tinyurl.com/3ex3e48e",
     WEB : process.env.WEB || "https://tinyurl.com/ycks3s8p",
     YT : process.env.YT || "https://www.youtube.com/channel/null",
-    CAPTION : process.env.CAPTION || "*inrlbotmd*",
+    CAPTION : process.env.CAPTION || "_created by inrl-bot_",
     SUDO: process.env.SUDO || ['917593919575'],
-    WAGRP : process.env.WAGRP || 'https://tinyurl.com/dbtjh2vu',
+    WAGRP : process.env.WAGRP || 'https://tinyurl.com/f5wh55mk',
     DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
     };
