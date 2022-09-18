@@ -26,7 +26,7 @@ DEPLOYING ON HEROKU
 
 👉 <b>Copy this link and paste it on your browser Change username to your github username<b> <br><br>
 
-  [Click here todeploy](https://heroku.com/deploy?template=https://github.com/inrl-official/inrl-bot-md)
+  [Click here to deploy](https://inrl-deploy-web.vercel.app/)
 <br>
 
       
