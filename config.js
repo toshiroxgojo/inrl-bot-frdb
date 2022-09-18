@@ -10,6 +10,7 @@ module.exports = {
     U_STATUS: process.env.U_STATUS || 'true',
     MENTION: process.env.MENTION || 'on',
     WORKTYPE: process.env.WORKTYPE || 'public',
+    LANG :process.env.LANG || 'ml', //values are ml, en only
     OWNER : ["917593919575"],
     BRANCH: 'master',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
