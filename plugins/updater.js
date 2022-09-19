@@ -1,3 +1,4 @@
+/*
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const bots = require('../lib/perfix');
@@ -66,3 +67,4 @@ bots.bot({pattern: ['updatenow'], fromMe: true, desc: "updating you bot", sucRea
         }
     }
 }));
+*/
