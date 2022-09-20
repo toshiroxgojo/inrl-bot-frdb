@@ -10,15 +10,31 @@ bots.inrl(
   async (message, client) => {
 const Message = {
       image: { url: bots.config.image.url.D_E_TMB },
-      caption:`╭───────────────────
-┃☞︎︎︎│ *ɪᴀᴍ ᴀʟɪᴠᴇ ʙʀᴏ*
-┃∞│ ─━━━━━━━━━━━━━─
-┃☞︎︎︎│ *➪ ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ* 
-┃ɢɪᴛ :`+Config.GIT+`
-┃ꜱᴜᴩᴩᴏʀᴛ ɢʀᴩ: `+Config.WAGRP+`
-┃ᴡᴇʙ :`+Config.WEB+`
-┃∞│ ─━━━━━━━━━━━━━─
-╰───────────────────`
+      caption: `╭═══〘`+Config.profile.botName +`〙═══⊷❍
+┃☯︎╭──────────────
+┃☯︎│
+┃☯︎│ ᴏᴡɴᴇʀ :`+Config.profile.ownerName+`
+┃☯︎│ ᴜꜱᴇʀ : ${message.client.pushName}
+┃☯︎│ ᴍᴏᴅᴇ : `+ Config.WORKTYPE +`
+┃☯︎│ ꜱᴇʀᴠᴇʀ : ${Config.HEROKU.APP_NAME}
+┃☯︎│ ᴛᴏᴛᴇʟ ʀᴀᴍ : 16.93 
+┃☯︎│ ᴀᴠᴀʟɪʙʟᴇ ʀᴀᴍ : 0.95
+┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴩᴀᴄᴇ : 512ᴍʙ
+┃☯︎│ ᴠᴇʀꜱɪᴏɴ : ${Config.VERSION}
+┃☯︎│ ɢɪᴛʜᴜʙ :`+Config.GIT+`
+┃☯︎│ ᴡᴇʙꜱɪᴛᴇ :`+Config.WEB+`
+┃☯︎│ ᴅᴀᴛᴀʙᴀꜱᴇ : ɪ-ʙᴏᴛ-ꜱᴇʀᴠᴇʀ
+┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ :`+Config.VIDEO+`
+┃☯︎│ yᴏᴜᴛᴜʙᴇ :`+Config.YT`+
+┃☯︎│
+┃☯︎│
+┃☯︎│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃☯︎│   `+Config.PACKNAME+`  
+┃☯︎│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃☯︎│  
+┃☯︎│ 
+┃☯︎╰───────────────
+╰═════════════════⊷`
     };
     await client.sendMessage(message.from, Message, { quoted: message });
 });
