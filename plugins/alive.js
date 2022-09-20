@@ -16,7 +16,7 @@ const Message = {
 ┃☯︎│ ᴏᴡɴᴇʀ :`+Config.profile.ownerName+`
 ┃☯︎│ ᴜꜱᴇʀ : ${message.client.pushName}
 ┃☯︎│ ᴍᴏᴅᴇ : `+ Config.WORKTYPE +`
-┃☯︎│ ꜱᴇʀᴠᴇʀ : ${Config.HEROKU.APP_NAME}
+┃☯︎│ ꜱᴇʀᴠᴇʀ : ʜᴇʀᴏᴋᴜ
 ┃☯︎│ ᴛᴏᴛᴇʟ ʀᴀᴍ : 16.93 
 ┃☯︎│ ᴀᴠᴀʟɪʙʟᴇ ʀᴀᴍ : 0.95
 ┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴩᴀᴄᴇ : 512ᴍʙ
