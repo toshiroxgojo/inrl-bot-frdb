@@ -31,7 +31,7 @@ module.exports = {
   auto: {
     chat: {
       group: false, // Chat Bot In Group | u can set true or false
-      inbox: true, // chat bot in inbox | u can set true or false
+      inbox: false, // chat bot in inbox | u can set true or false
     },
     reply: {
       sticker: false, // Boolean | ===== It not created now ======
@@ -48,13 +48,14 @@ module.exports = {
     IMG11 : "https://i.imgur.com/DyLAuEh.jpg",
     IMG12 : "https://imgur.com/AelfUJg.jpg",
     ERRIMG : "https://imgur.com/ggvhL6C.jpg",
+    INSTAGRAM : "https://instagram.com/_user_not_define 
     PACKNAME : process.env.PACKNAME || "ɪɴʀʟ-ʙᴏᴛ",
     GIT : process.env.GIT || "https://tinyurl.com/3ex3e48e",
     WEB : process.env.WEB || "https://tinyurl.com/ycks3s8p",
-    YT : process.env.YT || "https://www.youtube.com/channel/null",
+    YT : process.env.YT || "https://tinyurl.com/36r3668n",
     CAPTION : process.env.CAPTION || "_created by inrl-bot_",
     SUDO: process.env.SUDO || ['917593919575'],
-    VIDEO : "coming soon",
+    VIDEO : "https://tinyurl.com/3x38ajmn",
     WAGRP : process.env.WAGRP || 'https://tinyurl.com/f5wh55mk',
     DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
     };
