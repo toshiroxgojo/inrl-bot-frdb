@@ -54,6 +54,7 @@ module.exports = {
     YT : process.env.YT || "https://www.youtube.com/channel/null",
     CAPTION : process.env.CAPTION || "_created by inrl-bot_",
     SUDO: process.env.SUDO || ['917593919575'],
+    VIDEO : "coming soon",
     WAGRP : process.env.WAGRP || 'https://tinyurl.com/f5wh55mk',
     DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
     };
