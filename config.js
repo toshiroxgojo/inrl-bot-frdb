@@ -30,8 +30,8 @@ module.exports = {
   },
   auto: {
     chat: {
-      group: false, // Chat Bot In Group | u can set true or false
-      inbox: false, // chat bot in inbox | u can set true or false
+      group: off, // Chat Bot In Group | u can set true or false
+      inbox: off, // chat bot in inbox | u can set true or false
     },
     reply: {
       sticker: false, // Boolean | ===== It not created now ======
