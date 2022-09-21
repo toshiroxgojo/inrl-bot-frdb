@@ -26,92 +26,92 @@
         "LANG": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"ml"
         },
         "BGMBOT": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"on"
         },
         "PASSWORD": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":""
         },
         "MENTION": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"on"
         },
         "OWNER": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":["917593919575"]
         },
         "FOOTER": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"ɪɴʀʟ-ᴍᴅ"
         },
         "ALIVE": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://i.imgur.com/DyLAuEh.jpg"
         },
         "INSTAGRAM": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://instagram.com/_user_not_define"
         },
         "PACKNAME": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"ɪɴʀʟ-ʙᴏᴛ"
         },
         "GIT": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://tinyurl.com/3ex3e48e"
         },
         "WEB": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://tinyurl.com/ycks3s8p"
         },
         "YT": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://tinyurl.com/36r3668n"
         },
         "CAPTION": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"_created by inrl-bot_"
         },
         "SUDO: {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":['917593919575']
         },
         "VIDEO": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://tinyurl.com/3x38ajmn"
         },
         "WAGRP": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://tinyurl.com/f5wh55mk"
         },
         "IMG11": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://i.imgur.com/DyLAuEh.jpg"
         },
         "IMG12": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"true"
+            "value":"https://imgur.com/AelfUJg.jpg"
         },
         "WORKTYPE": {
             "description": "bot mode",
