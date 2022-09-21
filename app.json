@@ -15,8 +15,7 @@
         },
        "HEROKU_API_KEY": {
             "description": "For updating bot and setting vars remotely",
-            "required": true,
-            "value":""
+            "required": true
         },
         "U_STATUS": {
             "description": "For updating  profileStatus by using bot",
@@ -35,8 +34,7 @@
         },
         "PASSWORD": {
             "description": "For updating  profileStatus by using bot",
-            "required": false,
-            "value":""
+            "required": false
         },
         "MENTION": {
             "description": "For updating  profileStatus by using bot",
