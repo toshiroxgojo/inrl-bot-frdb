@@ -23,6 +23,96 @@
             "required": false,
             "value":"true"
         },
+        "LANG": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "BGMBOT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "PASSWORD": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "MENTION": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "OWNER": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "FOOTER": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "ALIVE": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "INSTAGRAM": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "PACKNAME": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "GIT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "WEB": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "YT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "CAPTION": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "SUDO: {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "VIDEO": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "WAGRP": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "IMG11": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
+        "IMG12": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"true"
+        },
         "WORKTYPE": {
             "description": "bot mode",
             "required": false,
