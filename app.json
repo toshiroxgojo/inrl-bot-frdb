@@ -44,7 +44,7 @@
         "OWNER": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":["917593919575"]
+            "value":"917593919575"
         },
         "FOOTER": {
             "description": "For updating  profileStatus by using bot",
@@ -89,7 +89,7 @@
         "SUDO: {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":['917593919575']
+            "value":'917593919575'
         },
         "VIDEO": {
             "description": "For updating  profileStatus by using bot",
