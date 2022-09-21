@@ -1,4 +1,3 @@
-/*
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const bots = require('../lib/perfix');
@@ -7,7 +6,7 @@ const exec = require('child_process').exec;
 const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
-bots.bot({pattern: ['update'], fromMe: true, desc: "to update bot", sucReact: "⚒️",  category: ["all"]}, (async (message, client) => {
+bots.inrl({pattern: ['update'], fromMe: true, desc: "to update bot", sucReact: "⚒️",  category: ["all"]}, (async (message, client) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -24,7 +23,7 @@ bots.bot({pattern: ['update'], fromMe: true, desc: "to update bot", sucReact: "�
     }
 }));
 
-bots.bot({pattern: ['updatenow'], fromMe: true, desc: "updating you bot", sucReact: "⚒️",  category: ["all"]}, (async (message, client) => {
+bots.inrl({pattern: ['updatenow'], fromMe: true, desc: "updating you bot", sucReact: "⚒️",  category: ["all"]}, (async (message, client) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -67,4 +66,3 @@ bots.bot({pattern: ['updatenow'], fromMe: true, desc: "updating you bot", sucRea
         }
     }
 }));
-*/
