@@ -21,6 +21,11 @@
             "required": false,
             "value":"true"
         },
+        "ALIVETXT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"INRL-BOT-MD"
+        },
         "SUDO": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
