@@ -2,7 +2,6 @@ const toBool = (x) => x == 'true'
 const { Sequelize } = require('sequelize')
 const { existsSync } = require('fs')
 if (existsSync('config.env')) require('dotenv').config({ path: './config.env' })
-const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : process.env.DATABASE_URL
 module.exports = {
     VERSION: 'V 1.0.0',
     SESSION_ID: process.env.SESSION_ID || '',
@@ -43,6 +42,7 @@ module.exports = {
     },
     read: false, // Boolean | ===== It not created now ======
   },
+    CHATBOT : process.env.CHATBOT || 'null',
     FOOTER : process.env.FOOTER || "ɪɴʀʟ-ᴍᴅ",
     ALIVE : process.env.ALIVE || "https://i.imgur.com/DyLAuEh.jpg",
     IMG11 : process.env.IMG11 || "https://i.imgur.com/DyLAuEh.jpg",
@@ -57,5 +57,4 @@ module.exports = {
     SUDO: process.env.SUDO || "917593919575",
     VIDEO : "https://tinyurl.com/3x38ajmn",
     WAGRP : process.env.WAGRP || 'https://tinyurl.com/f5wh55mk',
-    DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
     };
