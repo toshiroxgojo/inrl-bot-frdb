@@ -12,7 +12,7 @@ module.exports = {
     BGMBOT : process.env.BGMBOT || 'on',
     WORKTYPE: process.env.WORKTYPE || 'public',
     LANG :process.env.LANG || 'ml', //values are ml, en only
-    OWNER : ["917593919575"],
+    OWNER : "917593919575",
     BRANCH: 'master',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     HEROKU: {
@@ -54,7 +54,7 @@ module.exports = {
     WEB : process.env.WEB || "https://tinyurl.com/ycks3s8p",
     YT : process.env.YT || "https://tinyurl.com/36r3668n",
     CAPTION : process.env.CAPTION || "_created by inrl-bot_",
-    SUDO: process.env.SUDO || ['917593919575'],
+    SUDO: process.env.SUDO || "917593919575",
     VIDEO : "https://tinyurl.com/3x38ajmn",
     WAGRP : process.env.WAGRP || 'https://tinyurl.com/f5wh55mk',
     DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
