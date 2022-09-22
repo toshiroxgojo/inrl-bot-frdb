@@ -10,7 +10,7 @@ bots.inrl(
   async (message, client) => {
 const Message = {
       image: { url: bots.config.image.url.D_E_TMB },
-      caption: `╭═══〘`+Config.PACKNAME+`〙═══⊷❍
+      caption: `╭═══〘`+Config.ALIVETXT+`〙═══⊷❍
 ┃☯︎╭──────────────
 ┃☯︎│
 ┃☯︎│ ᴏᴡɴᴇʀ :`+Config.profile.ownerName+`
