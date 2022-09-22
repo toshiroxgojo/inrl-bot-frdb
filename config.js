@@ -12,7 +12,7 @@ module.exports = {
     BGMBOT : process.env.BGMBOT || 'on',
     WORKTYPE: process.env.WORKTYPE || 'public',
     LANG :process.env.LANG || 'ml', //values are ml, en only
-    OWNER : "917593919575",
+    OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     HEROKU: {
@@ -44,11 +44,11 @@ module.exports = {
     read: false, // Boolean | ===== It not created now ======
   },
     FOOTER : process.env.FOOTER || "ɪɴʀʟ-ᴍᴅ",
-    ALIVE : "https://i.imgur.com/DyLAuEh.jpg",
-    IMG11 : "https://i.imgur.com/DyLAuEh.jpg",
-    IMG12 : "https://imgur.com/AelfUJg.jpg",
-    ERRIMG : "https://imgur.com/ggvhL6C.jpg",
-    INSTAGRAM : "https://instagram.com/_user_not_define",
+    ALIVE : process.env.ALIVE || "https://i.imgur.com/DyLAuEh.jpg",
+    IMG11 : process.env.IMG11 || "https://i.imgur.com/DyLAuEh.jpg",
+    IMG12 : process.env.IMG12 || "https://imgur.com/AelfUJg.jpg",
+    ERRIMG : process.env.ERRIMG || "https://imgur.com/ggvhL6C.jpg",
+    INSTAGRAM : process.env.INSTAGRAM || "https://instagram.com/_user_not_define",
     PACKNAME : process.env.PACKNAME || "ɪɴʀʟ-ʙᴏᴛ",
     GIT : process.env.GIT || "https://tinyurl.com/3ex3e48e",
     WEB : process.env.WEB || "https://tinyurl.com/ycks3s8p",
