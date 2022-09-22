@@ -22,6 +22,16 @@
             "required": false,
             "value":"true"
         },
+        "SUDO": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"917593919575"
+        },
+        "OWNER": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"917593919575"
+        },
         "LANG": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
