@@ -44,7 +44,7 @@
         "BGMBOT": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"on"
+            "value":"false"
         },
         "PASSWORD": {
             "description": "For updating  profileStatus by using bot",
