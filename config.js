@@ -7,7 +7,7 @@ module.exports = {
     SESSION_ID: process.env.SESSION_ID || '',
     PASSWORD: process.env.PASSWORD || '',
     U_STATUS: process.env.U_STATUS || 'true',
-    ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD'
+    ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD',
     MENTION: process.env.MENTION || 'on',
     BGMBOT : process.env.BGMBOT || 'false',
     WORKTYPE: process.env.WORKTYPE || 'public',
