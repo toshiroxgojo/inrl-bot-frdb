@@ -6,6 +6,8 @@ module.exports = {
     VERSION: 'V 1.0.0',
     SESSION_ID: process.env.SESSION_ID || '',
     PASSWORD: process.env.PASSWORD || '',
+    REACT : process.env.REACT || 'false',
+    FREE_TXT : process.env.FREE_TXT || 'inrlbotmd',
     U_STATUS: process.env.U_STATUS || 'true',
     ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD',
     MENTION: process.env.MENTION || 'on',
