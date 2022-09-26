@@ -31,6 +31,11 @@ module.exports = {
     setting: {
     blockchat: [], // Your block chat Jids
   },
+    auto: {
+      chat: {
+      group: "off", // Chat Bot In Group | u can set true or false
+      inbox: "off", // chat bot in inbox | u can set true or false
+    },
     reply: {
       sticker: false, // Boolean | ===== It not created now ======
       audio: false, // Boolean | ===== It not created now ======
