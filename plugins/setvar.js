@@ -7,4 +7,77 @@ you may not use this file except in compliance with the License.
 inrl-md
 
 */
-const n=b,o=b,p=b,q=b,r=b;(function(d,e){const x={d:0x1ed,e:0x1bc,f:'0x1a8',g:'0x186',h:'0x1dd',y:'0x19a',z:0x1d4,A:'0x176',B:0x16e,C:0x1fa,D:0x17f,E:'0x1b3'},i=b,j=b,k=b,l=b,m=b,f=d();while(!![]){try{const g=-parseInt(i(x.d))/(0x2*-0x607+0x5*0xa7+0x8cc)+-parseInt(j(x.e))/(0x113f+0x1023*-0x1+0x2f*-0x6)*(-parseInt(i(x.f))/(0xe8*0x24+0x2ab*0xd+-0x434c))+parseInt(j(x.g))/(0x848+-0x4*0x9c0+-0x1ebc*-0x1)*(-parseInt(j(x.h))/(-0x225*0x3+-0x1241+-0x113*-0x17))+-parseInt(k(x.y))/(0x11*0xd3+0xe2f+0x1c2c*-0x1)*(parseInt(k(x.z))/(0x2b9*0x7+0x387+-0x4b*0x4d))+-parseInt(i(x.A))/(-0x2214+-0x19d5*-0x1+0x847*0x1)+parseInt(k(x.B))/(0x1*0x693+-0x1c0+-0x4ca)*(parseInt(l(x.C))/(0x2*-0xf9e+-0xcc4+0x2c0a))+-parseInt(m(x.D))/(-0x789+0x171*-0x7+0x11ab)*(-parseInt(k(x.E))/(0x129a+0x222e+0x12c*-0x2d));if(g===e)break;else f['push'](f['shift']());}catch(h){f['push'](f['shift']());}}}(a,0x34f6c+-0x202b1+0x168e*0x7f));const bots=require(n(0x1d7)+o('0x1d2')+p('0x180')),Config=require(p('0x197')+q(0x1af)),c={};function b(c,d){const e=a();return b=function(f,g){f=f-(-0x7*0x2f3+-0x100+0x16f5);let h=e[f];return h;},b(c,d);}c[n('0x173')+'rn']=[r(0x1a5)+'r'],c[o('0x1f8')]=n('0x199')+r(0x196)+r('0x1eb')+n('0x1f3')+q('0x1f4'),c[o('0x1b7')+p(0x1df)]=n('0x1f7'),c[r(0x162)+n(0x183)]=[n('0x1a9')+'m',o('0x153')],bots[p(0x1f0)](c,async(e,f)=>{const y={d:'0x1fd',e:0x188,f:'0x18c',g:'0x1a3',h:0x177,z:'0x15f',A:'0x179',B:0x1e3,C:'0x158',D:'0x172',E:0x1db,F:'0x1f2',G:0x175,H:0x1f2,I:'0x177',J:0x15f,K:'0x192',L:0x156,M:0x1ae,N:0x17d,O:'0x1a4',P:'0x195',Q:0x187,R:'0x159',S:0x1bd,T:0x1ea,U:'0x1d6',V:0x1d1,W:0x169,X:0x1fb,Y:'0x1d5',Z:'0x1ba',a0:'0x193',a1:'0x1da',a2:0x189,a3:'0x1e1',a4:0x18f,a5:0x16d,a6:'0x1b2',a7:0x1be,a8:'0x1aa',a9:0x1da,aa:0x189,ab:'0x15b',ac:'0x164',ad:0x161,ae:0x1f6,af:'0x1a7',ag:'0x1ad',ah:'0x1c1',ai:'0x1bb',aj:0x171,ak:'0x15a',al:'0x1bf',am:0x19c,an:0x18d,ao:0x16f,ap:0x1c0,aq:0x16c,ar:'0x16d',as:0x1b2,at:0x19e,au:'0x181',av:'0x1fb',aw:'0x1d9',ax:'0x1ce',ay:'0x1da',az:'0x190',aA:0x1de,aB:'0x16b',aC:0x1e8,aD:0x16d,aE:'0x19b',aF:'0x184',aG:'0x1a6',aH:0x1f5,aI:0x185,aJ:'0x1b0',aK:'0x18a',aL:0x1f1,aM:0x1e4,aN:'0x194',aO:0x151,aP:'0x178',aQ:0x17a,aR:'0x17c',aS:'0x1cf',aT:0x1e2,aU:'0x1ca',aV:0x155,aW:0x1cd,aX:'0x170',aY:0x1d6,aZ:'0x198',b0:0x167,b1:'0x1d5',b2:'0x1b9',b3:0x1e0,b4:0x19d,b5:'0x174',b6:0x1ec,b7:'0x1f6',b8:0x1a7,b9:'0x1c7',ba:0x17e,bb:'0x1fb',bc:'0x1d5',bd:0x1e0,be:'0x19d',bf:0x163,bg:0x168,bh:0x16a,bi:0x170,bj:0x1d6,bk:'0x1c4',bl:0x1c6,bm:0x1a6,bn:0x1b1,bo:'0x1c5',bp:'0x1e9',bq:0x1cb,br:0x1a0,bs:'0x1cd',bt:'0x1c3',bu:'0x1ac',bv:0x1ac,bw:'0x1ac',bx:'0x15c',by:0x195,bz:'0x165',bA:'0x152',bB:'0x166',bC:0x1d0,bD:'0x1f9',bE:0x1b5,bF:0x1b5,bG:'0x1b5',bH:0x1b5,bI:0x1b5,bJ:0x1ee,bK:0x19d,bL:0x1c2,bM:'0x1b6',bN:'0x1ab',bO:0x16d,bP:0x182,bQ:0x1d3,bR:0x1fb,bS:0x1d5,bT:0x1b9,bU:0x1e0,bV:'0x19d',bW:0x18b,bX:'0x1dc',bY:0x154,bZ:'0x1b8',c0:0x18e,c1:'0x178',c2:'0x17a',c3:'0x17c',c4:'0x1cf',c5:'0x1a6',c6:0x1e7,c7:'0x15d',c8:'0x1a1',c9:0x1ad,ca:0x19f,cb:'0x1fc',cc:0x157,cd:0x191,ce:0x1c9,cf:'0x1a4',cg:'0x1e5',ch:'0x160',ci:0x1a2,cj:'0x1d8',ck:0x1a7,cl:0x1c8,cm:'0x1b4',cn:'0x1cb',co:0x1a0,cp:0x1cd,cq:'0x150',cr:0x17b,cs:'0x1ef',ct:0x1cc,cu:'0x15e',cv:0x1e6},s=o,t=n,u=r,v=o,w=q,g={};g[s(y.d)]=s(y.e)+u(y.f)+t(y.g)+u(y.h)+v(y.z)+s(y.A)+v(y.B)+w(y.C)+s(y.D)+t(y.E)+s(y.F)+s(y.G)+w(y.H)+t(y.G)+s(y.I)+t(y.J)+u(y.K)+u(y.L)+s(y.M)+u(y.N)+u(y.O)+w(y.P)+v(y.Q)+w(y.R)+w(y.S)+v(y.T)+t(y.U)+w(y.V)+u(y.W)+v(y.X)+u(y.Y)+t(y.Z)+s(y.a0)+s(y.a1)+v(y.a2)+w(y.a3)+w(y.a4)+t(y.a5)+w(y.a6)+w(y.a7)+v(y.a8)+s(y.a9)+s(y.aa)+s(y.ab)+w(y.ac)+t(y.ad)+v(y.ae)+w(y.af)+u(y.ag)+u(y.ah)+w(y.ai)+u(y.aj)+u(y.ak)+v(y.al)+t(y.am)+u(y.an)+u(y.ao)+v(y.ap)+w(y.aq)+t(y.ar)+s(y.as)+u(y.at)+s(y.au)+t(y.av)+u(y.Y)+t(y.aw)+t(y.ax)+u(y.ay)+t(y.aa)+w(y.az)+w(y.aA)+v(y.aB)+s(y.aC)+u(y.aD)+v(y.a6)+t(y.aE)+s(y.aF)+s(y.aG)+v(y.aH)+u(y.aI)+s(y.aJ)+v(y.aK)+u(y.aL)+u(y.aM)+w(y.aN)+t(y.aO)+t(y.aP)+v(y.aQ)+u(y.aR)+u(y.aS)+t(y.aT)+v(y.aU)+u(y.aV)+s(y.aW)+w(y.aX)+v(y.aY)+v(y.aZ)+s(y.b0)+s(y.X)+v(y.b1)+t(y.b2)+u(y.b3)+u(y.b4)+w(y.b5)+t(y.b6)+u(y.b7)+w(y.b8)+v(y.b9)+w(y.ba)+s(y.bb)+w(y.bc)+u(y.b2)+v(y.bd)+v(y.be)+s(y.bf)+u(y.bg)+v(y.bh)+s(y.bi)+v(y.bj)+u(y.bk)+w(y.bl)+t(y.bm)+t(y.aH)+t(y.bn)+v(y.bo)+v(y.aM)+s(y.aN)+t(y.bp)+u(y.bq)+t(y.br)+t(y.bs)+w(y.bt)+w(y.bu)+s(y.bv)+v(y.bv)+w(y.bw)+u(y.bv)+t(y.bv)+t(y.bx)+t(y.by)+u(y.bz)+t(y.bA)+t(y.bB)+v(y.bC)+v(y.bD)+t(y.bE)+s(y.bF)+u(y.bF)+t(y.bG)+u(y.bH)+v(y.bF)+u(y.bG)+u(y.bG)+u(y.bI)+u(y.bJ)+w(y.bK)+w(y.bL)+u(y.bM)+t(y.bN)+u(y.bO)+s(y.a6)+w(y.bP)+v(y.bQ)+v(y.bR)+w(y.bS)+v(y.bT)+s(y.bU)+w(y.bV)+u(y.bW)+v(y.bX)+w(y.bY)+v(y.bi)+u(y.U)+s(y.bZ)+t(y.c0)+s(y.c1)+v(y.c2)+u(y.c3)+s(y.c4)+s(y.c5)+v(y.aH)+u(y.c6)+v(y.c7)+v(y.c8)+s(y.b8)+w(y.c9)+v(y.ca)+s(y.cb)+w(y.cc)+v(y.cd)+u(y.ce)+v(y.cf)+w(y.cg)+s(y.ch)+t(y.ci)+t(y.cj)+s(y.ck)+w(y.cl)+u(y.cm)+w(y.cn)+(u(y.co)+v(y.cp)+w(y.cq)+t(y.J)+w(y.cr)+u(y.cs)+'══'),await f[s(y.ct)+t(y.cu)+'e'](e[s(y.cv)],g,{'quoted':e});});function a(){const z=['../li','\x20\x0a\x0a_e','ml,\x20e','\x0a\x20To\x20','y\x20*\x0a\x0a','mage1','262895bhPXVu','cker\x20','act','\x0a\x0a\x0a\x20T','e\x20foo','\x20To\x20s','ꜱᴇᴛ\x20ᴠ','ex_\x20:','\x20chan','from','\x20imag','AME\x0a\x0a','wa\x20_-','\x20\x20_ex','he\x20bo','T\x20UrL','349289nhLVTY','---\x0aT','═💢💢══','inrl','me\x0a\x0a_','■□■□■','t\x20sta','tus','hange','_\x0a\x0a_e','ðŸ’¥','desc','t\x20\x0a--','3123860wNefWd','alues','\x20_-va','text','\x0a\x0a\x0a\x0a\x0a','git\x20_','s\x20wha','all','1\x20img','BSITE','l\x20set','lues\x20','ᴀʀꜱ\x20ʀ','n\x20or\x20','re\x20ml','e\x20INS','\x0a\x20\x20to','12\x20im','essag','\x20\x20\x20\x20\x20','ge\x20er','M\x20UrL','categ','nge\x20C','TAGRA','image','ts\x20yo','b\x20_-v','APTIO','m\x20_-v','N\x20msg','PACKN','AGE\x0a\x0a','_ex_\x20','18aNxCyD','ange\x20','\x0a\x0a_ex','ues\x20a','ᴇᴍᴏᴛʟ','patte','nge\x20Y','□■□■□','5788424hczxOk','\x0a\x0a\x20\x20\x20','-valu','\x20*ᴛᴏ\x20','es\x20ar','\x20════','e\x20UrL','are\x0a\x0a','t\x20_-v','30893181dtWctU','fix','\x20\x20_-v','-aliv','ory','\x20\x0a\x0a\x0a\x0a','\x20GITH','40nWkBwg','bgm\x20o','⛦━━💘S','chang','er\x20na','nge\x20i','ETVAR','To\x20ch','g-1\x20_','ter\x0a\x0a','e\x20sti','are\x20U','\x20\x20\x20Al','ff\x0a\x0a\x0a','\x20set-','\x20set\x20','eck\x20t','../co','et-we','to\x20ch','122448SyeOWc','-pack','\x0a\x0a\x0a\x0a\x20','o\x20cha','-lang','mag-2','s\x20are','g\x0a\x0a_e','r\x20img','💘━━⛦\x0a','\x0a\x0a\x20To','setva','\x20To\x20c','x_\x20:\x20','3vDhifh','syste','er\x0a\x0a\x0a','img\x0a\x0a','_____','set-i','vars\x20','nfig','UB\x20us','\x20WA-G',':\x20set','12xehOXx','rr\x20_-','-----','live\x20','sucRe','et-im','UrL_\x0a','on,\x20o','_-val','865668znMCpk','off\x0a\x0a','-foot',',\x20en_','LANGU','nsta\x20','nge\x20a','\x0a\x0a\x0a__','et-ca','RP\x0a\x0a_','p\x0a\x0a\x0a\x0a','set-y','set-e','rL_\x0a\x0a','et\x20WE','value','sendM','\x20UrL_','n_\x0a\x0a\x0a','_\x0a\x0a\x0a\x0a','u\x20wan','et-bg','b/per','e\x20_-v','497BLGzpA','\x20are\x20','_\x20:\x20s'];a=function(){return z;};return a();}
+const bots = require("../lib/perfix");
+const Config = require("../config");
+bots.inrl(
+  {
+    pattern: ["setvar"],
+    desc: "to check the bot status",
+    sucReact: "💗",
+    category: ["system", "all"],
+  },
+  async (message, client) => {
+await client.sendMessage(message.from,
+{text : `⛦━━💘SETVAR💘━━⛦\n\n
+         *ᴛᴏ ꜱᴇᴛ ᴠᴀʀꜱ ʀᴇᴍᴏᴛʟy *\n
+■□■□■□■□■□■□■□■□■□■□\n
+           All setvars are\n\n
+
+ To set bgm on or off\n
+  _ex_ : set-bgm _-values are on, off\n\n
+
+To set pdf file name\n
+  _ex_ : set-text _-values are you text\n\n
+
+To set alive text \n
+  _ex_ : set-alive-text _-values are your txt\n\n
+
+To set chatbot in bot\n
+  _ex_ : set-chat-bot _-values are your true, false\n\n
+
+To set react \n
+  _ex_ : set-react _-values are your txt\n\n
+
+ To change footer\n
+_ex_ : set-footer\n\n
+
+ To change INSTAGRAM UrL_\n
+_ex_ : set-insta _-values are ml, en_\n\n
+
+ To change LANGUAGE\n
+_ex_ : set-lang  _-values are ml, en_\n\n
+
+ To change sticker PACKNAME\n
+_ex_ : set-pack \n\n
+
+ To change GITHUB user name\n
+_ex_ : set-git _-values are UrL_\n\n
+
+ To set WEBSITE UrL_\n
+_ex_ : set-web _-values are UrL_\n\n
+
+ To change YT UrL_\n
+_ex_ : set-yt _-values are UrL_\n\n
+
+ To change CAPTION msg\n
+_ex_ : set-cap\n\n
+
+ To change WA-GRP\n
+_ex_ : set-wa _-values are UrL_\n\n
+________________________________
+  to set images whats you want 
+--------------------------------------------------
+To change alive img\n
+_ex_ : set-alive _-values are UrL_\n\n
+
+ To change image11 img\n
+_ex_ : set-img-1 _-values are UrL_\n\n
+
+ To change imag12 img\n
+_ex_ : set-imag-2 _-values are UrL_\n\n
+
+ To change err img \n
+_ex_ : set-err _-values are UrL_\n\n\n
+
+      ═════💢💢════`}, { quoted: message });
+});
