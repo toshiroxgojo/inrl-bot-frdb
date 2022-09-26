@@ -7,6 +7,7 @@ module.exports = {
     SESSION_ID: process.env.SESSION_ID || '',
     PASSWORD: process.env.PASSWORD || '',
     REACT : process.env.REACT || 'false',
+    GROUP_CHAT : process.env.GROUP_CHAT || 'false',
     FREE_TXT : process.env.FREE_TXT || 'inrlbotmd',
     U_STATUS: process.env.U_STATUS || 'true',
     ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD',
@@ -30,11 +31,6 @@ module.exports = {
     setting: {
     blockchat: [], // Your block chat Jids
   },
-  auto: {
-    chat: {
-      group: "off", // Chat Bot In Group | u can set true or false
-      inbox: "off", // chat bot in inbox | u can set true or false
-    },
     reply: {
       sticker: false, // Boolean | ===== It not created now ======
       audio: false, // Boolean | ===== It not created now ======
