@@ -21,6 +21,26 @@
             "required": false,
             "value":"true"
         },
+        "REACT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"false"
+        },
+        "GROUP_CHAT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"false"
+        },
+        "FREE_TXT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"inrlbotmd"
+        },
+        "CHATBOT": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"null"
+        },
         "ALIVETXT": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
