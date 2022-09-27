@@ -17,7 +17,7 @@ module.exports = {
     LANG :process.env.LANG || 'EN', //values are ml, en only
     OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
-    ANTILINK : process.env.ANTILINK || 'youtube:,
+    ANTILINK : process.env.ANTILINK || 'youtube',
     ANTIFAKE : process.env.ANTIFAKE || '+2222',
     ALL_LINK_BAN : 'false',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
