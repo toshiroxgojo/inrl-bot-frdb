@@ -14,14 +14,17 @@ module.exports = {
     MENTION: process.env.MENTION || 'on',
     BGMBOT : process.env.BGMBOT || 'false',
     WORKTYPE: process.env.WORKTYPE || 'public',
-    LANG :process.env.LANG || 'ml', //values are ml, en only
+    LANG :process.env.LANG || 'EN', //values are ml, en only
     OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
+    ANTILINK : process.env.ANTILINK || 'youtube:,
+    ANTIFAKE : process.env.ANTIFAKE || '+2222',
+    ALL_LINK_BAN : 'false',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
-        API_KEY: process.env.HEROKU_API_KEY || '10e5c5fb-7127-4687-8afc-40a26e51d0f4',
-        APP_NAME: process.env.HEROKU_APP_NAME || 'inrl-teasting'
+        API_KEY: process.env.HEROKU_API_KEY || '',
+        APP_NAME: process.env.HEROKU_APP_NAME || ''
     },
     profile: {
     ownerName: "inrl", 
