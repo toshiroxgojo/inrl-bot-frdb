@@ -15,6 +15,7 @@
     "cheerio": "^1.0.0-rc.10",
     "child_process": "^1.0.2",
     "aes256": "^1.1.0",
+    "@bochilteam/scraper": "^2.0.0",
     "pastebin-js" : "1.0.6",
     "crypto": "^1.0.1",
     "imgbb-uploader": "^1.4.0",
