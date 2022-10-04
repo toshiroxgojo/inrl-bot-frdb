@@ -6,7 +6,7 @@
 //╚═╝╚═╝░░╚══╝╚═╝░░╚═╝╚══════╝░░░░░░╚═════╝░░╚════╝░░░░╚═╝░░░░░░░░░╚═╝░░░░░╚═╝╚═════╝░
 const fs = require('fs');
 const { inrl , fetchJson , styletext , config} = require('../lib/');
-const Config = require('../config);
+const Config = require('../config');
 
 inrl({pattern: ['emojimix'], desc: "to emojis to single sticker",sucReact: "🌇",  category: ["all"]}, async (message, client) => {
            const text = message.client.text;
