@@ -12,6 +12,7 @@ module.exports = {
     U_STATUS: process.env.U_STATUS || 'true',
     ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD',
     MENTION: process.env.MENTION || 'on',
+    BOT_INFO : process.env.BOT_INFO || "INRL-BOT-MD,INRL,https://i.imgur.com/DyLAuEh.jpg",
     BGMBOT : process.env.BGMBOT || 'false',
     WORKTYPE: process.env.WORKTYPE || 'public',
     LANG :process.env.LANG || 'EN', //values are ml, en only
@@ -26,29 +27,11 @@ module.exports = {
         API_KEY: process.env.HEROKU_API_KEY || '',
         APP_NAME: process.env.HEROKU_APP_NAME || ''
     },
-    profile: {
-    ownerName: "inrl", 
-    ownerNumb: "917593919575", 
-    botName: "inrl-bot-md", 
-  },
-    setting: {
-    blockchat: [], // Your block chat Jids
-  },
-    auto: {
-      chat: {
-      group: "off", // Chat Bot In Group | u can set true or false
-      inbox: "off", // chat bot in inbox | u can set true or false
-    },
-    reply: {
-      sticker: false, // Boolean | ===== It not created now ======
-      audio: false, // Boolean | ===== It not created now ======
-    },
-    presence: {
-      is: false, // U Can on or off this () | u can set true or false
-      value: "recording", // It has two types | u can set 'recoding' or 'typing'
-    },
-    read: false, // Boolean | ===== It not created now ======
-  },
+    BLOCK_CHAT : process.env.BLOCK_CHAT ||[],
+    AUTO_CHAT_PM : process.env.AUTO_CHAT_PM || "false",
+    AUTO_CHAT_GRP : process.env.AUTO_CHAT_GRP || "false",
+    BOT_PRESENCE : process.env.BOT_PRESENCE || "recording",
+    IS_PRESENCE : process.env.IS_PRESENCE || "false",
     CHATBOT : process.env.CHATBOT || 'null',
     FOOTER : process.env.FOOTER || "ɪɴʀʟ-ᴍᴅ",
     ALIVE : process.env.ALIVE || "https://i.imgur.com/DyLAuEh.jpg",
