@@ -18,6 +18,7 @@ module.exports = {
     LANG :process.env.LANG || 'EN', //values are ml, en only
     OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
+    PROCFILE_DATA : process.env.PROCFILE_DATA || "💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ",
     ANTILINK : process.env.ANTILINK || 'youtube',
     ANTIFAKE : process.env.ANTIFAKE || '+2222',
     ALL_LINK_BAN : process.env.ALL_LINK_BAN || 'false',
