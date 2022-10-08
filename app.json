@@ -26,6 +26,16 @@
             "required": false,
             "value":"false"
         },
+        "PROCFILE_DATA": {
+            "description": "For updating  profileStatus data by using bot",
+            "required": false,
+            "value":"💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ"
+        },
+        "BOT_INFO": {
+            "description": "For updating  profileStatus by using bot",
+            "required": false,
+            "value":"INRL-BOT-MD,INRL,https://i.imgur.com/DyLAuEh.jpg"
+        },
         "GROUP_CHAT": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
