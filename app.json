@@ -21,8 +21,18 @@
             "required": false,
             "value":"true"
         },
+        "CALL_BLOCK": {
+            "description": "For block when calling some one by using bot",
+            "required": false,
+            "value":"false"
+        },
+        "PM_BLOCK": {
+            "description": "For blocking pm chat by using bot",
+            "required": false,
+            "value":"false"
+        },
         "REACT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "For setting auto recat by using bot",
             "required": false,
             "value":"false"
         },
