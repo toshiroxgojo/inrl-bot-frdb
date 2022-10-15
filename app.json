@@ -21,6 +21,11 @@
             "required": false,
             "value":"true"
         },
+        "ALIVE_DATA": {
+            "description": "For chenging alivetext, img, buttenName",
+            "required": false,
+            "value":"aliveImgUrl;aliveText;alivebButtenText1;aliveTextButten2"
+        },
         "CALL_BLOCK": {
             "description": "For block when calling some one by using bot",
             "required": false,
