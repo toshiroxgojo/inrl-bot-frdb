@@ -40,29 +40,63 @@ inrl(
     category: ["system", "all"],
   },
   async (message, client) => {
-const Message = {
+
+const aliveData = Config.ALIVE_DATA;
+if (aliveData.includes(';')) { 
+var split = aliveData.split(';');
+aliveImgUrl = split[0];
+aliveTxt = split[1];
+aliveButton1 = split[2];
+aliveButton2 = split[3];
+  }
+         
+
+      const alievTxtNew = aliveTxt;
+      const buttons = [
+        { buttonId: "1", buttonText: { displayText: aliveButton1}, type: 1, },
+        { buttonId: "2", buttonText: { displayText: aliveButton2}, type: 1, },
+      ]
+
+const templateButtons = {
+      image: { url: aliveImgUrl },
+      caption: alievTxtNew,
+      footer: config.exif.footer,
+      buttons,
+    };
+
+    await client.sendMessage(message.from, templateButtons, { quoted: message });
+});
+
+const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
+            + 'VERSION:3.0\n' 
+            + 'FN:'+Config.PACKNAME+'\n' // full name
+            + 'ORG:'+Config.FOOTER+';\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid='+Config.SUDO+':'+Config.SUDO+'\n' // WhatsApp ID + phone number
+            + 'END:VCARD'
+ inrl({pattern: ['owner'], desc: "to check whether", sucReact: "🥺", category: ['all']},   async (message, client) => {
+ await client.sendMessage( message.from, { contacts:{ displayName:`${Config.BOT_INFO.split(",")[0]}`, contacts: [{ vcard }],}})
+});
+inrl(
+  {
+    pattern: ["script"],
+    desc: "to check the bot status",
+    sucReact: "🥵",
+    category: ["system", "all"],
+  },
+  async (message, client) => {
+      const Message = {
       image: { url: config.image.url.D_E_TMB },
-      caption: `╭═══〘${Config.ALIVETXT}〙═══⊷❍
+      caption: `╭═══〘${Config.BOT_INFO.split(",")[0]}〙═══⊷❍
 ┃☯︎╭──────────────
 ┃☯︎│
 ┃☯︎│ ᴏᴡɴᴇʀ :${Config.BOT_INFO.split(",")[1]}
 ┃☯︎│ ᴜꜱᴇʀ : ${message.client.pushName}
-┃☯︎│ ᴍᴏᴅᴇ : ${Config.WORKTYPE}
-┃☯︎│ ꜱᴇʀᴠᴇʀ : ʜᴇʀᴏᴋᴜ
-┃☯︎│ ᴛᴏᴛᴇʟ ʀᴀᴍ : 16.93 
-┃☯︎│ ᴀᴠᴀʟɪʙʟᴇ ʀᴀᴍ : 0.95
-┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴩᴀᴄᴇ : 512ᴍʙ
 ┃☯︎│ ᴠᴇʀꜱɪᴏɴ : ${Config.VERSION}
 ┃☯︎│ ɢɪᴛʜᴜʙ :`+Config.GIT+`
 ┃☯︎│ ᴡᴇʙꜱɪᴛᴇ :`+Config.WEB+`
-┃☯︎│ ᴅᴀᴛᴀʙᴀꜱᴇ : ɪ-ʙᴏᴛ-ꜱᴇʀᴠᴇʀ
 ┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ :`+Config.VIDEO+`
 ┃☯︎│ yᴏᴜᴛᴜʙᴇ :`+Config.YT+`
 ┃☯︎│
-┃☯︎│  ꧁--☠︎︎--㋛︎---༒︎---㋛︎--☠︎︎--꧂
-┃☯︎│              ${Config.BOT_INFO.split(",")[0]}
-┃☯︎│  ꧁--☠︎︎--㋛︎---༒︎---㋛︎--☠︎︎--꧂
-┃☯︎│ 
 ┃☯︎╰───────────────
 ╰═════════════════⊷`
     };
