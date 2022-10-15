@@ -11,6 +11,7 @@ module.exports = {
     FREE_TXT : process.env.FREE_TXT || 'inrlbotmd',
     U_STATUS: process.env.U_STATUS || 'true',
     ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD',
+    ALIVE_DATA : process.env.ALIVE_DATA || "aliveImgUrl;aliveText;alivebButtenText1;aliveTextButten2",
     MENTION: process.env.MENTION || 'on',
     BOT_INFO : process.env.BOT_INFO || "INRL-BOT-MD,INRL,https://i.imgur.com/DyLAuEh.jpg",
     BGMBOT : process.env.BGMBOT || 'false',
