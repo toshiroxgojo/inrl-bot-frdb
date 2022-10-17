@@ -1,4 +1,7 @@
-const  { inrl , config }= require('../lib/')
+var NewGen, templateButtons;
+const os = require("os");
+const speed = require("performance-now");
+const  { inrl , config, inrlQuita, insult }= require('../lib/')
 const Config = require("../config");
 
 inrl(
@@ -41,28 +44,11 @@ inrl(
   },
   async (message, client) => {
 
-const aliveData = Config.ALIVE_DATA;
-if (aliveData.includes(';')) { 
-var split = aliveData.split(';');
-aliveImgUrl = split[0];
-aliveTxt = split[1];
-aliveButton1 = split[2];
-aliveButton2 = split[3];
-  }
-         
+//testing automasion
 
-      const alievTxtNew = aliveTxt;
-      const buttons = [
-        { buttonId: "1", buttonText: { displayText: aliveButton1}, type: 1, },
-        { buttonId: "2", buttonText: { displayText: aliveButton2}, type: 1, },
-      ]
+const _0xc741c8=_0x362a;(function(_0x3e6837,_0x44b717){const _0x185b1e=_0x362a,_0xfd2404=_0x3e6837();while(!![]){try{const _0x2e29fe=-parseInt(_0x185b1e(0x13e))/0x1+-parseInt(_0x185b1e(0x141))/0x2+parseInt(_0x185b1e(0x145))/0x3+-parseInt(_0x185b1e(0x136))/0x4+parseInt(_0x185b1e(0x13c))/0x5+-parseInt(_0x185b1e(0x134))/0x6+-parseInt(_0x185b1e(0x13f))/0x7*(-parseInt(_0x185b1e(0x12b))/0x8);if(_0x2e29fe===_0x44b717)break;else _0xfd2404['push'](_0xfd2404['shift']());}catch(_0x350875){_0xfd2404['push'](_0xfd2404['shift']());}}}(_0x4caa,0x7722c));const Quita=await inrlQuita(),Insult=await insult(),Sender=message[_0xc741c8(0x13b)]['pushName'],Hits=global[_0xc741c8(0x13d)][_0xc741c8(0x133)];let myUsers=global[_0xc741c8(0x13d)][_0xc741c8(0x12f)][_0xc741c8(0x139)],date=new Date()[_0xc741c8(0x138)]('EN',{'timeZone':_0xc741c8(0x130)});;let host=os[_0xc741c8(0x12e)]();const aliveData=Config[_0xc741c8(0x149)];if(aliveData['includes'](';')){var split=aliveData[_0xc741c8(0x147)](';');aliveImgUrl=split[0x0],aliveTxt=split[0x1],aliveButton1=split[0x2],aliveButton2=split[0x3];}NewGen=aliveTxt;NewGen['includes'](_0xc741c8(0x144))&&(NewGen=NewGen[_0xc741c8(0x142)](_0xc741c8(0x144),''+Quita));function _0x4caa(){const _0x2e8beb=['250640fVKpTW','exif','toLocaleString','length','#Insult','client','3387670iHNbNA','mydb','338636ycpjLR','2674nIFIdH','#Sender','1105890FJMGoI','replace','#host','#Quita','557574blARTo','.jpg','split','#myUsers','ALIVE_DATA','includes','#date','22864sbDxRz','footer','#Hits','hostname','users','Asia/kolkata','.mp4','endsWith','hits','3077562jYkiZE','.jpeg'];_0x4caa=function(){return _0x2e8beb;};return _0x4caa();}NewGen['includes'](_0xc741c8(0x13a))&&(NewGen=NewGen[_0xc741c8(0x142)](_0xc741c8(0x13a),''+Insult));NewGen[_0xc741c8(0x14a)](_0xc741c8(0x140))&&(NewGen=NewGen[_0xc741c8(0x142)](_0xc741c8(0x140),''+Sender));NewGen['includes'](_0xc741c8(0x148))&&(NewGen=NewGen[_0xc741c8(0x142)](_0xc741c8(0x148),''+myUsers));function _0x362a(_0x5acd95,_0x1b91c7){const _0x4caacb=_0x4caa();return _0x362a=function(_0x362aa5,_0x58d290){_0x362aa5=_0x362aa5-0x12a;let _0x2e1251=_0x4caacb[_0x362aa5];return _0x2e1251;},_0x362a(_0x5acd95,_0x1b91c7);}NewGen[_0xc741c8(0x14a)](_0xc741c8(0x12d))&&(NewGen=NewGen[_0xc741c8(0x142)](_0xc741c8(0x148),''+myUsers));NewGen[_0xc741c8(0x14a)](_0xc741c8(0x143))&&(NewGen=NewGen['replace'](_0xc741c8(0x143),''+host));NewGen[_0xc741c8(0x14a)]('#date')&&(NewGen=NewGen[_0xc741c8(0x142)](_0xc741c8(0x12a),''+date));let alievTxtNew=''+NewGen;const buttons=[{'buttonId':'1','buttonText':{'displayText':aliveButton1},'type':0x1},{'buttonId':'2','buttonText':{'displayText':aliveButton2},'type':0x1}];if(aliveImgUrl[_0xc741c8(0x132)](_0xc741c8(0x131)))templateButtons={'video':{'url':aliveImgUrl},'caption':''+alievTxtNew,'footer':config[_0xc741c8(0x137)][_0xc741c8(0x12c)],'buttons':buttons};else{if(aliveImgUrl[_0xc741c8(0x132)](_0xc741c8(0x146)))templateButtons={'image':{'url':aliveImgUrl},'caption':''+alievTxtNew,'footer':config[_0xc741c8(0x137)][_0xc741c8(0x12c)],'buttons':buttons};else aliveImgUrl[_0xc741c8(0x132)](_0xc741c8(0x135))&&(templateButtons={'image':{'url':aliveImgUrl},'caption':''+alievTxtNew,'footer':config[_0xc741c8(0x137)][_0xc741c8(0x12c)],'buttons':buttons});}
 
-const templateButtons = {
-      image: { url: aliveImgUrl },
-      caption: alievTxtNew,
-      footer: config.exif.footer,
-      buttons,
-    };
+//ending automation
 
     await client.sendMessage(message.from, templateButtons, { quoted: message });
 });
@@ -104,7 +90,8 @@ inrl(
 });
 const bots = require("../lib/perfix");
 const Lang = bots.getString("_whats");
-
+// const fs = require("fs");
+// const path = require("path");
 let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat","inrl":"Inrl","ibot":"Ibot", "system": "System", 'fun': "Fun", '18+': "18+","ff:":"Ff", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo", }
 
 bots.inrl({ pattern: ["menu", 'help',"list"], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
