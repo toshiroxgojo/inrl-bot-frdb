@@ -1,7 +1,8 @@
 var NewGen, templateButtons;
 const os = require("os");
+const fs = require('fs');
 const speed = require("performance-now");
-const  { inrl , config, inrlQuita, insult }= require('../lib/')
+const  { inrl , config, inrlQuita, insult, randomStyle, styletext, listall, tiny, fetchJson }= require('../lib/')
 const Config = require("../config");
 
 inrl(
@@ -37,7 +38,7 @@ inrl({ pattern: ['del'], desc: "to create to delete unwanted grp msg by admins",
 
 //testing automasion
 
-function _0x529f(_0x13e07d,_0x1b4eb4){const _0x4cea4a=_0x4cea();return _0x529f=function(_0x529fa8,_0x496d09){_0x529fa8=_0x529fa8-0x179;let _0x35a062=_0x4cea4a[_0x529fa8];return _0x35a062;},_0x529f(_0x13e07d,_0x1b4eb4);}const _0x992782=_0x529f;(function(_0x772601,_0x5126b4){const _0x120eef=_0x529f,_0x5107aa=_0x772601();while(!![]){try{const _0x2ff08a=-parseInt(_0x120eef(0x180))/0x1+-parseInt(_0x120eef(0x19c))/0x2+-parseInt(_0x120eef(0x1a6))/0x3*(-parseInt(_0x120eef(0x19e))/0x4)+parseInt(_0x120eef(0x197))/0x5+parseInt(_0x120eef(0x191))/0x6+-parseInt(_0x120eef(0x189))/0x7*(parseInt(_0x120eef(0x196))/0x8)+parseInt(_0x120eef(0x183))/0x9;if(_0x2ff08a===_0x5126b4)break;else _0x5107aa['push'](_0x5107aa['shift']());}catch(_0x2e8753){_0x5107aa['push'](_0x5107aa['shift']());}}}(_0x4cea,0x7fb22),inrl({'pattern':[_0x992782(0x1a0),_0x992782(0x185),_0x992782(0x184)],'desc':_0x992782(0x17d),'sucReact':'🥰','category':[_0x992782(0x199),_0x992782(0x1a3)]},async(_0x21d1cf,_0x4e6530)=>{const _0x1b530b=_0x992782,_0x44617a=await inrlQuita(),_0x48978d=await insult(),_0x27ac4a=_0x21d1cf['client'][_0x1b530b(0x18c)],_0x3c6ac9=global[_0x1b530b(0x190)][_0x1b530b(0x187)],_0x4f9088=Config[_0x1b530b(0x1a7)],_0xbd7730=Config['YT'],_0x32756a=Config[_0x1b530b(0x17e)];let _0x6d1837=global[_0x1b530b(0x190)]['users'][_0x1b530b(0x1a4)],_0x14d5d0=new Date()[_0x1b530b(0x188)]('EN',{'timeZone':_0x1b530b(0x179)});;let _0x273daf=os[_0x1b530b(0x192)]();const _0x42244d=Config[_0x1b530b(0x19f)];if(_0x42244d[_0x1b530b(0x17a)](';')){var _0x1544ef=_0x42244d[_0x1b530b(0x18d)](';');aliveImgUrl=_0x1544ef[0x0],aliveTxt=_0x1544ef[0x1],aliveButton1=_0x1544ef[0x2],aliveButton2=_0x1544ef[0x3];}NewGen=aliveTxt;NewGen[_0x1b530b(0x17a)](_0x1b530b(0x19b))&&(NewGen=NewGen[_0x1b530b(0x18f)](_0x1b530b(0x19b),''+_0x44617a));NewGen['includes'](_0x1b530b(0x1a8))&&(NewGen=NewGen['replace'](_0x1b530b(0x1a8),''+_0x48978d));NewGen[_0x1b530b(0x17a)](_0x1b530b(0x17b))&&(NewGen=NewGen['replace'](_0x1b530b(0x17b),''+_0x27ac4a));NewGen[_0x1b530b(0x17a)](_0x1b530b(0x1a1))&&(NewGen=NewGen['replace'](_0x1b530b(0x1a1),''+_0x6d1837));NewGen['includes']('#Hits')&&(NewGen=NewGen[_0x1b530b(0x18f)]('#myUsers',''+_0x6d1837));NewGen[_0x1b530b(0x17a)](_0x1b530b(0x18b))&&(NewGen=NewGen[_0x1b530b(0x18f)](_0x1b530b(0x18b),''+_0x273daf));NewGen[_0x1b530b(0x17a)]('#date')&&(NewGen=NewGen['replace'](_0x1b530b(0x186),''+_0x14d5d0));NewGen[_0x1b530b(0x17a)](_0x1b530b(0x1a9))&&(NewGen=NewGen[_0x1b530b(0x18f)]('#Hits',''+_0x3c6ac9));NewGen[_0x1b530b(0x17a)]('#Git')&&(NewGen=NewGen[_0x1b530b(0x18f)](_0x1b530b(0x19a),''+_0x4f9088));NewGen['includes']('#Yt')&&(NewGen=NewGen['replace']('#Yt',''+_0xbd7730));let _0x45fcce=[],_0x1d93a5={'buttonId':'1','buttonText':{'displayText':aliveButton1},'type':0x1},_0x7e88a7={'buttonId':'2','buttonText':{'displayText':aliveButton2},'type':0x1};if(NewGen[_0x1b530b(0x17a)]('#Insta')){NewGen=NewGen['replace'](_0x1b530b(0x1a5),'');let _0x1d7c51={'index':0x1,'urlButton':{'displayText':_0x1b530b(0x193),'url':_0x32756a}};await _0x45fcce[_0x1b530b(0x198)](_0x1d7c51);}_0x45fcce[_0x1b530b(0x198)](_0x1d93a5),_0x45fcce[_0x1b530b(0x198)](_0x7e88a7);let _0x3b98ba=''+NewGen;if(aliveImgUrl['endsWith'](_0x1b530b(0x194)))templateButtons={'video':{'url':aliveImgUrl},'caption':''+_0x3b98ba,'footer':config[_0x1b530b(0x19d)][_0x1b530b(0x17f)],'buttons':_0x45fcce},await _0x4e6530[_0x1b530b(0x18a)](_0x21d1cf[_0x1b530b(0x181)],templateButtons,{'quoted':_0x21d1cf});else{if(aliveImgUrl[_0x1b530b(0x182)](_0x1b530b(0x1a2)))templateButtons={'image':{'url':aliveImgUrl},'caption':''+_0x3b98ba,'footer':config[_0x1b530b(0x19d)][_0x1b530b(0x17f)],'buttons':_0x45fcce},await _0x4e6530[_0x1b530b(0x18a)](_0x21d1cf[_0x1b530b(0x181)],templateButtons,{'quoted':_0x21d1cf});else aliveImgUrl['endsWith']('.jpeg')?(templateButtons={'image':{'url':aliveImgUrl},'caption':''+_0x3b98ba,'footer':config[_0x1b530b(0x19d)][_0x1b530b(0x17f)],'buttons':_0x45fcce},await _0x4e6530[_0x1b530b(0x18a)](_0x21d1cf[_0x1b530b(0x195)],templateButtons,{'quoted':_0x21d1cf})):await _0x4e6530[_0x1b530b(0x18a)](_0x21d1cf[_0x1b530b(0x181)],{'text':aliveTxt+_0x1b530b(0x18e)+_0x27ac4a+'\x0a\x0afor\x20adding\x20your\x20own\x20datas\x20like\x20coustmized\x20button\x0atype\x20the\x20same\x20type\x20as\x20wahts\x20you\x20want\x0a\x0aset-alive-value\x20\x20imgurl;alivetxt;buttonName1;2\x0a\x0aCurrentValue\x20:'+Config['ALIVE_DATA']+_0x1b530b(0x17c)},{'quoted':_0x21d1cf});}}));function _0x4cea(){const _0x4fd7ae=['1694346XzjnxZ','exif','576auVByf','ALIVE_DATA','alive','#myUsers','.jpg','all','length','#Insta','4650hAthbf','GIT','#Insult','#Hits','Asia/kolkata','includes','#Sender','\x0a\x0aif\x20need\x20coustmized\x20texts\x20like\x20Quita;insult;Inst_Url..\x20\x0a\x0a\x20add\x20whats\x20you\x20want\x20*withStarting#*\x20\x0a_ex_:Quita\x20:#Quita\x20\x0a\x20note\x20thet\x20the\x20fisrt\x20letter\x20is\x20_capitel_\x0a\x0avalues\x20is\x20:#Hits,#Sender,#Insult#Quita...\x0a#Insta,\x20#Yt,\x20#Git,','to\x20check\x20the\x20bot\x20status','INSTAGRAM','footer','763935XHTtpF','from','endsWith','16157376IKuDzt','system_status','bot','#date','hits','toLocaleString','27349DnjeZL','sendMessage','#host','pushName','split','\x0a\x0aiam\x20alive\x20Bro\x20','replace','mydb','3398952fBEkHH','hostname','ɪɴꜱᴛᴀɢʀᴀᴍ','.mp4','sender','1872moVhav','2317160FbUlUx','push','system','#Git','#Quita'];_0x4cea=function(){return _0x4fd7ae;};return _0x4cea();}
+function _0x3138(){const _0x1b3883=['#date','#host','.jpeg','endsWith','3960CsaQNY','ALIVE_DATA','8zqvtEc','all','footer','.jpg','Asia/kolkata','GIT','5PYeZIS','system','@Style','sendMessage','bot','#Insta','hostname','#myUsers','6199710zNugSV','push','includes','1184204olCXWP','#Git','sender','exif','ɪɴꜱᴛᴀɢʀᴀᴍ','users','pushName','system_status','7480KtwWlv','mydb','6829543qLLJSu','#Insult','#Hits','length','964728UdbBEc','#Yt','INSTAGRAM','167904mpEDUo','2457556SAqCZU','#Quita','1lcAdrK','#Sender','from','\x0a\x0aiam\x20alive\x20Bro\x20','replace','client','toLocaleString','253cilpGX','alive','\x0a\x0afor\x20adding\x20your\x20own\x20datas\x20like\x20coustmized\x20button\x0atype\x20the\x20same\x20type\x20as\x20wahts\x20you\x20want\x0a\x0aset-alive-value\x20\x20imgurl;alivetxt;buttonName1;2\x0a\x0aCurrentValue\x20:'];_0x3138=function(){return _0x1b3883;};return _0x3138();}function _0x23c5(_0x3f70e6,_0x458251){const _0x31385d=_0x3138();return _0x23c5=function(_0x23c5ca,_0x7d6395){_0x23c5ca=_0x23c5ca-0xa7;let _0x316408=_0x31385d[_0x23c5ca];return _0x316408;},_0x23c5(_0x3f70e6,_0x458251);}const _0x438714=_0x23c5;(function(_0x2139b8,_0x588ba7){const _0x1e3e9e=_0x23c5,_0x4dddef=_0x2139b8();while(!![]){try{const _0x326cb8=-parseInt(_0x1e3e9e(0xac))/0x1*(parseInt(_0x1e3e9e(0xaa))/0x2)+parseInt(_0x1e3e9e(0xa9))/0x3+parseInt(_0x1e3e9e(0xcd))/0x4*(parseInt(_0x1e3e9e(0xc2))/0x5)+parseInt(_0x1e3e9e(0xca))/0x6+-parseInt(_0x1e3e9e(0xd7))/0x7*(parseInt(_0x1e3e9e(0xbc))/0x8)+-parseInt(_0x1e3e9e(0xba))/0x9*(parseInt(_0x1e3e9e(0xd5))/0xa)+parseInt(_0x1e3e9e(0xb3))/0xb*(parseInt(_0x1e3e9e(0xdb))/0xc);if(_0x326cb8===_0x588ba7)break;else _0x4dddef['push'](_0x4dddef['shift']());}catch(_0x59272b){_0x4dddef['push'](_0x4dddef['shift']());}}}(_0x3138,0xab193),inrl({'pattern':[_0x438714(0xb4),_0x438714(0xc6),_0x438714(0xd4)],'desc':'to\x20check\x20the\x20bot\x20status','sucReact':'🥰','category':[_0x438714(0xc3),_0x438714(0xbd)]},async(_0x38054c,_0x434cb7)=>{const _0x44a1e6=_0x438714,_0x40ce71=await inrlQuita(),_0x130a3e=await insult(),_0x23cc98=_0x38054c[_0x44a1e6(0xb1)][_0x44a1e6(0xd3)],_0x28818e=global[_0x44a1e6(0xd6)]['hits'],_0x499d0a=Config[_0x44a1e6(0xc1)],_0x2a386d=Config['YT'],_0xb6a5fd=Config[_0x44a1e6(0xa8)];let _0x38e0f6=global['mydb'][_0x44a1e6(0xd2)][_0x44a1e6(0xda)],_0x585db3=new Date()[_0x44a1e6(0xb2)]('EN',{'timeZone':_0x44a1e6(0xc0)});;let _0x57dc58=os[_0x44a1e6(0xc8)]();const _0x313886=Config[_0x44a1e6(0xbb)];if(_0x313886[_0x44a1e6(0xcc)](';')){var _0xb2df83=_0x313886['split'](';');aliveImgUrl=_0xb2df83[0x0],aliveTxt=_0xb2df83[0x1],aliveButton1=_0xb2df83[0x2],aliveButton2=_0xb2df83[0x3];}NewGen=aliveTxt;NewGen[_0x44a1e6(0xcc)]('#Quita')&&(NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xab),''+_0x40ce71));NewGen[_0x44a1e6(0xcc)]('#Insult')&&(NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xd8),''+_0x130a3e));NewGen[_0x44a1e6(0xcc)](_0x44a1e6(0xad))&&(NewGen=NewGen[_0x44a1e6(0xb0)]('#Sender',''+_0x23cc98));NewGen['includes'](_0x44a1e6(0xc9))&&(NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xc9),''+_0x38e0f6));NewGen[_0x44a1e6(0xcc)](_0x44a1e6(0xd9))&&(NewGen=NewGen[_0x44a1e6(0xb0)]('#myUsers',''+_0x38e0f6));NewGen[_0x44a1e6(0xcc)](_0x44a1e6(0xb7))&&(NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xb7),''+_0x57dc58));NewGen[_0x44a1e6(0xcc)](_0x44a1e6(0xb6))&&(NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xb6),''+_0x585db3));NewGen[_0x44a1e6(0xcc)](_0x44a1e6(0xd9))&&(NewGen=NewGen['replace'](_0x44a1e6(0xd9),''+_0x28818e));NewGen[_0x44a1e6(0xcc)](_0x44a1e6(0xce))&&(NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xce),''+_0x499d0a));NewGen['includes'](_0x44a1e6(0xa7))&&(NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xa7),''+_0x2a386d));let _0x5839c5=[],_0x39af8b={'buttonId':'1','buttonText':{'displayText':aliveButton1},'type':0x1},_0x1f8fd9={'buttonId':'2','buttonText':{'displayText':aliveButton2},'type':0x1};if(NewGen[_0x44a1e6(0xcc)](_0x44a1e6(0xc7))){NewGen=NewGen[_0x44a1e6(0xb0)](_0x44a1e6(0xc7),'');let _0x202d4c={'index':0x1,'urlButton':{'displayText':_0x44a1e6(0xd1),'url':_0xb6a5fd}};await _0x5839c5[_0x44a1e6(0xcb)](_0x202d4c);}_0x5839c5[_0x44a1e6(0xcb)](_0x39af8b),_0x5839c5[_0x44a1e6(0xcb)](_0x1f8fd9);_0x313886[_0x44a1e6(0xcc)](_0x44a1e6(0xc4))&&(NewGen=NewGen['replace'](_0x44a1e6(0xc4),''),NewGen=randomStyle(NewGen));let _0x580dfe=''+NewGen;if(aliveImgUrl[_0x44a1e6(0xb9)]('.mp4'))templateButtons={'video':{'url':aliveImgUrl},'caption':''+_0x580dfe,'footer':config[_0x44a1e6(0xd0)]['footer'],'buttons':_0x5839c5},await _0x434cb7['sendMessage'](_0x38054c['from'],templateButtons,{'quoted':_0x38054c});else{if(aliveImgUrl[_0x44a1e6(0xb9)](_0x44a1e6(0xbf)))templateButtons={'image':{'url':aliveImgUrl},'caption':''+_0x580dfe,'footer':config[_0x44a1e6(0xd0)]['footer'],'buttons':_0x5839c5},await _0x434cb7[_0x44a1e6(0xc5)](_0x38054c['from'],templateButtons,{'quoted':_0x38054c});else aliveImgUrl[_0x44a1e6(0xb9)](_0x44a1e6(0xb8))?(templateButtons={'image':{'url':aliveImgUrl},'caption':''+_0x580dfe,'footer':config[_0x44a1e6(0xd0)][_0x44a1e6(0xbe)],'buttons':_0x5839c5},await _0x434cb7['sendMessage'](_0x38054c[_0x44a1e6(0xcf)],templateButtons,{'quoted':_0x38054c})):await _0x434cb7['sendMessage'](_0x38054c[_0x44a1e6(0xae)],{'text':aliveTxt+_0x44a1e6(0xaf)+_0x23cc98+_0x44a1e6(0xb5)+Config[_0x44a1e6(0xbb)]+'\x0a\x0aif\x20need\x20coustmized\x20texts\x20like\x20Quita;insult;Inst_Url..\x20\x0a\x0a\x20add\x20whats\x20you\x20want\x20*withStarting#*\x20\x0a_ex_:Quita\x20:#Quita\x20\x0a\x20note\x20thet\x20the\x20fisrt\x20letter\x20is\x20_capitel_\x0a\x0avalues\x20is\x20:#Hits,#Sender,#Insult#Quita...\x0a#Insta,\x20#Yt,\x20#Git,'},{'quoted':_0x38054c});}}));
 
 //ending automation
 
@@ -127,7 +128,7 @@ bots.categories.map(category => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
       if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *➪* ```" + prefix + cmd + ' '+"\n"+"│```\n")}
     }); 
-    CMD_HELP += "│\n│ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ${Config.BOT_INFO.split(',')[0]}\n╰═════════════════⊷";
+    CMD_HELP += "│\n│ ᴄʀᴇᴀᴛᴇᴅ ʙʏ "+`${Config.BOT_INFO.split(',')[0]}`+"\n╰═════════════════⊷";
     await client.sendMessage( message.from,{ image: { url: Config.ALIVE_DATA.split(';')[0] }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
@@ -275,3 +276,103 @@ let returNtxt = await r_text[i]
     global.catchError = false;
   }
 );
+inrl(
+	   {
+		pattern: ['fancy'],
+		desc: 'To convert text to random style as you want',
+                sucReact: "🙀",
+                category: ["system", "all"],
+	   },
+	async (message, client) => {
+     const text = message.client.text;
+if(!text){
+let NewText =`
+Enter A Text Quary
+_ex_ : Enter a text like this *faancy 55,hi*
+1 Fᴀɴᴄʏ
+2 ʎɔuɐℲ
+3 F⃣   a⃣   n⃣   c⃣   y⃣
+4 F⃞    a⃞    n⃞    c⃞    y⃞
+5 ʏɔᴎɒꟻ
+6 F̸̧̥̠͔̯̻̱̋̏̾͗̈́͝a̵̟̠̯̐n̷̡̤̪͓͖̹̯̙͂̊͋̊̈́̐͑̋̏c̴̯̒͆́y̶͖̘̹̦͆̎̑͗͝
+7 Ⓕⓐⓝⓒⓨ
+8 F̶a̶n̶c̶y̶
+9 F̴a̴n̴c̴y̴
+10 F̷a̷n̷c̷y̷
+11 F̲a̲n̲c̲y̲
+12 F̳a̳n̳c̳y̳
+13 F♥a♥n♥c♥y
+14 F͎a͎n͎c͎y͎
+15 F͓̽a͓̽n͓̽c͓̽y͓̽
+16 ☞︎♋︎■︎♍︎⍓︎
+17 Fａncｙ
+18 ҒΔΠCΨ
+19 千卂几匚ㄚ
+20 ꎇꍏꈤꏳꌩ
+21 ቻልክርሃ
+22 𝐅𝐚𝐧𝐜𝐲
+23 𝑭𝒂𝒏𝒄𝒚
+24 𝐹𝑎𝑛𝑐𝑦
+25 ᠻꪖꪀᥴꪗ
+26 𝙵𝚊𝚗𝚌𝚢
+27 fคຖ¢ฯ
+28 ʄąŋƈყ
+29 ｷﾑ刀ᄃﾘ
+30 千卂几匚ㄚ
+31 🄵🄰🄽🄲🅈
+32 ᎦᏗᏁፈᎩ
+33 ᖴᗩᑎᑕY
+34 ʄǟռƈʏ
+35 𝙵𝚊𝚗𝚌𝚢
+36 𝙁𝙖𝙣𝙘𝙮
+37 𝗙𝗮𝗻𝗰𝘆
+38 𝐅𝐚𝐧𝐜𝐲
+39 𝘍𝘢𝘯𝘤𝘺
+40 Fαɳƈყ
+41 ₣₳₦₵Ɏ
+42 £åñ¢¥
+43 ƒαη¢у
+44 FΛПᄃY
+45 Ƒąղçվ
+46 Fₐₙcy
+47 ᶠᵃⁿᶜʸ
+48 Ŧคภςץ
+49 𝔽𝕒𝕟𝕔𝕪
+50 𝕱𝖆𝖓𝖈𝖞
+51 🅵🅰🅽🅲🆈
+52 𝓕𝓪𝓷𝓬𝔂
+53 𝔉𝔞𝔫𝔠𝔶
+54 Ｆａｎｃｙ
+55 𝑭𝒂𝒏𝒄𝒚
+56 𝐹𝛥𝛮𝐶𝑌
+57 𝙁𝞓𝞜𝘾𝙔
+58 𝐅𝚫𝚴𝐂𝐘
+59 ᖴᗩᑎᑕᎩ
+_ex_ : Enter a text like this *faancy 55,hi*`
+return await client.sendMessage(message.from, { text : NewText });
+    }
+  // if (text.includes(',')) {
+         var split = text.split(',');
+         Num = split[0] || "55";
+         Text = split[1] || "enter A text with number ex 31,text";
+//}
+let ThenText = await styletext(Text, Num)
+
+return await client.sendMessage(message.from, { text : ThenText });
+    }
+);
+inrl({pattern: ['emojiimix'], desc: "to emojis to single sticker",sucReact: "🌇",  category: ["all"]}, async (message, client) => {
+           const text = message.client.text;
+	    if (!text) return await client.sendMessage( message.from, { text: 'send to emojis \n\n _ex_:❣️+🥵'}, { quoted: message });
+if (text.includes('+')) {
+         var split = text.split('+');
+
+         emoji1= split[0];
+         emoji2 = split[1];
+        }
+const url = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
+for (let res of url.results) {
+//console.log("inrl="+res.url)
+await client.sendImageAsSticker(message.from, res.url, message, { packname: "", author: "", categories: res.tags })
+        }
+});
