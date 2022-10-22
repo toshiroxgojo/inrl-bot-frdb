@@ -22,7 +22,7 @@ module.exports = {
     CALL_BLOCK : process.env.CALL_BLOCK || "false",
     ANTI_LINK_ALL : process.env.ANTI_LINK_ALL || "false", //now thi scmd is not creted creating
     FACK_REMOVE : process.env.FACK_REMOVE || "2222", //now thi scmd is not creted creating
-    SET_ANTI_LINK : process.env.SET_ANTI_LINK || "instagram.com", "xnxx.com", //now thi scmd is not creted creating
+    SET_ANTI_LINK : process.env.SET_ANTI_LINK || "instagram.com", //now thi scmd is not creted creating
     LANG :process.env.LANG || 'EN', //values are ml, en only
     OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
