@@ -24,7 +24,7 @@
         "BAD_WORD_TEXT": {
             "description": "For kicking group when bad words example :xxx, xnxx, fuck,...",
             "required": false,
-            "value": 'xxx, xnxx'
+            "value": "xxx, xnxx"
         },
         "SET_ANTI_LINK": {
             "description": "For setting link ban as you want ex :youtube, instagram;109301902809.g.us {not thets the link contain orginal link text}",
