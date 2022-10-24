@@ -27,9 +27,7 @@ module.exports = {
     OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
     PROCFILE_DATA : process.env.PROCFILE_DATA || "💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ",
-    ANTILINK : process.env.ANTILINK || 'youtube',
-    ANTIFAKE : process.env.ANTIFAKE || '+2222',
-    ALL_LINK_BAN : process.env.ALL_LINK_BAN || 'false',
+    BAD_WORD_TEXT : process.env.BAD_WORD_TEXT || 'xxx, xnxx',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
