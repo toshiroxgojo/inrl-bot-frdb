@@ -21,6 +21,26 @@
             "required": false,
             "value":"true"
         },
+        "BAD_WORD_TEXT": {
+            "description": "For kicking group when bad words example :xxx, xnxx, fuck,...",
+            "required": false,
+            "value": 'xxx, xnxx'
+        },
+        "SET_ANTI_LINK": {
+            "description": "For setting link ban as you want ex :youtube, instagram;109301902809.g.us {not thets the link contain orginal link text}",
+            "required": false,
+            "value":"instagram.com"
+        },
+        "FACK_REMOVE": {
+            "description": "For setting remove fake number from the group ex: 91,92,93,94;1234567890.g.us;0987654321.g.us",
+            "required": false,
+            "value":"2222"
+        },
+        "ANTI_LINK_ALL": {
+            "description": "For setting all link ban ex true;1987630273028.g.us;09708759768.g.us",
+            "required": false,
+            "value":"false"
+        },
         "ALIVE_DATA": {
             "description": "For chenging alivetext, img, buttenName",
             "required": false,
