@@ -18,11 +18,16 @@ module.exports = {
     WORKTYPE: process.env.WORKTYPE || 'public',
     PM_BLOCK : process.env.PM_BLOCK || "false",
     WELCOME_SET : process.env.WELCOME_SET || "true", //now thi scmd is not creted creating
-    EXIT_MSG : process.env.EXIT_MSG || "true", //now thi scmd is not creted creating
+    EXIT_MSG : process.env.EXIT_MSG || "true", //now this cmd  was not created
     CALL_BLOCK : process.env.CALL_BLOCK || "false",
-    ANTI_LINK_ALL : process.env.ANTI_LINK_ALL || "false", //now thi scmd is not creted creating
-    FACK_REMOVE : process.env.FACK_REMOVE || "2222", //now thi scmd is not creted creating
-    SET_ANTI_LINK : process.env.SET_ANTI_LINK || "instagram.com", //now thi scmd is not creted creating
+    ANTI_LINK_ALL : process.env.ANTI_LINK_ALL || "false", //now this cmd  creted!use with casesencitivity
+    FACK_REMOVE : process.env.FACK_REMOVE || "2222", //sorry about thets! This cmd was created but don't work 
+    SET_ANTI_LINK : process.env.SET_ANTI_LINK || "instagram.com", //now this cmd creted 
+    MENSION: {
+        MENSION_AUDIO : process.env.MENSION_AUDIO || 'https://i.imgur.com/5NZDe8m.mp4,https://i.imgur.com/c6wEqlx.mp4,https://i.imgur.com/5lniXiJ.mp4,https://i.imgur.com/kYzbJbx.mp4',
+        MENSION_IMG : process.env.MENSION_IMG || 'https://imgur.com/ggvhL6C.jpg, https://i.imgur.com/DyLAuEh.jpg, https://imgur.com/AelfUJg.jpg',
+        MENSION_TEXT : process.env.MENSION_TEXT || 'ᴊᴜꜱᴛ ᴛᴇꜱᴛɪɴɢ, 𝚒𝚝𝚜𝚖𝚎 𝚒𝚗𝚛𝚕, https://chat.whatsapp.com/CUJuk1xPEpR8av9h7DDGNO'
+    },
     LANG :process.env.LANG || 'EN', //values are ml, en only
     OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
