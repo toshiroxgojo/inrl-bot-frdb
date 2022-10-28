@@ -16,6 +16,21 @@
             "description": "For updating bot and setting vars remotely",
             "required": true
         },
+       "MENSION_TEXT": {
+            "description": "For updating bot and setting vars remotely",
+            "required": false,
+            "value":"ᴊᴜꜱᴛ ᴛᴇꜱᴛɪɴɢ, 𝚒𝚝𝚜𝚖𝚎 𝚒𝚗𝚛𝚕, https://chat.whatsapp.com/CUJuk1xPEpR8av9h7DDGNO"
+        },
+       "MENSION_AUDIO": {
+            "description": "For updating bot and setting vars remotely",
+            "required": false,
+            "value":"https://i.imgur.com/5NZDe8m.mp4,https://i.imgur.com/c6wEqlx.mp4,https://i.imgur.com/5lniXiJ.mp4,https://i.imgur.com/kYzbJbx.mp4"
+        },
+        "MENSION_IMG": {
+            "description": "For updating bot and setting vars remotely",
+            "required": false,
+            "value":"https://imgur.com/ggvhL6C.jpg, https://i.imgur.com/DyLAuEh.jpg, https://imgur.com/AelfUJg.jpg"
+        },
         "U_STATUS": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
