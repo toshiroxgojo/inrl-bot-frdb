@@ -140,11 +140,6 @@
             "required": false,
             "value":"ɪɴʀʟ-ᴍᴅ"
         },
-        "ALIVE": {
-            "description": "For updating  profileStatus by using bot",
-            "required": false,
-            "value":"https://i.imgur.com/DyLAuEh.jpg"
-        },
         "INSTAGRAM": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
@@ -185,15 +180,15 @@
             "required": false,
             "value":"https://tinyurl.com/f5wh55mk"
         },
-        "IMG11": {
+        "AUDIO_DATA": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"https://i.imgur.com/DyLAuEh.jpg"
+            "value":"inrl, ibot,https://i.imgur.com/DyLAuEh.jpg"
         },
-        "IMG12": {
+        "STICKER_DATA": {
             "description": "For updating  profileStatus by using bot",
             "required": false,
-            "value":"https://imgur.com/AelfUJg.jpg"
+            "value":"inrl, ibot,https://i.imgur.com/DyLAuEh.jpg"
         },
         "WORKTYPE": {
             "description": "bot mode",
