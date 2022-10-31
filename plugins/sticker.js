@@ -4,6 +4,7 @@ const { isUrl } = require("../lib/Function");
 const lang = bots.getString("whats_bot");
 const fs = require("fs");
 const path = require("path");
+const Config = require('../config');
 
 bots.inrl(
   {
@@ -19,16 +20,16 @@ bots.inrl(
         let download = await message.quoted.download();
         client.sendFile(message.from, download, "", message, {
           asSticker: true,
-          author: bots.config.exif.author,
-          packname: bots.config.exif.packname,
+          author: Config.STICKER_DATA.split(',')[0],
+          packname: Config.STICKER_DATA.split(',')[1],
           categories: ["😄", "😊"],
         });
       } else if (/image|video|sticker/.test(message.client.mime)) {
         let download = await message.download();
         client.sendFile(message.from, download, "", message, {
           asSticker: true,
-          author: bots.config.exif.author,
-          packname: bots.config.exif.packname,
+          author: Config.STICKER_DATA.split(',')[0],
+          packname: Config.STICKER_DATA.split(',')[1],
           categories: ["😄", "😊"],
         });
       } else if (message.quoted && message.quoted.mentions[0]) {
@@ -38,8 +39,8 @@ bots.inrl(
         );
         client.sendFile(message.from, url, "", message, {
           asSticker: true,
-          author: bots.config.exif.author,
-          packname: bots.config.exif.packname,
+          author: Config.STICKER_DATA.split(',')[0],
+          packname: Config.STICKER_DATA.split(',')[1],
           categories: ["😄", "😊"],
         });
       } else if (isUrl(message.client.text)) {
@@ -51,8 +52,8 @@ bots.inrl(
             message,
             {
               asSticker: true,
-              author: bots.config.exif.author,
-              packname: bots.config.exif.packname,
+              author: Config.STICKER_DATA.split(',')[0],
+              packname: Config.STICKER_DATA.split(',')[1],
               categories: ["😄", "😊"],
             }
           );
@@ -78,8 +79,8 @@ bots.inrl(
           await delay(1000);
           client.sendFile(message.from, url, "", message, {
             asSticker: true,
-            author: bots.config.exif.author,
-            packname: bots.config.exif.packname,
+            author: Config.STICKER_DATA.split(',')[0],
+            packname: Config.STICKER_DATA.split(',')[1],
             categories: ["😄", "😊"],
           });
         }
@@ -89,8 +90,8 @@ bots.inrl(
         let download = await client.downloadMediaMessage(_message);
         client.sendFile(message.from, download, "", message, {
           asSticker: true,
-          author: config.exif.author,
-          packname: bots.config.exif.packname,
+          author: Config.STICKER_DATA.split(',')[0],
+          packname: Config.STICKER_DATA.split(',')[1],
           categories: ["😄", "😊"],
         });
       } else if (message.quoted && message.quoted.type == "buttonsMessage") {
@@ -99,8 +100,8 @@ bots.inrl(
         let download = await client.downloadMediaMessage(_message);
         client.sendFile(message.from, download, "", message, {
           asSticker: true,
-          author: bots.config.exif.author,
-          packname: bots.config.exif.packname,
+          author: Config.STICKER_DATA.split(',')[0],
+          packname: Config.STICKER_DATA.split(',')[1],
           categories: ["😄", "😊"],
         });
       } else {
