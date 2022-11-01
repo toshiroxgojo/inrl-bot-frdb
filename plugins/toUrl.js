@@ -32,7 +32,7 @@ let media = await client.downloadAndSaveMediaMessage(_message)
 let text = message.client.text;
 if(text.includes(' ')){ text = text.trim() }
 let imagee = Config.AUDIO_DATA;
-if(imagee.includes(' ')){ imagee = img.trim() }
+if(imagee.includes(' ')){ imagee = imagee.trim() }
 if(text.includes(',') /*&& text.split(',')[2] !== undefined */){ let img = /*text.split(',')[2] } else { img = */imagee.split(',')[2] }
 console.log("error="+img);
 let imgForUdio = await urlBufferToImgFile(img,'./media/imagForAudio.jpg');
