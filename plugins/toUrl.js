@@ -34,7 +34,7 @@ if(text.includes(' ')){ text = text.trim() }
 let img = Config.AUDIO_DATA.split(',')[2];
 if(img.includes(' ')){ img = img.trim() }
 if(text.split(',')[2]){ img = text.split(',')[2] }
-console.log(img);
+console.log("error="+img);
 let imgForUdio = await urlBufferToImgFile(img,'./media/imagForAudio.jpg');
     await AudioMetaData(imgForUdio, media, message, client);
 })
