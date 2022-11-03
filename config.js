@@ -28,7 +28,7 @@ module.exports = {
         MENSION_IMG : process.env.MENSION_IMG || 'https://imgur.com/ggvhL6C.jpg, https://i.imgur.com/DyLAuEh.jpg, https://imgur.com/AelfUJg.jpg',
         MENSION_TEXT : process.env.MENSION_TEXT || 'ᴊᴜꜱᴛ ᴛᴇꜱᴛɪɴɢ, 𝚒𝚝𝚜𝚖𝚎 𝚒𝚗𝚛𝚕, https://chat.whatsapp.com/CUJuk1xPEpR8av9h7DDGNO'
     },
-    LANG :process.env.LANG || 'EN', //values are ml, en only
+    LANG : (process.env.LANGUAG || 'EN').toLowerCase(), //values are ml, en only
     OWNER : process.env.OWNER || "917593919575",
     BRANCH: 'master',
     PROCFILE_DATA : process.env.PROCFILE_DATA || "💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ",
