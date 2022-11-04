@@ -17,17 +17,17 @@
             "required": true
         },
        "MENSION_TEXT": {
-            "description": "For updating bot and setting vars remotely",
+            "description": " to set mension text ex : hi, ha, url",
             "required": false,
             "value":"ᴊᴜꜱᴛ ᴛᴇꜱᴛɪɴɢ, 𝚒𝚝𝚜𝚖𝚎 𝚒𝚗𝚛𝚕, https://chat.whatsapp.com/CUJuk1xPEpR8av9h7DDGNO"
         },
        "MENSION_AUDIO": {
-            "description": "For updating bot and setting vars remotely",
+            "description": "to send audios when someone mension you if you have need many audios set your udios by,",
             "required": false,
             "value":"https://i.imgur.com/5NZDe8m.mp4,https://i.imgur.com/c6wEqlx.mp4,https://i.imgur.com/5lniXiJ.mp4,https://i.imgur.com/kYzbJbx.mp4"
         },
         "MENSION_IMG": {
-            "description": "For updating bot and setting vars remotely",
+            "description": "to set mension img, if some one mension you in grp you will send datas by this data",
             "required": false,
             "value":"https://imgur.com/ggvhL6C.jpg, https://i.imgur.com/DyLAuEh.jpg, https://imgur.com/AelfUJg.jpg"
         },
@@ -82,116 +82,111 @@
             "value":"💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ"
         },
         "BOT_INFO": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "change bot info to whats you want genrely use in menu, script such generl plugins",
             "required": false,
             "value":"INRL-BOT-MD,INRL,https://i.imgur.com/DyLAuEh.jpg"
         },
         "GROUP_CHAT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "For working chat bot in grp vlaues is true & false",
             "required": false,
             "value":"false"
         },
         "FREE_TXT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set pdf name this data is used to naming your  pdf",
             "required": false,
             "value":"inrlbotmd"
         },
         "CHATBOT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set chat bot in pm msgs value are true & false",
             "required": false,
             "value":"null"
         },
         "ALIVETXT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "currently no uses in this data",
             "required": false,
             "value":"INRL-BOT-MD"
         },
         "SUDO": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set bot creater as  you wnat by adding here if you need to add many sudo number use this,",
             "required": false,
             "value":"917593919575"
         },
         "OWNER": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set bot owner who want to you",
             "required": false,
             "value":"917593919575"
         },
         "LANG": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "set a languge as you want its use full in tts plugins",
             "required": false,
             "value":"ml"
         },
         "BGMBOT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set bot s an bgm bot value ar true & fales",
             "required": false,
             "value":"false"
         },
         "PASSWORD": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set passwerd here for using bad plugin such as x#*",
             "required": false
         },
-        "MENTION": {
-            "description": "For updating  profileStatus by using bot",
+        "READ_CHAT": {
+            "description": "to read messages automaticly values ar true & false",
             "required": false,
-            "value":"on"
+            "value":"false"
         },
         "FOOTER": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set footer on button msgs",
             "required": false,
             "value":"ɪɴʀʟ-ᴍᴅ"
         },
         "INSTAGRAM": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "set ig url her generly uses in alive, menu plugins",
             "required": false,
             "value":"https://instagram.com/_user_not_define"
         },
         "PACKNAME": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set your own sticker datas like",
             "required": false,
             "value":"ɪɴʀʟ-ʙᴏᴛ"
         },
         "GIT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set your git url",
             "required": false,
             "value":"https://tinyurl.com/3ex3e48e"
         },
         "WEB": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to seg you website url",
             "required": false,
             "value":"https://tinyurl.com/ycks3s8p"
         },
         "YT": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set you yt url",
             "required": false,
             "value":"https://tinyurl.com/36r3668n"
         },
         "CAPTION": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to change images videos caption, work in download plugins",
             "required": false,
             "value":"_created by inrl-bot_"
         },
-        "VIDEO": {
-            "description": "For updating  profileStatus by using bot",
-            "required": false,
-            "value":"https://tinyurl.com/3x38ajmn"
-        },
         "WAGRP": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set your own grp url",
             "required": false,
             "value":"https://tinyurl.com/f5wh55mk"
         },
         "AUDIO_DATA": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set audio data as you want it work in download and take plugins",
             "required": false,
             "value":"inrl, ibot,https://i.imgur.com/DyLAuEh.jpg"
         },
         "STICKER_DATA": {
-            "description": "For updating  profileStatus by using bot",
+            "description": "to set your own stixker data as packname and..",
             "required": false,
             "value":"inrl, ibot,https://i.imgur.com/DyLAuEh.jpg"
         },
         "WORKTYPE": {
-            "description": "bot mode",
+            "description": "corrently not useble",
             "required": false,
             "value":"public"
         },
