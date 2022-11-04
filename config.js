@@ -13,7 +13,6 @@ module.exports = {
     ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD',
     ALIVE_DATA : process.env.ALIVE_DATA || "https://i.imgur.com/DyLAuEh.jpg,aliveText,alivebButtenText1,aliveTextButten2",
     READ_CHAT : process.env.READ_CHAT || "false", //values are true and false only if true read all chats
-    MENTION: process.env.MENTION || 'on',
     BOT_INFO : process.env.BOT_INFO || "INRL-BOT-MD,INRL,https://i.imgur.com/DyLAuEh.jpg",
     BGMBOT : process.env.BGMBOT || 'false',
     WORKTYPE: process.env.WORKTYPE || 'public',
