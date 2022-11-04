@@ -1,4 +1,4 @@
-const { inrl, sendUrl, tinyUrl, webSs, pdfGen, urlBufferToImgFile, AudioMetaData  } = require('../lib')
+const { inrl, sendUrl, tinyUrl, webSs, pdfGen, BufferToFile, AudioMetaData  } = require('../lib')
 const Config = require('../config');
 const fs = require('fs');
 const { readFile, writeFile } = require('fs/promises')
@@ -34,6 +34,6 @@ if(text.includes(' ')){ text = text.trim() }
 let img = Config.AUDIO_DATA.split(',')[2];
 if(img.includes(' ')){ img = img.trim() }
 img = text.split(',')[2] ? text.split(',')[2] : img;
-let imgForUdio = await urlBufferToImgFile(img,'./media/imagForAudio.jpg');
+let imgForUdio = await BufferToFile(img,'./media/imagForAudio.jpg');
     await AudioMetaData(imgForUdio, media, message, client);
 })
