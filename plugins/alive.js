@@ -186,3 +186,164 @@ bots.inrl({ pattern: [`cmds-count`], sucReact: "🆗", category: ["all", "system
     return await client.sendErrorMessage( message.from, error, message.key, message);
   }
 });
+const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
+            + 'VERSION:3.0\n' 
+            + 'FN:'+Config.PACKNAME+'\n' // full name
+            + 'ORG:'+Config.FOOTER+';\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid='+Config.SUDO+':'+Config.SUDO+'\n' // WhatsApp ID + phone number
+            + 'END:VCARD'
+ inrl({pattern: ['owner'], desc: "to check whether", sucReact: "🥺", category: ['all']},   async (message, client) => {
+ await client.sendMessage( message.from, { contacts:{ displayName:`${Config.BOT_INFO.split(",")[0]}`, contacts: [{ vcard }],}})
+});
+const GDM = "it sends good morning message";
+const GDN = "it sends Night message";
+
+inrl(
+  { pattern: ["gm","GoodMornig","gdmornig"], desc: GDM, sucReact: "💖", category: ["chat"] },
+  async (message, client) => {
+    var r_text = new Array();
+    r_text[0] = "❀🍃Good❀ ❀morning❀🥰❀ ";
+    r_text[1] = "☘️𝐺𝑜𝑜𝑑 🌅𝑚𝑜𝑟𝑛𝑖𝑛𝑔 💐 ";
+    r_text[2] = "🍃𝙶𝚘𝚘𝚍 🌻𝚖𝚘𝚛𝚗𝚒𝚗𝚐 🥰 ";
+    r_text[3] = "🍀𝗚𝗼𝗼𝗱 😘𝗺𝗼𝗿𝗻𝗶𝗻𝗴 🌸 ";
+    r_text[4] = "🌻𝓖𝓸𝓸𝓭 𝓶𝓸𝓻𝓷𝓲𝓷𝓰 💞 ";
+    r_text[5] = "🌼🅖🅞🅞🅓 🅜🅞🅡🅝🅘🅝🅖 🐶 ";
+    r_text[6] = "🍃Ⓖⓞⓞⓓ 🌈ⓜⓞⓡⓝⓘⓝⓖ 🥰 ";
+    const i = Math.floor(7 * Math.random());
+let returNtxt = await r_text[i] 
+    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message } );
+    global.catchError = false;
+  }
+);
+
+inrl(
+  { pattern: ["ge", "good evening", "evening"], desc: "good evening", sucReact: "💖", category: ["chat"] },
+  async (message, client) => {
+    var r_text = new Array();
+r_text[0] = "😻ɢᴏᴏᴅ 💗ᴇᴠᴇɴɪɴɢ",
+r_text[1] = "❣️𝐺𝛩𝛩𝐷 💓𝛯𝛻𝛯𝛮𝛪𝛮𝐺",
+r_text[2] = "🥰ｇｏｏｄ 💞ｅｖｅｎｉｎｇ",
+r_text[3] = "🥳𝓰𝓸𝓸𝓭 💝𝓮𝓿𝓮𝓷𝓲𝓷𝓰",
+r_text[4] = "😍ムののり 💘乇√乇刀ﾉ刀ム",
+r_text[5] = "🤩ᎶᎧᎧᎴ 💕ᏋᏉᏋᏁᎥᏁᎶ",
+r_text[6] = "😛 ɠơơɖ 💔ɛ۷ɛŋıŋɠ"
+const i = Math.floor(7 * Math.random());
+let returNtxt = await r_text[i] 
+    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message } );
+    global.catchError = false;
+  }
+);
+
+inrl(
+  { pattern: ["gn", "gdnight", "goodnight","gd8","gdn8"], desc: GDN, sucReact: "💖", category: ["chat"] },
+  async (message, client) => {
+    var r_text = new Array();
+    r_text[0] = "😘𝙂𝙤𝙤𝙙 🙈𝙣𝙞𝙜𝙝𝙩 💫✨";
+    r_text[1] = "🤗𝓖𝓸𝓸𝓭 🧚‍♀𝓷𝓲𝓰𝓱𝓽 ❄️✨";
+    r_text[1] = "🌌❡០០ᖱ 🌙⩎ɨ❡ϦƬ 🌎";
+    r_text[3] = "😘ցօօժ ⭐️ղíցհԵ 💝";
+    r_text[4] = "🌃Ꮐᝪᝪᗞ 🙈ᑎᏆᏀᕼᎢ 💫✨";
+    const i = Math.floor(5 * Math.random());
+let returNtxt = await r_text[i] 
+    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message, adReply: true } );
+    global.catchError = false;
+  }
+);
+inrl(
+  { pattern: ["ga", "gdafternoon", "goodafternoon","gda",], desc: GDN, sucReact: "💖", category: ["chat"] },
+  async (message, client) => {
+    var r_text = new Array();
+    r_text[0] = "😘Ꮆㄖㄖᗪ 🥵卂千ㄒ乇尺几ㄖㄖ几💫✨";
+    r_text[1] = "🤗𝙂𝙤𝙤𝙙 💖𝙖𝙛𝙩𝙚𝙧𝙣𝙤𝙤𝙣❄️✨";
+    r_text[1] = "♢♞  𝐆Ⓞ𝐨๔ 𝐀ƒт𝔢𝓇Ňｏ𝐎ภ  💲🎀";
+    r_text[3] = "😘ɢᴏᴏᴅ ⭐️ᴀꜰᴛᴇʀɴᴏᴏɴ 💝";
+    r_text[4] = "🌃₲ØØĐ  🙈₳₣₮ɆⱤ₦ØØ₦💫✨";
+    const i = Math.floor(5 * Math.random());
+let returNtxt = await r_text[i] 
+    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message, adReply: true } );
+    global.catchError = false;
+  }
+);
+inrl(
+	   {
+		pattern: ['fancy'],
+		desc: 'To convert text to random style as you want',
+                sucReact: "🙀",
+                category: ["system", "all"],
+	   },
+	async (message, client) => {
+     const text = message.client.text;
+if(!text){
+let NewText =`
+Enter A Text Quary
+_ex_ : Enter a text like this *fancy 55,hi*
+1 Fᴀɴᴄʏ
+2 ʎɔuɐℲ
+3 F⃣ a⃣ n⃣  c⃣ y⃣
+4 fancy
+5 ʏɔᴎɒꟻ
+6 F̸̧̥̠͔̯̻̱̋̏̾͗̈́͝a̵̟̠̯̐n̷̡̤̪͓͖̹̯̙͂̊͋̊̈́̐͑̋̏c̴̯̒͆́y̶͖̘̹̦͆̎̑͗͝
+7 Ⓕⓐⓝⓒⓨ
+8 F̶a̶n̶c̶y̶
+9 F̴a̴n̴c̴y̴
+10 F̷a̷n̷c̷y̷
+11 F̲a̲n̲c̲y̲
+12 F̳a̳n̳c̳y̳
+13 F♥a♥n♥c♥y
+14 F͎a͎n͎c͎y͎
+15 F͓̽a͓̽n͓̽c͓̽y͓̽
+16 ☞︎♋︎■︎♍︎⍓︎
+17 Fａncｙ
+18 ҒΔΠCΨ
+19 千卂几匚ㄚ
+20 ꎇꍏꈤꏳꌩ
+21 ቻልክርሃ
+22 𝐅𝐚𝐧𝐜𝐲
+23 𝑭𝒂𝒏𝒄𝒚
+24 𝐹𝑎𝑛𝑐𝑦
+25 ᠻꪖꪀᥴꪗ
+26 𝙵𝚊𝚗𝚌𝚢
+27 fคຖ¢ฯ
+28 ʄąŋƈყ
+29 ｷﾑ刀ᄃﾘ
+30 千卂几匚ㄚ
+31 🄵🄰🄽🄲🅈
+32 ᎦᏗᏁፈᎩ
+33 ᖴᗩᑎᑕY
+34 ʄǟռƈʏ
+35 𝙵𝚊𝚗𝚌𝚢
+36 𝙁𝙖𝙣𝙘𝙮
+37 𝗙𝗮𝗻𝗰𝘆
+38 𝐅𝐚𝐧𝐜𝐲
+39 𝘍𝘢𝘯𝘤𝘺
+40 Fαɳƈყ
+41 ₣₳₦₵Ɏ
+42 £åñ¢¥
+43 ƒαη¢у
+44 FΛПᄃY
+45 Ƒąղçվ
+46 Fₐₙcy
+47 ᶠᵃⁿᶜʸ
+48 Ŧคภςץ
+49 𝔽𝕒𝕟𝕔𝕪
+50 𝕱𝖆𝖓𝖈𝖞
+51 🅵🅰🅽🅲🆈
+52 𝓕𝓪𝓷𝓬𝔂
+53 𝔉𝔞𝔫𝔠𝔶
+54 Ｆａｎｃｙ
+55 𝑭𝒂𝒏𝒄𝒚
+56 𝐹𝛥𝛮𝐶𝑌
+57 𝙁𝞓𝞜𝘾𝙔
+58 𝐅𝚫𝚴𝐂𝐘
+59 ᖴᗩᑎᑕᎩ
+_ex_ : Enter a text like this *fancy 55,hi*`
+return await client.sendMessage(message.from, { text : NewText });
+    }
+         var split = text.split(',');
+         Num = split[0] || "55";
+         Text = split[1] || "enter A text with number ex 31,text";
+let ThenText = await styletext(Text, Num)
+
+return await client.sendMessage(message.from, { text : ThenText });
+    }
+);
