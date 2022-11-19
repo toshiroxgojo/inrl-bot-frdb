@@ -6,6 +6,17 @@ const Config = require('../config');
 
 inrl(
 	   {
+		pattern: ['git'],
+		desc: 'To get script of the bot',
+                sucReact: "💯",
+                category: ["system", "all"],
+	   },
+	async (message, client) => {
+		return await client.sendMessage( message.from, { text: Config.GIT }, { quoted: message })
+                }
+);
+inrl(
+	   {
 		pattern: ['true'],
 		desc: 'To check ping',
                 sucReact: "💯",
