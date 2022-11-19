@@ -1,4 +1,4 @@
-const { inr, stickersearch, truecaller } = require("../lib");
+const { inrl, stickersearch, truecaller } = require("../lib");
 const inRl = require("../config");
 const got = require('got');
 
@@ -6,7 +6,7 @@ const got = require('got');
 inrl(
   {
     pattern: ["git"],
-    desc: "to check the bot status",
+    desc: "to get script of the bot",
     sucReact: "🥰",
     category: ["system", "all"],
   },
@@ -16,7 +16,7 @@ inrl(
 inrl(
   {
     pattern: ["search"],
-    desc: "to check the bot status",
+    desc: "to serch  datas as you want",
     sucReact: "🥰",
     category: ["system", "all"],
   },
@@ -31,7 +31,7 @@ let data = await stickersearch(match.replace("sticker","")
 inrl(
 	   {
 		pattern: ['true'],
-		desc: 'To check ping',
+		desc: 'To get detiles of a number',
                 sucReact: "💯",
                 category: ["system", "all"],
 	   },
