@@ -1,37 +1,13 @@
-const { inrl, stickersearch, truecaller } = require("../lib");
-const inRl = require("../config");
+//created by @inrl
+const { inrl, truecaller, stickersearch } = require('../lib/');
+//const { getLastMessageInChat } = require('@adiwajshing/baileys');
 const got = require('got');
+const Config = require('../config');
 
-
-inrl(
-  {
-    pattern: ["git"],
-    desc: "to get script of the bot",
-    sucReact: "🥰",
-    category: ["system", "all"],
-  },
-  async (message, client) => {
-    await client.sendMessage(message.from,{ text : inRl.GIT }, { quoted: message });
-});
-inrl(
-  {
-    pattern: ["search"],
-    desc: "to serch  datas as you want",
-    sucReact: "🥰",
-    category: ["system", "all"],
-  },
-  async (message, client, match) => {
-if(match){
-if(match.match("sticker")){
-let data = await stickersearch(match.replace("sticker","")
-    await client.sendMessage(message.from,{ text : data }, { quoted: message });
-    }
-  }
-});
 inrl(
 	   {
 		pattern: ['true'],
-		desc: 'To get detiles of a number',
+		desc: 'To check ping',
                 sucReact: "💯",
                 category: ["system", "all"],
 	   },
@@ -44,3 +20,31 @@ let msg = await truecaller(rslt);
                 }
         }
 );
+inrl(
+  {
+    pattern: ["search"],
+    desc: "to serch  datas as you want",
+    sucReact: "🥰",
+    category: ["system", "all"],
+  },
+  async (message, client, match) => {
+if(match){
+if(match.match("photo")){
+let data = await stickersearch(match.replace("photo",""))
+let img = data.sticker_url;
+console.log(data);
+let GetRandom = img[Math.floor(Math.random(), img.length)]
+ let buttons = [
+        {buttonId:`.search ${match}`, buttonText: {displayText: `ɴᴇxᴛ ➪`}, type: 1},
+      ]
+      let buttonMsg = {
+      image : {url: GetRandom },
+      caption:`${data.title}`,
+      footer: Config.FOOTER,
+      buttons: buttons,
+      headerType: 4
+      }
+await client.sendMessage(message.from, buttonMsg, {quoted: message})
+    }
+  }
+});
