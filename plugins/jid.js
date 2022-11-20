@@ -1,6 +1,5 @@
 //created by @ inrl
 const { inrl } = require('../lib/');
-//const { getLastMessageInChat } = require('@adiwajshing/baileys');
 inrl(
 	   {
 		pattern: ['jid'],
@@ -60,6 +59,9 @@ await client.sendMessage(jid, { sticker : msg });
 }else if(message.quoted.videoMessage){
 let msg = await message.quoted.download();
 await client.sendMessage(jid, { video : msg });
+}else if(message.quoted.audioMessage){
+let msg = await message.quoted.download();
+await client.sendMessage(jid, { audio : msg });
 }else { return await client.sendMessage(message.from, { text : "replay to a message with a jid"});}
 });
 
