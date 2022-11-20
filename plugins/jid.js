@@ -8,7 +8,10 @@ inrl(
                 category: ["system", "all"],
 	   },
 	async (message, client) => {
-		return await client.sendMessage( message.from, { text: message.quoted.sender || message.from }, { quoted: message })
+if(message.quoted){
+await client.sendMessage( message.from, { text: message.quoted.sender }, { quoted: message })
+                }else {
+await client.sendMessage( message.from, { text: message.from }, { quoted: message })
                 }
 );
 inrl({
@@ -20,7 +23,7 @@ inrl({
 	async (message, client) => {
 if(!message.client.isCreator) return await client.sendMessage( message.from, { text: "sorry about thets! this cmd only for owner"});
 if (message.isGroup) { 
-await client.updateBlockStatus(message.quoted, "block") // Block user
+await client.updateBlockStatus(message.quoted.sender, "block") // Block user
 }else{
 await client.updateBlockStatus(message.from, "block")
     }
@@ -34,7 +37,7 @@ inrl({
 	async (message, client) => {
 if(!message.client.isCreator) return await client.sendMessage( message.from, { text: "sorry about thets this cmd only for owner"});
 if (message.isGroup) { 
-await client.updateBlockStatus(message.quoted, "unblock") // Unblock user
+await client.updateBlockStatus(message.quoted.sender, "unblock") // Unblock user
 }else{
 await client.updateBlockStatus(message.from, "unblock") // Unblock user
     }
@@ -48,7 +51,7 @@ inrl({
                 category: ["system", "all"],
 	   },
 	async (message, client, match) => {
-if(!match.endsWith('g.us' || 'whatsapp.net')) return client.sendMessage(message.from, {text : "after the (cmd) enter the jid to share your data \n_example :- forward 910123456789@s.whatsapp.net"})
+if(!match) { return client.sendMessage(message.from, {text : "after the (cmd) enter the jid to share your data \n_example :- forward 910123456789@s.whatsapp.net_"}); }
 let jid = match;
 if(message.quoted.imageMessage){
 let msg = await message.quoted.download();
