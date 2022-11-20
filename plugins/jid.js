@@ -10,10 +10,10 @@ inrl(
 	async (message, client) => {
 if(message.quoted){
 await client.sendMessage( message.from, { text: message.quoted.sender }, { quoted: message })
-                }else {
+                } else {
 await client.sendMessage( message.from, { text: message.from }, { quoted: message })
-                }
-);
+}});
+
 inrl({
 		pattern: ['block'],
 		desc: 'To block a person',
