@@ -1,11 +1,11 @@
-const { inrl, sendUrl, tinyUrl, webSs, pdfGen, BufferToFile, AudioMetaData  } = require('../lib')
+const { inrl, fetchJson, sendUrl, tinyUrl, webSs, pdfGen, BufferToFile, AudioMetaData  } = require('../lib')
 const Config = require('../config');
 const fs = require('fs');
 const { readFile, writeFile } = require('fs/promises')
 inrl(
 	{
 		pattern: ['url'],
-       desc: 'to convert image/sticker to url',
+       desc: 'to convert image/sticker/video/audio to url',
        sucReact: "⛰️",
        category: ["all"]
     },
@@ -38,4 +38,19 @@ img = text.split(',')[2] ? text.split(',')[2] : img;
 let imgForaUdio = await BufferToFile(img,'./media/imagForAudio.jpg');
     await AudioMetaData(imgForaUdio, media, message, client);
   }
+})
+inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"]}, async (message, client) => {
+           const text = message.client.text;
+	    if (!text) return message.send('send to emojis \n\n _ex_:❣️+🥵');
+let emoji1,emoji2;
+if (text.includes('+')) {
+         var split = text.split('+');
+         emoji1 = split[0];
+         emoji2 = split[1];
+        }
+let md = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
+		for (let res of md.results) {
+	        let encmedia = await client.sendImageAsSticker(message.from, res.url, message, { packname: Config.PACKNAME, author: Config.FOOTER, categories: res.tags })
+		await fs.unlinkSync(encmedia)
+		}
 })
