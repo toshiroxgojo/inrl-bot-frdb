@@ -99,11 +99,11 @@ let _message = message.quoted.imageMessage;
 inrl({ pattern: ["name"], usage: '<name>', sucReact: "🙃", category: ["group", "all"], },
   async (message, client) => {
     if (message.client.isCreator && message.isGroup){
-    if (!message.client.text) { global.catchError = true; return await client.sendMessage( message.from, { text: errorMessage('Enter number: \nEx g-add 1235234509/5672323625/2345456756') }, { quoted: message } ); };
     if (message.client.text > 25) { global.catchError = true; return await client.sendMessage( message.from, { text: errorMessage('Text is too long') }, { quoted: message } ); };
     try {
         await client.sendMessage( message.from, { text: infoMessage("🙃 Changing group name.") }, { quoted: message } );
-        await client.groupUpdateSubject(message.from, message.client.text);
+let txt = message.client.text || " ";
+        await client.groupUpdateSubject(message.from, txt);
         global.catchError = false;
     }  catch (err) {
         global.catchError = true
@@ -116,11 +116,11 @@ inrl({ pattern: ["name"], usage: '<name>', sucReact: "🙃", category: ["group",
 inrl({ pattern: ["desc"], usage: '<desc>', sucReact: "🙂", category: ["group", "all"], },
   async (message, client) => {
 if (message.client.isCreator && message.isGroup) {
-    if (!message.client.text) { global.catchError = true; return await client.sendMessage( message.from, { text: errorMessage('Enter number: \nEx g-add inrl hot support grp') }, { quoted: message } ); };
     if (message.client.text > 80) { global.catchError = true; return await client.sendMessage( message.from, { text: errorMessage('Text is too long') }, { quoted: message } ); };
         try {
         await client.sendMessage( message.from, { text: infoMessage("🙂 Changing group description.") }, { quoted: message } );
-        await client.groupUpdateDescription(message.from, message.client.text);
+let txt = message.client.text || " ";
+        await client.groupUpdateDescription(message.from, txt);
         global.catchError = false;
     }  catch (err) {
         global.catchError = true
@@ -226,7 +226,7 @@ inrl({ pattern: ["acpt"], sucReact: "🆗", category: ["group", "all"], },
 );
 
 
-inrl({ pattern: ["grp-info"], sucReact: "🆗", category: ["group", "all"], },
+inrl({ pattern: ["getinfo"], sucReact: "🆗", category: ["group", "all"], },
   async (message, client) => {
     if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: errorMessage(config.reply.owner) }, { quoted: message } ); };
     try {
@@ -244,8 +244,10 @@ inrl({ pattern: ["grp-info"], sucReact: "🆗", category: ["group", "all"], },
 
 inrl({ pattern: ["pp"],desc: 'set  profile picture of bot', sucReact: "😁",  category: ["all", "create"], },
 	async (message, client) => {
+if(message.client.isCreator){
 	let _message = message.quoted.imageMessage || message.client.text;
 		let download = await client.downloadMediaMessage(_message);
 		await client.updateProfilePicture(message.client.botNumber,download ).catch((err) => fs.unlinkSync(download))
       }
+   }
 );
