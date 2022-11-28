@@ -9,13 +9,13 @@ module.exports = {
     REACT : process.env.REACT || 'false',
     GROUP_CHAT : process.env.GROUP_CHAT || 'false',
     FREE_TXT : process.env.FREE_TXT || 'inrlbotmd',
-    U_STATUS: process.env.U_STATUS || 'true',
+    U_STATUS: process.env.U_STATUS || 'false',
     ALIVETXT: process.env.ALIVETXT || 'INRL-BOT-MD',
     ALIVE_DATA : process.env.ALIVE_DATA || "https://i.imgur.com/DyLAuEh.jpg,aliveText,alivebButtenText1,aliveTextButten2",
     READ_CHAT : process.env.READ_CHAT || "false", //values are true and false only if true read all chats
     BOT_INFO : process.env.BOT_INFO || "INRL-BOT-MD,INRL,https://i.imgur.com/DyLAuEh.jpg",
     BGMBOT : process.env.BGMBOT || 'false',
-    WORKTYPE: process.env.WORKTYPE || 'public',
+    WORKTYPE: process.env.WORKTYPE || 'privet',
     PM_BLOCK : process.env.PM_BLOCK || "false",
     WELCOME_SET : process.env.WELCOME_SET || "true", //now thi scmd is not creted creating
     EXIT_MSG : process.env.EXIT_MSG || "true", //now this cmd  was not created
