@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "WhatsApp bot made with nodejs and baileys",
   "main": "index.js",
-  "scripts": {
-    "start": "supervisor -w lib,index.js,plugins index.js",
-    "test": "node index.js"
+    "scripts": {
+    "start": "pm2 start . --attach --name inrl"
   },
   "repository": {
     "type": "git",
@@ -14,9 +13,7 @@
   "keywords": [
     "whatsapp",
     "bot",
-    "ai",
-    "Inrl-Bot",
-    "Inrl"
+    "multi-device"
   ],
   "author": "inrl",
   "developer": "@INRL",
