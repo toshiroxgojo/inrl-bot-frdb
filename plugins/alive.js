@@ -1,7 +1,7 @@
 // created by inrl
 var NewGen, templateButtons;
 const os = require("os");
-const axios = require('axios')
+const got = require('got')
 const speed = require("performance-now");
 const  { inrl , tiny, config, inrlQuita, insult , getBuffer, randomStyle, styletext, send_alive, send_menu }= require('../lib/')
 const Config = require("../config");
@@ -74,7 +74,8 @@ inrl(
     category: ["system", "all"],
   },
   async (message, client) => {
-      let { data } = await axios.get('https://api.github.com/repos/inrl-official/inrl-bot-md')
+      const response = await got("https://api.github.com/repos/inrl-official/inrl-bot-md")
+      const json = JSON.parse(response.body);
       captIon: `╭═══〘${Config.BOT_INFO.split(",")[0]}〙═══⊷❍
 ┃☯︎╭──────────────
 ┃☯︎│
@@ -82,21 +83,21 @@ inrl(
 ┃☯︎│ ᴠᴇʀꜱɪᴏɴ : ${tiny(Config.VERSION)}
 ┃☯︎│ ɢɪᴛʜᴜʙ : _${Config.GIT}_
 ┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ : _${Config.VIDEO}_
-┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴛᴀʀᴇꜱ :* ${data.stargazers_count} stars
-┃☯︎│ ꜰᴏʀᴋꜱ:* ${data.forks_count} forks
+┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴛᴀʀᴇꜱ :* ${json.stargazers_count} stars
+┃☯︎│ ꜰᴏʀᴋꜱ:* ${json.forks_count} forks
 ┃☯︎│
 ┃☯︎╰───────────────
 ╰═════════════════⊷`
  
 let buttonMessage = {
-            image: { url: data.avatar_url },
+            image: { url: json.avatar_url },
             caption: captIon,
             footer: Config.FOOTER,
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
                     title: data.name,
-                    body: data.description ,
+                    body: json.description ,
                     thumbnail: await getBuffer(Config.BOT_INFO.split(',')[2]),
                     mediaType: 2,
                     mediaUrl: Config.INSTAGRAM,
