@@ -96,7 +96,7 @@ let buttonMessage = {
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: data.name,
+                    title: json.name,
                     body: json.description ,
                     thumbnail: await getBuffer(Config.BOT_INFO.split(',')[2]),
                     mediaType: 2,
