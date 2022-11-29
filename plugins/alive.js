@@ -1,8 +1,9 @@
 // created by inrl
 var NewGen, templateButtons;
 const os = require("os");
+const axios = require('axios')
 const speed = require("performance-now");
-const  { inrl , config, inrlQuita, insult , randomStyle, styletext, send_alive, send_menu }= require('../lib/')
+const  { inrl , tiny, config, inrlQuita, insult , getBuffer, randomStyle, styletext, send_alive, send_menu }= require('../lib/')
 const Config = require("../config");
 
 inrl(
@@ -46,28 +47,43 @@ await send_alive(message, client)
 inrl(
   {
     pattern: ["script"],
-    desc: "to check the bot status",
+    desc: "to get the bot script",
     sucReact: "🥵",
     category: ["system", "all"],
   },
   async (message, client) => {
-      const Message = {
-      image: { url: Config.BOT_INFO.split(",")[2] },
-      caption: `╭═══〘${Config.BOT_INFO.split(",")[0]}〙═══⊷❍
+      let { data } = await axios.get('https://api.github.com/repos/inrl-official/inrl-bot-md')
+      captIon: `╭═══〘${Config.BOT_INFO.split(",")[0]}〙═══⊷❍
 ┃☯︎╭──────────────
 ┃☯︎│
-┃☯︎│ ᴏᴡɴᴇʀ :${Config.BOT_INFO.split(",")[1]}
-┃☯︎│ ᴜꜱᴇʀ : ${message.client.pushName}
-┃☯︎│ ᴠᴇʀꜱɪᴏɴ : ${Config.VERSION}
-┃☯︎│ ɢɪᴛʜᴜʙ :`+Config.GIT+`
-┃☯︎│ ᴡᴇʙꜱɪᴛᴇ :`+Config.WEB+`
-┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ :`+Config.VIDEO+`
-┃☯︎│ yᴏᴜᴛᴜʙᴇ :`+Config.YT+`
+┃☯︎│ ᴜꜱᴇʀ : _${message.client.pushName}_
+┃☯︎│ ᴠᴇʀꜱɪᴏɴ : ${tiny(Config.VERSION)}
+┃☯︎│ ɢɪᴛʜᴜʙ : ${_Config.GIT_}
+┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ :${_Config.VIDEO_}
+┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴛᴀʀᴇꜱ :* ${data.stargazers_count} stars
+┃☯︎│ ꜰᴏʀᴋꜱ:* ${data.forks_count} forks
+┃☯︎│
 ┃☯︎│
 ┃☯︎╰───────────────
 ╰═════════════════⊷`
-    };
-    await client.sendMessage(message.from, Message, { quoted: message });
+ 
+let buttonMessaged = {
+            image: { url: data.avatar_url },
+            caption: captIon,
+            footer: Config.FOOTER,
+            headerType: 4,
+            contextInfo: {
+                externalAdReply: {
+                    title: data.name,
+                    body: data.description ,
+                    thumbnail: await getBuffer(Config.BOT_INFO.split(',')[2],
+                    mediaType: 2,
+                    mediaUrl: Config.INSTAGRAM,
+                    sourceUrl: Config.GIT,
+                },
+            },
+        };
+    await client.sendMessage(message.from, buttonMessaged, { quoted: message });
 });
 const bots = require("../lib/perfix");
 const Lang = bots.getString("_whats");
@@ -75,7 +91,7 @@ const Lang = bots.getString("_whats");
 // const path = require("path");
 let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat","inrl":"Inrl","ibot":"Ibot", "system": "System", 'fun': "Fun", '18+': "18+","ff:":"Ff", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo","photo": "Photo","sticker": "Sticker","anime": "Anime" }
 
-bots.inrl({ pattern: ["menu"], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
+inrl({ pattern: ["menu"], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
  await send_menu(message, client);
 });
 bots.categories.map(category => {
@@ -268,7 +284,7 @@ inrl(
                 sucReact: "🙀",
                 category: ["system", "all"],
 	   },
-	async (message, client) => {
+	async (message, client, match) => {
      const text = message.client.text;
 if(!text){
 let NewText =`
@@ -337,10 +353,9 @@ _ex_ : Enter a text like this *fancy 55,hi*`
 return await client.sendMessage(message.from, { text : NewText });
     }
          var split = text.split(',');
-         Num = split[0] || "55";
-         Text = split[1] || "enter A text with number ex 31,text";
+         Num = split[0] || match || "55";
+         Text = message.quoted.text || split[1] || "enter A text with number ex 31,text";
 let ThenText = await styletext(Text, Num)
-
 return await client.sendMessage(message.from, { text : ThenText });
     }
 );
