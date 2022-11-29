@@ -76,7 +76,7 @@ inrl(
   async (message, client) => {
       const response = await got("https://api.github.com/repos/inrl-official/inrl-bot-md")
       const json = JSON.parse(response.body);
-      let captIon: `╭═══〘${Config.BOT_INFO.split(",")[0]}〙═══⊷❍
+      let captIon = `╭═══〘${Config.BOT_INFO.split(",")[0]}〙═══⊷❍
 ┃☯︎╭──────────────
 ┃☯︎│
 ┃☯︎│ ᴜꜱᴇʀ : _${message.client.pushName}_
