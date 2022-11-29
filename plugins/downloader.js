@@ -1,6 +1,7 @@
 //created by @inrl
 //more featurs comming soon
 const { inrl, isUrl, googleIt, wikiMedia, ringTone, getYtV, getYtA, ytmp4, ytmp3, weather, movie } = require('../lib');
+const { instagram } = require('../lib/database/semifunction/serch_query');
 const Config = require('../config');
 const util = require('util');
 
@@ -111,4 +112,20 @@ inrl(
 	async (message, client,match) => {
 await wather(message,client);
   }
+);
+inrl(
+	   {
+		pattern: ['insta'],
+		desc: 'do get goole serch result',
+                sucReact: "🙃",
+                category: ["system", "all"],
+	   },
+	async (message, client, match) => {
+        if(message.client.text){
+        let url = await instagram(match);
+        for (let i=0; i<url.length; i++) {
+        return await client.sendMessage( message.from, { video: { url : url[i]}, caption :Config.CAPTION }, { quoted: message })
+         }
+      }
+   }
 );
