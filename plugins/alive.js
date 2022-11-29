@@ -26,14 +26,36 @@ inrl(
                 }
 	 }
 );
-inrl({ pattern: ['del'], desc: "to create to delete unwanted grp msg by admins",sucReact: "⚒️",  category: ["all"]}, async (message, client) => {
-
+inrl({ pattern: ['del'], desc: "to delete unwanted grp msg sended by bot",sucReact: "⚒️",  category: ["all"]}, async (message, client) => {
+if (message.client.isCreator && message.isGroup) {
                 if (!message.quoted) return await client.sendMessage(message.from, { text :"replay to a group content"},{ quoted: message })
                 let { chat, fromMe, id } = message.quoted
                 client.sendMessage(message.from, { delete: { remoteJid: message.chat, fromMe: message.quoted.fromMe, id: message.quoted.id, participant: message.quoted.sender }})
-            }
+        }
+    }
 );
-
+inrl(
+	   {
+		pattern: ['dlt'],
+		desc: 'To dlt unwanted msg by admin from group content',
+                sucReact: "🤌",
+                category: ["system", "all"],
+	   },
+	async (message, client) => {
+        const groupMetadata = message.isGroup ? await client.groupMetadata(message.from).catch(e => {}) : ''
+	const participants = message.isGroup ? await groupMetadata.participants : ''
+        let admins = message.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
+if(admins.includes(message.sender) && message.isGroup) {
+await client.sendMessage(message.from, {
+		delete: {
+			remoteJid: message.from,
+			fromMe: message.quoted.fromMe,
+			id: message.quoted.id,
+			participant: message.quoted.sender
+            }
+     })
+}
+})
 inrl(
   {
     pattern: ["alive"],
@@ -63,11 +85,10 @@ inrl(
 ┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴛᴀʀᴇꜱ :* ${data.stargazers_count} stars
 ┃☯︎│ ꜰᴏʀᴋꜱ:* ${data.forks_count} forks
 ┃☯︎│
-┃☯︎│
 ┃☯︎╰───────────────
 ╰═════════════════⊷`
  
-let buttonMessaged = {
+let buttonMessage = {
             image: { url: data.avatar_url },
             caption: captIon,
             footer: Config.FOOTER,
@@ -76,14 +97,14 @@ let buttonMessaged = {
                 externalAdReply: {
                     title: data.name,
                     body: data.description ,
-                    thumbnail: await getBuffer(Config.BOT_INFO.split(',')[2],
+                    thumbnail: await getBuffer(Config.BOT_INFO.split(',')[2]),
                     mediaType: 2,
                     mediaUrl: Config.INSTAGRAM,
                     sourceUrl: Config.GIT,
                 },
             },
         };
-    await client.sendMessage(message.from, buttonMessaged, { quoted: message });
+    await client.sendMessage(message.from, buttonMessage, { quoted: message });
 });
 const bots = require("../lib/perfix");
 const Lang = bots.getString("_whats");
