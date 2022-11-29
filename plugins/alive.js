@@ -80,8 +80,8 @@ inrl(
 ┃☯︎│
 ┃☯︎│ ᴜꜱᴇʀ : _${message.client.pushName}_
 ┃☯︎│ ᴠᴇʀꜱɪᴏɴ : ${tiny(Config.VERSION)}
-┃☯︎│ ɢɪᴛʜᴜʙ : ${_Config.GIT_}
-┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ :${_Config.VIDEO_}
+┃☯︎│ ɢɪᴛʜᴜʙ : _${Config.GIT}_
+┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ : _${Config.VIDEO}_
 ┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴛᴀʀᴇꜱ :* ${data.stargazers_count} stars
 ┃☯︎│ ꜰᴏʀᴋꜱ:* ${data.forks_count} forks
 ┃☯︎│
