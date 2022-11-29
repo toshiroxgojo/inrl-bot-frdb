@@ -16,7 +16,7 @@ inrl(
 	async (message, client) => {
         if(message.client.text){
         let teks = await googleIt(message.client.text);
-        return await client.sendMessage( message.from, { text: "result =>\n\n"+teks }, { quoted: message })
+        return await client.sendMessage( message.from, { text: "\n"+teks }, { quoted: message })
           }
      }
 );
@@ -116,7 +116,7 @@ await wather(message,client);
 inrl(
 	   {
 		pattern: ['insta'],
-		desc: 'do get goole serch result',
+		desc: 'do get instgram videos',
                 sucReact: "🙃",
                 category: ["system", "all"],
 	   },
