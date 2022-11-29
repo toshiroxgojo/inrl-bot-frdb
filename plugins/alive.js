@@ -93,7 +93,7 @@ let buttonMessage = {
             image: { url: json.owner.avatar_url },
             caption: captIon,
             footer: Config.FOOTER,
-            headerType: 4,
+            headerType: 1,
             contextInfo: {
                 externalAdReply: {
                     title: json.name,
