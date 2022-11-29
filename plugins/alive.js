@@ -90,7 +90,7 @@ inrl(
 ╰═════════════════⊷`
  
 let buttonMessage = {
-            image: { url: json.avatar_url },
+            image: { url: json.owner.avatar_url },
             caption: captIon,
             footer: Config.FOOTER,
             headerType: 4,
