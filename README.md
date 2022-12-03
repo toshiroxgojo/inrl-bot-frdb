@@ -32,7 +32,7 @@ DEPLOYING ON HEROKU
 ## `⨷ Deploy To Koyeb`  
   
 
-- 👉 if You have no Accound In Koyeb Create an AccoundBy cliking here<b>[Create An Accound](https://app.koyeb.com/)<br>
+- 👉 if You have no Accound In Koyeb Create an Accound By clicking here <b> [Create An Accound](https://app.koyeb.com/)<br>
 
   [Click here to deploy on Koyeb](https://app.koyeb.com/apps/deploy?type=docker&image=quay.io/inrlwabot/inrl-bot:latest&env[SESSION_ID]&env[WORKTYPE]&env[U_STATUS]&env[MENSION_TEXT]&env[MENSION_AUDIO]&env[MENSION_IMG]&env[BAD_WORD_TEXT]&env[SET_ANTI_LINK]&env[FACK_REMOVE]&env[ANTI_LINK_ALL]&env[ALIVE_DATA]&env[CALL_BLOCK]&env[PM_BLOCK]&env[REACT]&env[PROCFILE_DATA]&env[BOT_INFO]&env[GROUP_CHAT]&env[CHATBOT]&env[SUDO]&env[OWNER]&env[LANG]&env[BGMBOT]&env[PASSWORD]&env[READ_CHAT]&env[FOOTER]&env[INSTAGRAM]&env[PACKNAME]&env[GIT]&env[WEB]&env[YT]&env[CAPTION]&env[WAGRP]&env[AUDIO_DATA]&env[STICKER_DATA]&name=inrl-bot-md&env[KOYEB_NAME]=inrl-official&env[PORT]=8080)
 <br>
