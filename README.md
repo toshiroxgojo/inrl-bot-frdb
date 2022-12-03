@@ -21,14 +21,15 @@ DEPLOYING ON HEROKU
 [Click Here To Scan](https://frendpage.vercel.app/)
 
 
-## `⨷Deploy To Heroku`  
+## `⨷ Deploy To Heroku`  
   
 
 - 👉 Copy this link and paste it on your browser Change username to your github username<br><br>
 
   [Click here to deploy on Heroku](https://inrl-deploy-web.vercel.app/)
 <br>
-## `⨷Deploy To Koyeb`  
+
+## `⨷ Deploy To Koyeb`  
   
 
 - 👉 if You have no Accound In Koyeb Create an AccoundBy cliking here<b>[Create An Accound](https://app.koyeb.com/)<br>
