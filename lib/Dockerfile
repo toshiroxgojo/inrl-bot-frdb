@@ -1,6 +1,6 @@
 FROM node:latest
 ENV TZ=Asia/Kolkata
-RUN git clone https://github.com/inrl-official/inrl-bot-md/root/inrl/
+RUN git clone https://github.com/inrl-official/inrl-bot-md /root/inrl/
 WORKDIR /root/inrl/
 COPY package*.json ./
 RUN npm install
