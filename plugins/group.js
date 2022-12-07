@@ -96,6 +96,15 @@ let _message = message.quoted.imageMessage;
       }
    }
 )
+inrl({ pattern: ["fullgpp"],desc: 'set  profile picture of group with any resolution', sucReact: "🔥",  category: ["all", "create"], },
+	async (message, client) => {
+        if(message.client.isCreator && message.quoted){
+        if(!message.isGroup) return;
+		let download = await message.quoted.download();
+		await message.updateProfilePicture(message.from,download );
+      }
+   }
+);
 inrl({ pattern: ["name"], usage: '<name>', sucReact: "🙃", category: ["group", "all"], },
   async (message, client) => {
     if (message.client.isCreator && message.isGroup){
@@ -248,6 +257,14 @@ if(message.client.isCreator){
 	let _message = message.quoted.imageMessage || message.client.text;
 		let download = await client.downloadMediaMessage(_message);
 		await client.updateProfilePicture(message.client.botNumber,download ).catch((err) => fs.unlinkSync(download))
+      }
+   }
+);
+inrl({ pattern: ["fullpp"],desc: 'set  profile picture of bot with any resolution', sucReact: "🔥",  category: ["all", "create"], },
+	async (message, client) => {
+        if(message.client.isCreator && message.quoted){
+		let download = await message.quoted.download();
+		await message.updateProfilePicture(message.client.botNumber,download );
       }
    }
 );
