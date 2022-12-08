@@ -37,6 +37,7 @@ if(img.includes(' ')){ img = img.trim() }
 img = text.split(',')[2] ? text.split(',')[2] : img;
 let imgForaUdio = await BufferToFile(img,'./media/imagForAudio.jpg');
     await AudioMetaData(imgForaUdio, media, message, client);
+    return await fs.unlinkSync(imgForaUdio)
   }
 })
 inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"]}, async (message, client) => {
