@@ -26,8 +26,25 @@ inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  ca
      await pdfGen(message, client);
 }))
 
-inrl({ pattern: ['copy'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"]}, async (message, client) => {
-if(message.quoted.audioMessage){
+inrl({ pattern: ['take'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"]}, async (message, client, match) => {
+if(message.quoted.stickerMessage){
+let pack, auth;
+if(match.includes(',')){
+let i = match.split(',')[0];
+pack = i[0] ? i[0] : Config.STICKER_DATA.split(',')[0];
+auth = i[1] ? i[1] : Config.STICKER_DATA.split(',')[1];
+} else {
+pack = text || Config.STICKER_DATA.split(',')[0];
+auth = Config.STICKER_DATA.split(',')[1];
+}
+let media = await message.quoted.download();
+client.sendFile(message.from, media, "", message, {
+          asSticker: true,
+          author: auth,
+          packname: pack,
+          categories: ["😄"],
+        });
+}else if(message.quoted.audioMessage){
 let _message = message.quoted.audioMessage
 let media = await client.downloadAndSaveMediaMessage(_message)
 let text = message.client.text;
