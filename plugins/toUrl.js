@@ -34,7 +34,7 @@ let i = match.split(',')[0];
 pack = i[0] ? i[0] : Config.STICKER_DATA.split(',')[0];
 auth = i[1] ? i[1] : Config.STICKER_DATA.split(',')[1];
 } else {
-pack = text || Config.STICKER_DATA.split(',')[0];
+pack = match || Config.STICKER_DATA.split(',')[0];
 auth = Config.STICKER_DATA.split(',')[1];
 }
 let media = await message.quoted.download();
