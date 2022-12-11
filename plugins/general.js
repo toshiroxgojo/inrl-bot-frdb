@@ -22,7 +22,8 @@ inrl({
 	   },
 	async (message, client) => {
 if(!message.client.isCreator) return await client.sendMessage( message.from, { text: "sorry about thets! this cmd only for owner"});
-if (message.isGroup) { 
+if(message.client.isCreator.includes(message.from) return;
+if(message.isGroup) { 
 await client.updateBlockStatus(message.quoted.sender, "block") // Block user
 }else{
 await client.updateBlockStatus(message.from, "block")
@@ -36,7 +37,8 @@ inrl({
 	   },
 	async (message, client) => {
 if(!message.client.isCreator) return await client.sendMessage( message.from, { text: "sorry about thets this cmd only for owner"});
-if (message.isGroup) { 
+if(message.client.isCreator.includes(message.from) return;
+if(message.isGroup) { 
 await client.updateBlockStatus(message.quoted.sender, "unblock") // Unblock user
 }else{
 await client.updateBlockStatus(message.from, "unblock") // Unblock user
@@ -67,4 +69,32 @@ let msg = await message.quoted.download();
 await client.sendMessage(jid, { audio : msg });
 }else { return await client.sendMessage(message.from, { text : "replay to a message with a jid"});}
 });
-
+inrl(
+	   {
+		pattern: ['whois'],
+		desc: 'it send information of user',
+                sucReact: "💯",
+                category: ["system", "all"],
+	   },
+	async (message, client) => {
+let pp, from , cap;
+if(!message.client.isCreator) return await client.sendMessage( message.from, { text: "sorry about thets this cmd only for owner"});
+if(message.isGroup) {
+if(!message.quoted) return;
+from = message.quoted.sender;
+try { pp = await client.profilePictureUrl(from, 'image') } 
+catch { pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'}
+//let { id, name } = message.conn.user;
+let { status, setAt } = await client.fetchStatus(from)
+let captiOn = "```"+`/*user : ${name}\nid : ${id}*/\nstatus :${status}\nstatus setAt : ${setAt}`+"```";
+await client.sendMessage(message.from, { image : { url : pp }, caption : captiOn }, { message : quoted });
+} else {
+from = message.from;
+try { pp = await client.profilePictureUrl(from, 'image') } 
+catch { pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'}
+//let { id, name } = message.conn.user;
+let { status, setAt } = await client.fetchStatus(from)
+let captiOn = "```"+`/*user : ${name}\nid : ${id}*/\nstatus :${status}\nstatus setAt : ${setAt}`+"```";
+await client.sendMessage(message.from, { image : { url : pp }, caption : captiOn }, { message : quoted });
+     }
+});
