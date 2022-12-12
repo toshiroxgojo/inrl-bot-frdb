@@ -13,7 +13,7 @@ inrl({
 if(!message.client.isCreator) return message.send("only for owners!")
     try {
       let evaled = await eval(match);
-      if (typeof match !== "string") //evaled = require("util").inspect(evaled);
+      if (typeof match !== "string") evaled = await util.inspect(evaled);
     await message.reply(evaled);
     } catch (err) {
       await message.reply(util.format(err));
