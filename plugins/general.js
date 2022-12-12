@@ -87,7 +87,7 @@ catch { pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top
 //let { id, name } = message.conn.user;
 let { status, setAt } = await client.fetchStatus(from)
 let captiOn = "```"/*user : ${name}\nid : ${id}\n*/+`status :${status}\nstatus setAt : ${setAt}`+"```";
-await client.sendMessage(message.from, { image : { url : pp }, caption : captiOn }, { message : quoted });
+await client.sendMessage(message.from, { image : { url : pp }, caption : captiOn }, { quoted: message });
 } else {
 from = message.from;
 try { pp = await client.profilePictureUrl(from, 'image') } 
@@ -95,6 +95,6 @@ catch { pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top
 //let { id, name } = message.conn.user;
 let { status, setAt } = await client.fetchStatus(from)
 let captiOn = "```"/*user : ${name}\nid : ${id}\n*/+`status :${status}\nstatus setAt : ${setAt}`+"```";
-await client.sendMessage(message.from, { image : { url : pp }, caption : captiOn }, { message : quoted });
+await client.sendMessage(message.from, { image : { url : pp }, caption : captiOn }, { quoted: message });
      }
 });
