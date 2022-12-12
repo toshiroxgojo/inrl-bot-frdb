@@ -22,7 +22,7 @@ inrl({
 	   },
 	async (message, client) => {
 if(!message.client.isCreator) return await client.sendMessage( message.from, { text: "sorry about thets! this cmd only for owner"});
-if(message.client.isCreator.includes(message.from) return;
+if(message.client.isCreator.includes(message.from)) return;
 if(message.isGroup) { 
 await client.updateBlockStatus(message.quoted.sender, "block") // Block user
 }else{
@@ -37,7 +37,7 @@ inrl({
 	   },
 	async (message, client) => {
 if(!message.client.isCreator) return await client.sendMessage( message.from, { text: "sorry about thets this cmd only for owner"});
-if(message.client.isCreator.includes(message.from) return;
+if(message.client.isCreator.includes(message.from)) return;
 if(message.isGroup) { 
 await client.updateBlockStatus(message.quoted.sender, "unblock") // Unblock user
 }else{
