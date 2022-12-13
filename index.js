@@ -8,7 +8,7 @@ const chalk = require("chalk");
 const pino = require("pino");
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 const yargs = require('yargs/yargs')
 const path = require("path");
 const { Boom } = require("@hapi/boom");
@@ -67,7 +67,7 @@ setInterval(() => { store.writeToFile("./lib/database/json/store.json")}, 30 * 1
       });
       console.log("plugin installed successfully☑️");
 console.log("💖 Login successful! \n bot working now💗");
-conn.sendMessage(conn.user.id, { text : "```bot working now 💗thanks for choosing inrlbotmd, if you have face any bug related on our bot please infrom our suppoer group```"+`*mode : ${Config.WORKTYPE}*` });
+conn.sendMessage(conn.user.id, { text : "```bot working now 💗thanks for choosing inrlbotmd, if you have face any bug related on our bot please infrom our support group``` *mode : "+Config.WORKTYPE });
 }
     else if (connection == "close") {
       let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
@@ -200,10 +200,10 @@ const templateButtons = {
       footer: Config.FOOTER,
       buttons,
     };
-await conn.sendMessage(m.from,templateButtons, { quoted: m });
+await conn.sendMessage(conn.user.id,templateButtons);
 }
 // end updater function
-     }// function closing
+}// function closing
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
