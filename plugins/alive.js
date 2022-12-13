@@ -40,7 +40,7 @@ inrl(
 		const start = new Date().getTime()
 	        message.reply("❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯")
 		const end = new Date().getTime()
-		await message.send("ʀᴇsᴘᴏɴsᴇ ɪɴ ' + (end - start) + ' _ᴍs_")
+		await message.send("ʀᴇsᴘᴏɴsᴇ ɪɴ " + (end - start) + " _ᴍs_")
 		global.catchError = false;
                 } catch (error) {
       global.catchError = true;
