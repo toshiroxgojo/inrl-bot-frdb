@@ -7,6 +7,7 @@ module.exports = {
     SESSION_ID: process.env.SESSION_ID || '',
     PASSWORD: process.env.PASSWORD || '',
     REACT : process.env.REACT || 'false',
+    WARNCOUND : process.env.WARNCOUND || "5",
     GROUP_CHAT : process.env.GROUP_CHAT || 'false',
     FREE_TXT : process.env.FREE_TXT || 'inrlbotmd',
     U_STATUS: process.env.U_STATUS || 'false',
