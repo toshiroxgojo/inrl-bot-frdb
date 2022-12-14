@@ -12,7 +12,7 @@ inrl({
  let m = message, c = client, text = match;
 if(!message.client.isCreator) return message.send("only for owners!")
     try {
-      let evaled = await eval(match);
+      let evaled = await eval(`(async () => { ${match} })()`);
       if (typeof match !== "string") evaled = await util.inspect(evaled);
     await message.reply(evaled);
     } catch (err) {
