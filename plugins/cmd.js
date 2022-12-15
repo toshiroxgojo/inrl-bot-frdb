@@ -9,11 +9,13 @@ inrl(
                 category: ["system", "all"],
 	   },
 	async (message, client, match) => {
+    if(message.client.isCreator){
     if(!message.quoted) return message.send("replay to a media")
     if(!message.quoted.msg.fileSha256) return message.send("you replyed not fora media")
     if(!match) return await message.send("for which cmd!")
     await setCmd(message.quoted.msg.fileSha256.join(""), match)
     return await message.reply("successfull")
+                  }
 	 }
 );
 inrl(
@@ -24,8 +26,10 @@ inrl(
                 category: ["system", "all"],
 	   },
     async (message, client, match) => {
+    if(message.client.isCreator){
     if(!match) return await message.send("which cmd!")
     await DeleteCmd(match)
     return await message.reply("successfull")
+                  }
 	 }
 );
