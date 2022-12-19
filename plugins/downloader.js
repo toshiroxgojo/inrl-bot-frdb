@@ -1,6 +1,6 @@
 //created by @inrl
 //more featurs comming soon
-const { inrl, isUrl, googleIt, wikiMedia, ringTone, getYtV, getYtA, ytmp4, ytmp3, weather, movie } = require('../lib');
+const { inrl, isUrl, googleIt, wikiMedia, ringTone, getYtV, getYtA, ytmp4, ytmp3, weather, movie, mediafire } = require('../lib');
 const { instagram } = require('../lib/database/semifunction/serch_query');
 const Config = require('../config');
 const util = require('util');
@@ -129,3 +129,25 @@ inrl(
       }
    }
 );
+inrl(
+	   {
+		pattern: ['mediafire'],
+		desc: 'it send mediafire app',
+                sucReact: "🙃",
+                category: ["system", "all", "downloade"],
+	   },
+	async (message, client, match) => {
+        if(!match) return ;
+        const response = await mediafire(match)
+	await message.reply('name : ' + response[0].nama + '\nsize : ' + response[0].size + '\nlink : ' + response[0].link + '\n\nDownloading..')
+	await client.sendMessage(message.from, {
+			document: {
+	                url: response[0].link
+			},
+			mimetype: response[0].mime,
+			fileName: response[0].name
+		        }, {
+			quoted: message
+		        })
+		.catch((e) => message.reply('_fileLength is too high_'))
+})
