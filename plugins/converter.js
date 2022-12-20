@@ -1,5 +1,8 @@
 //created by @inrl
 const { inrl, sendPhoto, sendVideo, sendVoice, sendGif, sendBassAudio, sendSlowAudio, sendBlownAudio, sendDeepAudio, sendErrapeAudio, sendFastAudio, sendFatAudio, sendNightcoreAudio, sendReverseAudio, sendSquirrelAudio, sendMp4AsMp3 } = require('../lib');
+const googleTTS = require('google-translate-tts');
+const Config = require('../config')
+
 
 
    inrl({ pattern: ['photo'], desc: "to convert webp to img",sucReact: "⚒️",  category: ["all"]}, async (message, client) => {
@@ -59,23 +62,26 @@ const ImSg =`╭───────────────╮
 ╰───────────────╯`
 await client.sendMessage(message.from,  { text : ImSg }, { quoted: message });
 });
-inrl({pattern: ['tts'], desc: "to get text as audio ", sucReact: "💔", category: ['all'], }, (async (message, client) => {
-const text = message.client.text;
-	    if (!message.client.text) return await client.sendMessage( message.from, { text: 'Enter A text'}, { quoted: message });
-            let InRL, TEXT;
-            let split = message.client.text.split(',');
-            TEXT = split[0] || text;
-            InRL = split[1] || Config.LANG;
+const googleTTS = require('google-translate-tts');
+const Config = require('../config')
+
+inrl({pattern: ['tts'], desc: "to get text as audio ", sucReact: "💔", category: ['all'], }, (async (message, client, match) => {
+ if (!match) return await client.sendMessage( message.from, { text: 'Enter A text'}, { quoted: message });
+  
+            let lang, TEXT;
+            let split = match.split(',');
+            TEXT = split[0] || match;
+            lang = split[1] ? split[1].trim() : Config.LANG.trim();
              
-                LANG = InRL;
+                LANG = lang;
                 ttsMessage = TEXT;
                 SPEED = 1.0
     
-            var buffer = await googleTTS.synthesize({
+            let buffer = await googleTTS.synthesize({
                 text: ttsMessage,
                 voice: LANG
             });
-            await client.sendMessage( message.from, { audio:buffer, mimetype: "audio/mp4",ptt: true}, { quoted: message } );
+            await client.sendMessage( message.from, { audio:buffer, mimetype: "audio/mp4",ptt: false }, { quoted: message } );
         }));
 inrl({pattern: ['mp3','audio'], desc: "to get video as audio ", sucReact: "💥", category: ['all'], }, (async (message, client) => {
 await sendMp4AsMp3(message, client)
