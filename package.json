@@ -29,6 +29,7 @@
     "translatte": "^3.0.1",
     "browser-id3-writer":"4.4.0",
     "awesome-phonenumber": "^2.64.0",
+    "google-translate-tts": "^0.4.0-dev",
     "axios": "^0.27.2",
     "chalk": "^4.1.2",
     "imgur": "^1.0.2",
