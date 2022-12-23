@@ -34,6 +34,36 @@
 - 👉 if You have no Accound In Koyeb Create an Accound By clicking here  [Create An Accound](https://app.koyeb.com/)<br>
 
   [Click here to deploy on Koyeb](https://tinyurl.com/2smba26t)<br>
+<br>
+
+## `⨷ Deploy To Termux` 
+
+- 👉 setup the below cmd at first<br>
+
+```bash
+termux-setup-storage
+```
+
+- 👉 then copy all cmds from below<br><br>
+
+```bash
+apt update
+apt upgrade
+pkg update && pkg upgrade
+pkg install python
+pkg install python2
+pkg install bash
+pkg install libwebp
+pkg install git -y
+pkg install nodejs -y 
+pkg install ffmpeg -y 
+pkg install wget
+pkg install imagemagick -y
+git clone Your Forked Github Url
+cd inrl-bot-md
+npm i
+npm start
+```
 
 </div>
 
