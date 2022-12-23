@@ -66,7 +66,7 @@ inrl(
   if(!match) return m.send("give me a pkg name");
   await axios.get(`https://api.npms.io/v2/search?q=${match}`).then(({ data }) => {
   let txt = data.results.map(({ package: pkg }) => `*${pkg.name}* (v${pkg.version})\n_${pkg.links.npm}_\n_${pkg.description}_`).join('\n\n')
-  return await m.send(' ' + txt + ' ')
+  return m.send(' ' + txt + ' ')
   })
 })
 inrl(
