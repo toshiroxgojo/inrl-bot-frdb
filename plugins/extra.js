@@ -50,7 +50,7 @@ inrl(
     type : "extra"
   },
   async (m, client, match) => {
-let perso = m.qouted.sender ? m.qouted.sender.split("@")[0] : match
+let perso = m.quoted.sender ? m.quoted.sender.split("@")[0] : match
 let person = perso;
 if(perso.includes(':')){ person = perso.split(':')[0] } else if(perso.includes('+')){ person = perso.split('+')[1] }
 await m.send(`https://wa.me/${person}`)
@@ -64,9 +64,9 @@ inrl(
     type : "extra"
   }, async (m, client, match) => {
   if(!match) return m.send("give me a pkg name");
-  await axios.get(`https://api.npms.io/v2/search?q=${text}`).then(({ data }) => {
+  await axios.get(`https://api.npms.io/v2/search?q=${match}`).then(({ data }) => {
   let txt = data.results.map(({ package: pkg }) => `*${pkg.name}* (v${pkg.version})\n_${pkg.links.npm}_\n_${pkg.description}_`).join('\n\n')
-  m.send(' ' + txt + ' ')
+  return await m.send(' ' + txt + ' ')
   })
 })
 inrl(
