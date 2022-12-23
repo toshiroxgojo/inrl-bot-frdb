@@ -1,5 +1,4 @@
 const toBool = (x) => x == 'true'
-const { Sequelize } = require('sequelize')
 const { existsSync } = require('fs')
 if (existsSync('config.env')) require('dotenv').config({ path: './config.env' })
 module.exports = {
