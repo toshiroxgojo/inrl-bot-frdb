@@ -33,9 +33,8 @@ module.exports = {
     LANG : (process.env.LANGUAG || 'EN').toLowerCase(), //values are ml, en only
     OWNER : process.env.OWNER || "917593919575",// bot owner
     BRANCH: 'master',//nothing😉
-    PROCFILE_DATA : process.env.PROCFILE_DATA || "💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ",// profile status updating value
+    PROFILE_STATUS : process.env.PROFILE_STATUS || "💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ",// profile status updating value
     BAD_WORD_TEXT : process.env.BAD_WORD_TEXT || 'xxx, xnxx;1020020000.g.us, yourJid', // to kick person by unwanted msg
-    SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),// to read chats
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY || '',
