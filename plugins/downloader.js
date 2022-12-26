@@ -1,6 +1,6 @@
 //created by @inrl
 //more featurs comming soon
-const { inrl, isUrl, googleIt, wikiMedia, ringTone, getYtV, getYtA, ytmp4, ytmp3, weather, movie, mediafire } = require('../lib');
+const { inrl, isUrl, googleIt, wikiMedia, ringTone, getYtV, getYtA, weather, movie, mediafire } = require('../lib');
 const { instagram } = require('../lib/database/semifunction/serch_query');
 const Config = require('../config');
 const util = require('util');
@@ -12,13 +12,17 @@ inrl(
 		desc: 'do get goole serch result',
                 sucReact: "🙃",
                 category: ["system", "all"],
+                type : "serch"
 	   },
 	async (message, client) => {
-        if(message.client.text){
+try{
+        if(!message.client.text) return m.send("need a text to serch");
         let teks = await googleIt(message.client.text);
         return await client.sendMessage( message.from, { text: "\n"+teks }, { quoted: message })
-          }
-     }
+ }catch(e){
+    m.send("error"+e)
+         }
+    }
 );
 inrl(
 	   {
@@ -26,9 +30,11 @@ inrl(
 		desc: 'do get data from wikimedia',
                 sucReact: "🙃",
                 category: ["system", "all"],
+                type : "serch"
 	   },
 	async (message, client) => {
-        if(message.client.text){
+try {
+        if(!message.client.text) return m.send("need a text to serch");
         let result = await wikiMedia(message.client.text);
 let buttons = [
                  {buttonId: `wikimedia ${message.client.text}`, buttonText: {displayText: 'next result'}, type: 1}
@@ -41,8 +47,10 @@ let buttons = [
                     headerType: 4
                 }
         return await client.sendMessage( message.from, buttonMessage, { quoted: message })
-          }
-     }
+ }catch(e){
+    m.send("error"+e)
+         }
+    }
 );
 inrl(
 	   {
@@ -50,13 +58,17 @@ inrl(
 		desc: 'do get random ringtons ',
                 sucReact: "🙃",
                 category: ["system", "all"],
+                type : "serch"
 	   },
 	async (message, client) => {
-        if(message.client.text){
+try{
+        if(!message.client.text) return m.send("need a text to serch");
         let result = await ringTone(message.client.text);
         return await client.sendMessage( message.from, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: message })
-          }
-     }
+ }catch(e){
+    m.send("error"+e)
+         }
+    }
 );
 
 inrl(
@@ -65,14 +77,11 @@ inrl(
 		desc: 'To get yt video',
                 sucReact: "💯",
                 category: ["system", "all", "downloade"],
+                type : "download"
 	   },
 	async (message, client,match) => {
-if(!match.includes('http')){
-await getYtV(message, client)
-}if(match.includes('http')){
-await ytmp4(message, client)
+await getYtV(message, client);
     }
-  }
 );
 inrl(
 	   {
@@ -80,13 +89,10 @@ inrl(
 		desc: 'get yt video as mp3 output',
                 sucReact: "🤙",
                 category: ["system", "all", "downloade"],
+                type : "download"
 	   },
 	async (message, client,match) => {
-if(!match.includes('http')){
 await getYtA(message, client)
-}if(match.includes('http')){
-await ytmp3(message, client)
-    }
   }
 );
 inrl(
@@ -95,10 +101,15 @@ inrl(
 		desc: 'To get detiles of movie',
                 sucReact: "💥",
                 category: ["system", "all", "downloade"],
+                type : "search"
 	   },
 	async (message, client,match) => {
 if(!match) return message.send("enter name of movie");
+try {
 await movie(message,client);
+}catch(e){
+m.send("error"+e);
+    }
   }
 );
 
@@ -108,9 +119,14 @@ inrl(
 		desc: 'To get detiles of you place',
                 sucReact: "🔥",
                 category: ["system", "all"],
+                type : "search"
 	   },
 	async (message, client,match) => {
+try {
 await wather(message,client);
+}catch(e){
+m.send("error"+e);
+    }
   }
 );
 inrl(
@@ -119,15 +135,15 @@ inrl(
 		desc: 'do get instgram videos',
                 sucReact: "🙃",
                 category: ["system", "all"],
+                type : "download"
 	   },
 	async (message, client, match) => {
-        if(message.client.text){
+        if(!message.client.text) return m.send('need url after the cmd');
         let url = await instagram(match);
         for (let i=0; i<url.length; i++) {
         return await client.sendMessage( message.from, { video: { url : url[i]}, caption :Config.CAPTION }, { quoted: message })
          }
-      }
-   }
+    }
 );
 inrl(
 	   {
@@ -135,9 +151,10 @@ inrl(
 		desc: 'it send mediafire app',
                 sucReact: "🙃",
                 category: ["system", "all", "downloade"],
+                type : "download"
 	   },
 	async (message, client, match) => {
-        if(!match) return ;
+        if(!match) return m.send('need url after the cmd');
         const response = await mediafire(match)
 	await message.reply('name : ' + response[0].nama + '\nsize : ' + response[0].size + '\nlink : ' + response[0].link + '\n\nDownloading..')
 	await client.sendMessage(message.from, {
