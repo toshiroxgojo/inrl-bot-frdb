@@ -12,7 +12,7 @@ inrl(
 		desc: 'do get goole serch result',
                 sucReact: "🙃",
                 category: ["system", "all"],
-                type : "serch"
+                type : "search"
 	   },
 	async (message, client) => {
 try{
@@ -30,7 +30,7 @@ inrl(
 		desc: 'do get data from wikimedia',
                 sucReact: "🙃",
                 category: ["system", "all"],
-                type : "serch"
+                type : "search"
 	   },
 	async (message, client) => {
 try {
@@ -58,7 +58,7 @@ inrl(
 		desc: 'do get random ringtons ',
                 sucReact: "🙃",
                 category: ["system", "all"],
-                type : "serch"
+                type : "search"
 	   },
 	async (message, client) => {
 try{
