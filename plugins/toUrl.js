@@ -8,25 +8,26 @@ inrl(
        desc: 'to convert image/sticker/video/audio to url',
        sucReact: "⛰️",
        category: ["all"]
+       type : "converter"
     },
 	   async (message, client) => {
 await sendUrl(message, client);
     }
 );
- inrl({pattern: ['tinyurl'], desc: "to convert url as small", sucReact: "😛", category: ['all'],},   async (message, client) => {
+ inrl({pattern: ['tinyurl'], desc: "to convert url as small", sucReact: "😛", category: ['all'],type : "converter"},   async (message, client) => {
 
            await tinyUrl(message, client);
 });
-inrl({ pattern: ['webss'], desc: "to get web screenshot",sucReact: "⚒️",  category: ["all"]}, async (message, client) => {
+inrl({ pattern: ['webss'], desc: "to get web screenshot",sucReact: "⚒️",  category: ["all"],type : "misc"}, async (message, client) => {
 
         await webSs(message, client);
 });
 
-inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  category: ["all"],}, (async (message, client) => {
+inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  category: ["all"],type : "converter"}, (async (message, client) => {
      await pdfGen(message, client);
 }))
 
-inrl({ pattern: ['take'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"]}, async (message, client, match) => {
+inrl({ pattern: ['take'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"],type : "utility"}, async (message, client, match) => {
 if(message.quoted.stickerMessage){
 let pack, auth;
 if(match.includes(',')){
@@ -57,7 +58,7 @@ let imgForaUdio = await BufferToFile(img,'./media/imagForAudio.jpg');
     return await fs.unlinkSync(imgForaUdio)
   }
 })
-inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"]}, async (message, client) => {
+inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"],type : "converter"}, async (message, client) => {
            const text = message.client.text;
 	    if (!text) return message.send('send to emojis \n\n _ex_:❣️+🥵');
 let emoji1,emoji2;
