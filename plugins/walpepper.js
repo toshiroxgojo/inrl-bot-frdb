@@ -1,17 +1,19 @@
-const bots = require("../lib/perfix");
+const { config, inrl } = require('../lib');
 const axios = require("axios");
-const conf = require("../lib/Data");
+let perfix  = Config.PERFIX == 'false' ? '' : Config.PERFIX;
+const Config = require('../config');
 
-bots.inrl(
+inrl(
   {
     pattern: ["wp"],
     desc: "for fun to get random photos",
     sucReact: "🌇",
     category: ["all", "create"],
+    type : "fun"
   },
-  async (message, client) => {
-    var r_text = new Array();
-
+  async (message, client, match) => {
+if(match) return;
+    let r_text = new Array();
     r_text[0] =
       "https://images.wallpaperscraft.com/image/single/trees_pines_lake_198439_4480x6720.jpg";
     r_text[0] =
@@ -1257,12 +1259,16 @@ bots.inrl(
     r_text[620] =
       "https://images.wallpaperscraft.com/image/single/smiley_emotions_minimalism_134124_1350x2400.jpg";
 
-    var i = Math.floor(r_text.length * Math.random());
-    const Message = {
-      image: { url: r_text[i] },
-      caption:bots.config.exif.cap,
-    };
-    await client.sendMessage(message.from, Message, { quoted: message });
-    global.catchError = false;
-  }
-);
+    let i = Math.floor(r_text.length * Math.random());
+     let buttons = [
+        {buttonId:`${perfix}wp, buttonText: {displayText: `ɴᴇxᴛ ➪`}, type: 1},
+      ]
+      let buttonMsg = {
+      image: {url:r_text[i]},
+      caption:  config.exif.cap,
+      footer: Config.FOOTER,
+      buttons: buttons,
+      headerType: 4
+      }
+await client.sendMessage(message.from, buttonMsg, {quoted: message})
+})
