@@ -1,6 +1,5 @@
 //created by @inrl
 const { inrl, truecaller, stickersearch } = require('../lib/');
-//const { getLastMessageInChat } = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
 
@@ -10,6 +9,7 @@ inrl(
 		desc: 'To get script of the bot',
                 sucReact: "💯",
                 category: ["system", "all"],
+                type : "general"
 	   },
 	async (message, client) => {
 		return await client.sendMessage( message.from, { text: Config.GIT }, { quoted: message })
@@ -21,6 +21,7 @@ inrl(
 		desc: 'To check ping',
                 sucReact: "💯",
                 category: ["system", "all"],
+                type : "search"
 	   },
 	async (message, client, match) => {
 if(match || message.quoted){
@@ -40,6 +41,7 @@ inrl(
     desc: "to serch  datas as you want",
     sucReact: "🥰",
     category: ["system", "all"],
+    type : "search"
   },
   async (message, client, match) => {
 if(match){
