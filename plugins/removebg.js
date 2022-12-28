@@ -9,6 +9,7 @@ inrl(
 		desc: 'To remove bg of any image',
                 sucReact: "😉",
                 category: ["system", "all","create","photo","fun"],
+                type : "converter"
 	   },
 	async (message, client) => {
 if(message.quoted.imageMessage){
@@ -26,6 +27,7 @@ inrl(
     usage: '<text>',
     sucReact: "🖼",
     category: ["search", "all"],
+    type : "search"
   },
   async (message, client, match) => {
     if (!match) {
