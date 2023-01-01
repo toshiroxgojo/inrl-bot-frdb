@@ -1,4 +1,3 @@
-//created by @ inrl
 const { inrl } = require('../lib/');
 inrl(
 	   {
@@ -54,7 +53,7 @@ inrl({
 		desc: 'for sending a message  by thir jid',
                 sucReact: "😉",
                 category: ["system", "all"],
-                type : "misc"
+                type : "utility"
 	   },
 	async (message, client, match) => {
 if(!match) { return client.sendMessage(message.from, {text : "after the (cmd) enter the jid to share your data \n_example :- forward 910123456789@s.whatsapp.net_"}); }
@@ -79,7 +78,7 @@ inrl(
 		desc: 'it send information of user',
                 sucReact: "💯",
                 category: ["system", "all"],
-                type : "misc"
+                type : "utility"
 	   },
 	async (message, client) => {
 try{
@@ -102,8 +101,8 @@ catch { pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top
 let { status, setAt } = await client.fetchStatus(from)
 let captiOn = "```"/*user : ${name}\nid : ${id}\n*/+`status :${status}\nstatus setAt : ${setAt}`+"```";
 await client.sendMessage(message.from, { image : { url : pp }, caption : captiOn }, { quoted: message });
+     }
 } catch(e){
 m.reply('error\n'+e)
-         }
-     }
+   }
 });
