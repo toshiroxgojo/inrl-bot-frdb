@@ -21,9 +21,6 @@ module.exports = {
     WELCOME_SET : process.env.WELCOME_SET || "true", //now thi scmd is not creted creating
     EXIT_MSG : process.env.EXIT_MSG || "true", //to use kick or left msg
     CALL_BLOCK : process.env.CALL_BLOCK || "false", // to block pm calling numbers expt sudo
-    ANTI_LINK_ALL : process.env.ANTI_LINK_ALL || "1919219,82822929,8282929,,jid", //to remove person from group by the link
-    FACK_REMOVE : process.env.FACK_REMOVE || "2222,27372;1919911918282828282.g.us, yourJid", //yo remove expected perfix phone numbers
-    SET_ANTI_LINK : process.env.SET_ANTI_LINK || "instagram.com, youtube, chat.com;100839299210173.g.us, yourJid", //to set coustamized antilink
     STATUS_VIEW : process.env.STATUS_VIEW || 'true',//it read your status automaticaly 
     MENSION: {
         MENSION_AUDIO : process.env.MENSION_AUDIO || "https://i.imgur.com/iUOGcyF.mp4,https://i.imgur.com/e2PKT60.mp4,https://i.imgur.com/5NZDe8m.mp4,https://i.imgur.com/iaHKsGW.mp4, https://i.imgur.com/NGWrUkQ.mp4,https://i.imgur.com/GUtD1hr.mp4, https://i.imgur.com/PBuALN3.mp4, https://i.imgur.com/79YoX98.mp4, https://i.imgur.com/HzIz3ls.mp4, https://i.imgur.com/2jzZauR.mp4, https://i.imgur.com/oKVVwIj.mp4, https://i.imgur.com/AzqHkeV.mp4, https://i.imgur.com/pf1BWXN.mp4, https://i.imgur.com/N2N6S7C.mp4, https://i.imgur.com/IrEdvwL.mp4, https://i.imgur.com/4fdJUoj.mp4, https://i.imgur.com/FaOtaF5.mp4, https://i.imgur.com/wsrdnP8.mp4,https://i.imgur.com/imr3bC8.mp4, https://i.imgur.com/Xgzkbsk.mp4, https://i.imgur.com/0WML13D.mp4, https://i.imgur.com/b491tUX.mp4, https://i.imgur.com/GuAnUuf.mp4, https://i.imgur.com/yVwoqYp.mp4, https://i.imgur.com/WgMgTBP.mp4,https://i.imgur.com/LQBlI1y.mp4,https://i.imgur.com/EQn2BvM.mp4, https://i.imgur.com/SIj26aP.mp4,https://i.imgur.com/IWlTmTE.mp4, https://i.imgur.com/c4E7E1k.mp4, https://i.imgur.com/D5PREWe.mp4,https://i.imgur.com/JL6FWpS.mp4, https://i.imgur.com/rvD8PlZ.mp4, https://i.imgur.com/ChUKdPk.mp4, https://i.imgur.com/z9oQd4N.mp4, https://i.imgur.com/z9oQd4N.mp4, https://i.imgur.com/vkdcGHu.mp4, https://i.imgur.com/vkdcGHu.mp4,https://i.imgur.com/K2QlmTc.mp4, https://i.imgur.com/AeGNKo3.mp4, https://i.imgur.com/Qe5khtL.mp4, https://i.imgur.com/lCZl3Af.mp4, https://i.imgur.com/AsEfT76.mp4, https://i.imgur.com/KraBTPf.mp4, https://i.imgur.com/fbvDI1g.mp4,https://i.imgur.com/uazVUOH.mp4, https://i.imgur.com/YN04ot5.mp4, https://i.imgur.com/YN04ot5.mp4",
@@ -34,13 +31,12 @@ module.exports = {
     OWNER : process.env.OWNER || "917593919575",// bot owner
     BRANCH: 'master',//nothing😉
     PROFILE_STATUS : process.env.PROFILE_STATUS || "💗 ᴀᴜᴛᴏ ᴍᴀᴛɪᴄ ʙɪᴏ ʙy ɪɴʀʟ-ʙᴏᴛ-ᴍᴅ",// profile status updating value
-    BAD_WORD_TEXT : process.env.BAD_WORD_TEXT || 'xxx, xnxx;1020020000.g.us, yourJid', // to kick person by unwanted msg
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY || '',
         APP_NAME: process.env.HEROKU_APP_NAME || ''
     },
-    BLOCK_CHAT : process.env.BLOCK_CHAT ||[],//to remove chat from specifed jid
+    BLOCK_CHAT : process.env.BLOCK_CHAT || 'your jid',//to remove chat from specifed jid
     AUTO_CHAT_PM : process.env.AUTO_CHAT_PM || "false",//to chat bot on pm msgs
     AUTO_CHAT_GRP : process.env.AUTO_CHAT_GRP || "false",//to set chatbot on group
     BOT_PRESENCE : process.env.BOT_PRESENCE || "recording",//bot presence
