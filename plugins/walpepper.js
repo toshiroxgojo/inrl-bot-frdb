@@ -1261,7 +1261,7 @@ if(match) return;
 
     let i = Math.floor(r_text.length * Math.random());
      let buttons = [
-        {buttonId:`${perfix}wp, buttonText: {displayText: `ɴᴇxᴛ ➪`}, type: 1},
+        {buttonId:`${perfix}wp`, buttonText: {displayText: `ɴᴇxᴛ ➪`}, type: 1},
       ]
       let buttonMsg = {
       image: {url:r_text[i]},
