@@ -7,7 +7,7 @@ inrl(
 		pattern: ['url'],
        desc: 'to convert image/sticker/video/audio to url',
        sucReact: "⛰️",
-       category: ["all"]
+       category: ["all"],
        type : "converter"
     },
 	   async (message, client) => {
@@ -58,7 +58,7 @@ let imgForaUdio = await BufferToFile(img,'./media/imagForAudio.jpg');
     return await fs.unlinkSync(imgForaUdio)
   }
 })
-inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"],type : "converter"}, async (message, client) => {
+inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"],type : "general"}, async (message, client) => {
            const text = message.client.text;
 	    if (!text) return message.send('send to emojis \n\n _ex_:❣️+🥵');
 let emoji1,emoji2;
