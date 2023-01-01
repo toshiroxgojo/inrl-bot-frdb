@@ -1,7 +1,7 @@
 const { config, inrl } = require('../lib');
 const axios = require("axios");
-let perfix  = Config.PERFIX == 'false' ? '' : Config.PERFIX;
 const Config = require('../config');
+let perfix  = Config.PERFIX == 'false' ? '' : Config.PERFIX;
 
 inrl(
   {
