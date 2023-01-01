@@ -77,3 +77,41 @@ inrl(
        }
     }
 })
+const { withValue } = require('../lib/database/groupdbs');
+inrl(
+	   {
+		pattern: ['remove'],
+		desc: 'to remove externel Plugin ',
+        sucReact: "🐽",
+        category: ["system", "all"],
+        type : "system"
+	   }, async (message, client, match, cmd) => {
+	   if(!message.client.isCreator) return await message.replay("action only for owner!");
+       if(!match) return message.send("need name of plugin!")
+       match = withValue()+match.trim();
+       if(fs.existsSync('./'+match+'.js')){
+       await fs.unlinkSync(__dirname + "/" + match + ".js");
+       }
+       let list = await getListOfPlugin(),dltName;
+       list.map(async(name)=>{
+        dltName = name.name
+       if(!dltName.includes(match)) {
+        return await message.reply("no such plugin in your db!")
+         }
+       await dlt_plugin(match)
+       if(fs.existsSync('./'+match+'.js')){
+       await fs.unlinkSync(__dirname + "/" + match + ".js");
+       }
+const buttons = [
+        { buttonId: perfix+"restart", buttonText: { displayText: "restart"}, type: 1, }
+      ]
+const caption = match.split(getValues)[1]+" plugin deleted from the database\nbut the plugins work for befor restarting\nthe project, as you want to remove this \nplugin permently from the code at this \nmomment! clieck the below \nrestart button"
+const templateButtons = {
+      text:caption,
+      footer:Config.FOOTER,
+      buttons: buttons,
+      headerType: 1
+    };
+return await client.sendMessage(message.from,templateButtons, { quoted: message});
+    })
+})
