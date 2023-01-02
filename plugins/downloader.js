@@ -20,7 +20,7 @@ try{
         let teks = await googleIt(message.client.text);
         return await client.sendMessage( message.from, { text: "\n"+teks }, { quoted: message })
  }catch(e){
-    m.send("error"+e)
+    message.send("error"+e)
          }
     }
 );
@@ -48,7 +48,7 @@ let buttons = [
                 }
         return await client.sendMessage( message.from, buttonMessage, { quoted: message })
  }catch(e){
-    m.send("error"+e)
+    message.send("error"+e)
          }
     }
 );
@@ -66,7 +66,7 @@ try{
         let result = await ringTone(message.client.text);
         return await client.sendMessage( message.from, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: message })
  }catch(e){
-    m.send("error"+e)
+    message.send("error"+e)
          }
     }
 );
@@ -108,7 +108,7 @@ if(!match) return message.send("enter name of movie");
 try {
 await movie(message,client);
 }catch(e){
-m.send("error"+e);
+message.send("error"+e);
     }
   }
 );
@@ -125,7 +125,7 @@ inrl(
 try {
 await wather(message,client);
 }catch(e){
-m.send("error"+e);
+message.send("error"+e);
     }
   }
 );
@@ -138,8 +138,8 @@ inrl(
                 type : "download"
 	   },
 	async (message, client, match) => {
-        if(!message.client.text) return m.send('need url after the cmd');
-        let url = await instagram(match);
+        if(!match) return message.send('need url after the cmd');
+        let url = await instagram(match.trim());
         for (let i=0; i<url.length; i++) {
         return await client.sendMessage( message.from, { video: { url : url[i]}, caption :Config.CAPTION }, { quoted: message })
          }
@@ -154,8 +154,8 @@ inrl(
                 type : "download"
 	   },
 	async (message, client, match) => {
-        if(!match) return m.send('need url after the cmd');
-        const response = await mediafire(match)
+        if(!match) return message.send('need url after the cmd');
+        const response = await mediafire(match.trim())
 	await message.reply('name : ' + response[0].nama + '\nsize : ' + response[0].size + '\nlink : ' + response[0].link + '\n\nDownloading..')
 	await client.sendMessage(message.from, {
 			document: {
