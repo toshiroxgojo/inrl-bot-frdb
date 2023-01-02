@@ -16,7 +16,7 @@ inrl(
 	   },
 	async (message, client) => {
 try{
-        if(!message.client.text) return m.send("need a text to serch");
+        if(!message.client.text) return message.send("need a text to serch");
         let teks = await googleIt(message.client.text);
         return await client.sendMessage( message.from, { text: "\n"+teks }, { quoted: message })
  }catch(e){
@@ -34,7 +34,7 @@ inrl(
 	   },
 	async (message, client) => {
 try {
-        if(!message.client.text) return m.send("need a text to serch");
+        if(!message.client.text) return message.send("need a text to serch");
         let result = await wikiMedia(message.client.text);
 let buttons = [
                  {buttonId: `wikimedia ${message.client.text}`, buttonText: {displayText: 'next result'}, type: 1}
@@ -62,7 +62,7 @@ inrl(
 	   },
 	async (message, client) => {
 try{
-        if(!message.client.text) return m.send("need a text to serch");
+        if(!message.client.text) return message.send("need a text to serch");
         let result = await ringTone(message.client.text);
         return await client.sendMessage( message.from, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: message })
  }catch(e){
