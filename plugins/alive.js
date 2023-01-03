@@ -1,23 +1,23 @@
-// created by inrl
-var NewGen, templateButtons;
 const os = require("os");
 const got = require('got')
 const speed = require("performance-now");
-const  { inrl , tiny, config, inrlQuita, insult , getBuffer, randomStyle, styletext, send_alive, send_menu }= require('../lib/')
+const { inrl , tiny, config, inrlQuita, insult , getBuffer, randomStyle, styletext, send_alive, send_menu }= require('../lib/')
 const Config = require("../config");
+let perfix  = Config.PERFIX == 'false' ? '' : Config.PERFIX;
+
 inrl(
 	   {
-		pattern: ['list'],
-		desc: 'To viwe list of categories',
-                sucReact: "💯",
-                category: ["system", "all"],
+	pattern: ['list'],
+	desc: 'To viwe list of categories',
+        sucReact: "💯",
+        category: ["system", "all"],
+        type :'info'
 	   },
 	async (message, client, match) => {
-if(match) return;
 const categories = ["search", "all", "downloade", "chat", "system", 'fun', '18+', 'apk','ff','owner', 'create', 'group', "logo","photo","sticker","anime" ];
 let rows =[];
 for(i=0;i<categories.length;i++){
-  if([i]) rows.push({title: `${categories[i]}-menu`, rowId:`${categories[i]}-menu`})
+  if([i]) rows.push({title: `${categories[i]}-menu`, rowId:`${perfix}${categories[i]}-menu`})
 }
 const sections = [{title: `${Config.BOT_INFO.split(',')[0]} list menu`, rows: rows}]
 const button = {
@@ -26,50 +26,46 @@ const button = {
         buttonText: "click here to viwe categories",
         sections,
 }
-await client.sendMessage( message.from, button, { quoted: message});
+return await client.sendMessage( message.from, button, { quoted: message});
 });
 inrl(
 	   {
 		pattern: ['ping'],
 		desc: 'To check ping',
-                sucReact: "💯",
-                category: ["system", "all"],
+        sucReact: "💯",
+        category: ["system", "all"],
+        type : 'info'
 	   },
 	async (message, client) => {
-             try {
-		const start = new Date().getTime()
-	        message.reply("❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯")
-		const end = new Date().getTime()
-		await message.send("ʀᴇsᴘᴏɴsᴇ ɪɴ " + (end - start) + " _ᴍs_")
-		global.catchError = false;
-                } catch (error) {
-      global.catchError = true;
-      return await client.sendErrorMessage( message.from, error, message.key, message );
-                }
+             const start = new Date().getTime()
+		     await message.reply('Ping!')
+		     const end = new Date().getTime()
+		     return await message.reply('Pong! ' + (end - start) + ' ms');
 	 }
 );
-inrl({ pattern: ['del'], desc: "to delete unwanted grp msg sended by bot",sucReact: "⚒️",  category: ["all"]}, async (message, client) => {
-if (message.client.isCreator && message.isGroup) {
+inrl({ pattern: ['del'], desc: "to delete unwanted grp msg sended by bot",sucReact: "⚒️",  category: ["all"], type: 'whatsapp'}, async (message, client) => {
+if (!message.client.isCreator) return message.reply('only for owner!');
+if(!message.isGroup) return message.reply('this plugin only works in group!');
                 if (!message.quoted) return await client.sendMessage(message.from, { text :"replay to a group content"},{ quoted: message })
                 let { chat, fromMe, id } = message.quoted
-                client.sendMessage(message.from, { delete: { remoteJid: message.chat, fromMe: message.quoted.fromMe, id: message.quoted.id, participant: message.quoted.sender }})
-        }
+                return client.sendMessage(message.from, { delete: { remoteJid: message.chat, fromMe: message.quoted.fromMe, id: message.quoted.id, participant: message.quoted.sender }})
     }
 );
 inrl(
 	   {
 		pattern: ['dlt'],
 		desc: 'To dlt unwanted msg by admin from group content',
-                sucReact: "🤌",
-                category: ["system", "all"],
+        sucReact: "🤌",
+        category: ["system", "all"],
+        type: 'whatsapp'
 	   },
 	async (message, client) => {
         const groupMetadata = message.isGroup ? await client.groupMetadata(message.from).catch(e => {}) : ''
-	const participants = message.isGroup ? await groupMetadata.participants : ''
+	    const participants = message.isGroup ? await groupMetadata.participants : ''
         let admins = message.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
 if(admins.includes(message.sender) && message.isGroup) {
-await client.sendMessage(message.from, {
-		delete: {
+return await client.sendMessage(message.from, {
+		    delete: {
 			remoteJid: message.from,
 			fromMe: message.quoted.fromMe,
 			id: message.quoted.id,
@@ -84,9 +80,10 @@ inrl(
     desc: "to check the bot status",
     sucReact: "🥰",
     category: ["system", "all"],
+    type : 'info'
   },
   async (message, client) => {
-await message.send("iam Aliev")//send_alive(message, client)
+return await send_alive(message, client)
 });
 inrl(
   {
@@ -94,6 +91,7 @@ inrl(
     desc: "to get the bot script",
     sucReact: "🥵",
     category: ["system", "all"],
+    type : 'system'
   },
   async (message, client) => {
       const response = await got("https://api.github.com/repos/inrl-official/inrl-bot-md")
@@ -105,8 +103,8 @@ inrl(
 ┃☯︎│ ᴠᴇʀꜱɪᴏɴ : ${tiny(Config.VERSION)}
 ┃☯︎│ ɢɪᴛʜᴜʙ : _${Config.GIT}_
 ┃☯︎│ ᴛᴜʀᴛᴏʀɪᴀʟ : _${Config.VIDEO}_
-┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴛᴀʀᴇꜱ :* ${json.stargazers_count} stars
-┃☯︎│ ꜰᴏʀᴋꜱ:* ${json.forks_count} forks
+┃☯︎│ ᴛᴏᴛᴇʟ ꜱᴛᴀʀᴇꜱ : ${json.stargazers_count} stars
+┃☯︎│ ꜰᴏʀᴋꜱ: ${json.forks_count} forks
 ┃☯︎│
 ┃☯︎╰───────────────
 ╰═════════════════⊷`
@@ -131,16 +129,14 @@ let buttonMessage = {
 });
 const bots = require("../lib/perfix");
 const Lang = bots.getString("_whats");
-// const fs = require("fs");
-// const path = require("path");
 let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat","inrl":"Inrl","ibot":"Ibot", "system": "System", 'fun': "Fun", '18+': "18+","ff:":"Ff", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo","photo": "Photo","sticker": "Sticker","anime": "Anime" }
 
-inrl({ pattern: ["menu"], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
+inrl({ pattern: ["menu"], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"], type: 'whatsapp'}, async (message, client) => {
  await send_menu(message, client);
 });
 bots.categories.map(category => {
   if (category == 'all') return;
-  bots.inrl({ pattern: [`${category}-menu`], sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
+inrl({ pattern: [`${category}-menu`], sucReact: "📰", category: ["all", "system"], type :'get'}, async (message, client) => {
   try {
     let prefix = new String; 
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
@@ -172,91 +168,27 @@ bots.categories.map(category => {
 })
 
 
-bots.inrl({ pattern: [`cmds-count`], sucReact: "🆗", category: ["all", "system"] }, async (message, client) => {
-  try {
-    await client.sendMessage( message.from, { text: bots.infoMessage('Counting commands 💯') }, { quoted: bots.config.quoted.product });
-    let all_cmd = 0;
-    let visible_cmd = 0;
-    let invisible_cmd = 0;
-    let search_cmd = 0;
-    let downloade_cmd = 0;
-    let chat_cmd = 0;
-    let system_cmd = 0;
-    let fun_cmd = 0;
-    let eighteenplus_cmd = 0;
-    let owner_cmd = 0;
-    let create_cmd = 0;
-    let group_cmd = 0;
-    let logo_cmd = 0;
-    let countcmdOfCmd = 0;
-    bots.commands.map(command => {
-      if (command.category.includes("all")) all_cmd += command.pattern.length;
-      if (!command.dontAddCommandList) visible_cmd += command.pattern.length;
-      if (command.dontAddCommandList) invisible_cmd += command.pattern.length;
-      if (command.category.includes("search")) search_cmd += command.pattern.length;
-      if (command.category.includes("downloade")) downloade_cmd += command.pattern.length;
-      if (command.category.includes("chat")) chat_cmd += command.pattern.length;
-      if (command.category.includes("system")) system_cmd += command.pattern.length;
-      if (command.category.includes("fun")) fun_cmd += command.pattern.length;
-      if (command.category.includes("18+")) eighteenplus_cmd += command.pattern.length;
-      if (command.category.includes("owner")) owner_cmd += command.pattern.length; 
-      if (command.category.includes("create")) create_cmd += command.pattern.length; 
-      if (command.category.includes("group")) group_cmd += command.pattern.length; 
-      if (command.category.includes("logo")) logo_cmd += command.pattern.length; 
-      countcmdOfCmd += command.pattern.length;
-    });
-    let text = `------- Command Count -------
-
-𖠌 All Commands: ${all_cmd.toString()}
-𖠌 Visible Commands: ${visible_cmd.toString()}
-𖠌 Invisible Commands: ${invisible_cmd.toString()}
-𖠌 Search Commands: ${system_cmd.toString()}
-𖠌 Downloade Commands: ${downloade_cmd.toString()}
-𖠌 Chat Commands: ${chat_cmd.toString()}
-𖠌 System Commands: ${system_cmd.toString()}
-𖠌 Fun Commands: ${fun_cmd.toString()}
-𖠌 Adult Commands: ${eighteenplus_cmd.toString()}
-𖠌 Owner Commands: ${owner_cmd.toString()}
-𖠌 Create Commands: ${create_cmd.toString()}
-𖠌 Group Commands: ${group_cmd.toString()}
-𖠌 Logo Commands: ${logo_cmd.toString()}
-
-💢 Count Of All Commands: ${countcmdOfCmd.toString()}
-`;
-    const buttons = [
-      { buttonId: ".extra_urls", buttonText: { displayText: "urls" }, type: 1, },
-      { buttonId: ".system-menu", buttonText: { displayText: "system menu" }, type: 1, },
-    ];
-    const Message = {
-      image: { url: bots.config.image.url.D_E_DP_ },
-      caption: text,
-      footer: bots.config.exif.footer,
-      buttons,
-    };
-    await client.sendMessage( message.from, Message, { quoted: message })
-    global.catchError = false;
-  } catch (error) { 
-    global.catchError = true; 
-    let countcmdOfCmd = 0;
-    bots.commands.map((command) => { countcmdOfCmd += command.pattern.length });
-    await client.sendMessage(message.from, {text: countcmdOfCmd.toString()}, { quoted: message });
-    return await client.sendErrorMessage( message.from, error, message.key, message);
-  }
+inrl({ pattern: [`cmds-count`], sucReact: "🆗", category: ["all", "system"], type : 'info'}, async (message, client) => {
+let countcmdOfCmd =0;
+bots.commands.map((command) => {
+    countcmdOfCmd += command.pattern.length
+  });
+    return await client.sendMessage(message.from, {text: countcmdOfCmd.toString()}, { quoted: message });
 });
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:'+Config.PACKNAME+'\n' // full name
             + 'ORG:'+Config.FOOTER+';\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid='+Config.SUDO+':'+Config.SUDO+'\n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid='+Config.OWNER+':'+Config.OWNER+'\n' // WhatsApp ID + phone number
             + 'END:VCARD'
- inrl({pattern: ['owner'], desc: "to check whether", sucReact: "🥺", category: ['all']},   async (message, client) => {
+ inrl({pattern: ['owner'], desc: "to check whether", sucReact: "🥺", category: ['all'],type : 'utility' },   async (message, client) => {
  await client.sendMessage( message.from, { contacts:{ displayName:`${Config.BOT_INFO.split(",")[0]}`, contacts: [{ vcard }],}})
 });
 const GDM = "it sends good morning message";
 const GDN = "it sends Night message";
 
 inrl(
-  { pattern: ["gm","GoodMornig","gdmornig"], desc: GDM, sucReact: "💖", category: ["chat"] },
+  { pattern: ["gm","GoodMornig","gdmornig"], desc: GDM, sucReact: "💖", category: ["chat"], type :'chat' },
   async (message, client) => {
     var r_text = new Array();
     r_text[0] = "❀🍃Good❀ ❀morning❀🥰❀ ";
@@ -268,13 +200,12 @@ inrl(
     r_text[6] = "🍃Ⓖⓞⓞⓓ 🌈ⓜⓞⓡⓝⓘⓝⓖ 🥰 ";
     const i = Math.floor(7 * Math.random());
 let returNtxt = await r_text[i] 
-    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message } );
-    global.catchError = false;
+    return await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message } );
   }
 );
 
 inrl(
-  { pattern: ["ge", "good evening", "evening"], desc: "good evening", sucReact: "💖", category: ["chat"] },
+  { pattern: ["ge", "good evening", "evening"], desc: "good evening", sucReact: "💖", category: ["chat"], type :'chat'  },
   async (message, client) => {
     var r_text = new Array();
 r_text[0] = "😻ɢᴏᴏᴅ 💗ᴇᴠᴇɴɪɴɢ",
@@ -286,13 +217,13 @@ r_text[5] = "🤩ᎶᎧᎧᎴ 💕ᏋᏉᏋᏁᎥᏁᎶ",
 r_text[6] = "😛 ɠơơɖ 💔ɛ۷ɛŋıŋɠ"
 const i = Math.floor(7 * Math.random());
 let returNtxt = await r_text[i] 
-    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message } );
-    global.catchError = false;
+return await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message } );
+
   }
 );
 
 inrl(
-  { pattern: ["gn", "gdnight", "goodnight","gd8","gdn8"], desc: GDN, sucReact: "💖", category: ["chat"] },
+  { pattern: ["gn", "gdnight", "goodnight","gd8","gdn8"], desc: GDN, sucReact: "💖", category: ["chat"], type :'chat'  },
   async (message, client) => {
     var r_text = new Array();
     r_text[0] = "😘𝙂𝙤𝙤𝙙 🙈𝙣𝙞𝙜𝙝𝙩 💫✨";
@@ -302,12 +233,11 @@ inrl(
     r_text[4] = "🌃Ꮐᝪᝪᗞ 🙈ᑎᏆᏀᕼᎢ 💫✨";
     const i = Math.floor(5 * Math.random());
 let returNtxt = await r_text[i] 
-    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message, adReply: true } );
-    global.catchError = false;
+return await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message, adReply: true } );
   }
 );
 inrl(
-  { pattern: ["ga", "gdafternoon", "goodafternoon","gda",], desc: GDN, sucReact: "💖", category: ["chat"] },
+  { pattern: ["ga", "gdafternoon", "goodafternoon","gda",], desc: GDN, sucReact: "💖", category: ["chat"], type :'chat'  },
   async (message, client) => {
     var r_text = new Array();
     r_text[0] = "😘Ꮆㄖㄖᗪ 🥵卂千ㄒ乇尺几ㄖㄖ几💫✨";
@@ -317,19 +247,19 @@ inrl(
     r_text[4] = "🌃₲ØØĐ  🙈₳₣₮ɆⱤ₦ØØ₦💫✨";
     const i = Math.floor(5 * Math.random());
 let returNtxt = await r_text[i] 
-    await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message, adReply: true } );
-    global.catchError = false;
+return await client.sendMessage( message.from, { text: returNtxt + message.client.pushName }, { quoted: message, adReply: true } );
   }
 );
 inrl(
 	   {
 		pattern: ['fancy'],
 		desc: 'To convert text to random style as you want',
-                sucReact: "🙀",
-                category: ["system", "all"],
+         sucReact: "🙀",
+         category: ["system", "all"],
+         type : 'converter'
 	   },
 	async (message, client, match) => {
-     const text = message.client.text;
+const text = message.client.text;
 if(!text){
 let NewText =`
 Enter A Text Quary
