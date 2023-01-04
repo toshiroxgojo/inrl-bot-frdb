@@ -11,9 +11,10 @@ inrl(
 		desc: 'To send a vote msg',
                 sucReact: "💯",
                 category: ["system", "all"],
+                type: 'whatsapp'
 	   },
 	async (message, client, text, cmd, store) => {
-await send_vote(message, client);
+retrun await send_vote(message, client);
        }
 );
 inrl(
@@ -22,12 +23,13 @@ inrl(
 		desc: 'To send a poll msg',
                 sucReact: "💯",
                 category: ["system", "all"],
+                type: 'whatsapp'
 	   },
 	async (message, client, text) => {
-await send_poll(message, client, text);
+retrun await send_poll(message, client, text);
        }
 );
-inrl({ pattern: ['hentaivideo'], desc: "thus send random anime hot videos, asure thets bad",sucReact: "😕",  category: ["anime","18+"],}, async (message, client) => {
+inrl({ pattern: ['hentaivideo'], desc: "thus send random anime hot videos, asure thets bad",sucReact: "😕",  category: ["anime","18+"],type : '18+'}, async (message, client) => {
 if(checkPass === crtPass && message.client.isCreator){
 rslt = await hentaivideo();
 result = rslt[Math.floor(Math.random(), rslt.length)]
@@ -42,6 +44,6 @@ let buttons = [
       buttons: buttons,
       headerType: 4
       }
-await client.sendMessage(message.from, buttonMsg, {quoted: message})
+return await client.sendMessage(message.from, buttonMsg, {quoted: message})
     }
 })
