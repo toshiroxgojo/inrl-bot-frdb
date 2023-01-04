@@ -14,7 +14,7 @@ inrl(
                 type: 'whatsapp'
 	   },
 	async (message, client, text, cmd, store) => {
-retrun await send_vote(message, client);
+return await send_vote(message, client);
        }
 );
 inrl(
@@ -26,7 +26,7 @@ inrl(
                 type: 'whatsapp'
 	   },
 	async (message, client, text) => {
-retrun await send_poll(message, client, text);
+return await send_poll(message, client, text);
        }
 );
 inrl({ pattern: ['hentaivideo'], desc: "thus send random anime hot videos, asure thets bad",sucReact: "😕",  category: ["anime","18+"],type : '18+'}, async (message, client) => {
