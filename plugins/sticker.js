@@ -8,14 +8,14 @@ const Config = require('../config');
 
 bots.inrl(
   {
-    pattern: ["s", "sticker"],
+    pattern: [ "sticker", "s"],
     desc: "It cnvert image to sticker",
     sucReact: "🔁",
     category: ["all", "create"],
+    type : 'converter'
   },
   async (message, client) => {
     try {
-      // if (!message.quoted) { global.catchError = true; return await client.sendErrorMessage( message.from, 'Reply to Supported media With Caption', message.key, message ); }
       if (/image|video|sticker/.test(message.client.mime)) {
         let download = await message.quoted.download();
         client.sendFile(message.from, download, "", message, {
