@@ -62,7 +62,7 @@
     "os": "^0.1.2",
     "pm2": "^5.2.0",
     "parse-ms": "^2.1.0",
-    "pastebin-js": "1.0.6",
+    "whatsapp-bot-pack": "latest",
     "path": "^0.12.7",
     "perf_hooks": "0.0.1",
     "performance-now": "^2.1.0",
