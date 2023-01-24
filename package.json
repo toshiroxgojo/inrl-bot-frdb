@@ -1,6 +1,6 @@
 {
   "name": "inrl-bot-md",
-  "version": "1.0.0",
+  "version": "5.1.0",
   "description": "WhatsApp bot made with nodejs and baileys",
   "main": "index.js",
     "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/inrl-official/inrl-bot-md#readme",
   "dependencies": {
-    "@adiwajshing/baileys": "4.4.0",
+    "@adiwajshing/baileys": "5.0.0",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "aes256": "^1.1.0",
@@ -76,8 +76,6 @@
     "translatte": "^3.0.1",
     "util": "^0.12.4",
     "yargs": "^17.4.0",
-    "yt-search": "^2.10.3",
-    "ytdl-core": "4.11.2",
     "discord-xp": "^1.1.16"
   }
 }
