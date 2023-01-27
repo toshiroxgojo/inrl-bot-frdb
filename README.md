@@ -20,12 +20,12 @@
 [Click Here To Scan](https://frendpage.vercel.app/)
 
 
-## `⨷ Deploy To Heroku`  
+## `⨷ Deploy To Railway` 
   
 
 - 👉 Copy this link and paste it on your browser Change username to your github username<br><br>
 
-  [Click here to deploy on Heroku](https://inrl-deploy-web.vercel.app/)
+  [Click here to deploy on Railway](https://railway.app/new/template/K7RXq3?referralCode=koOK_D)
 <br>
 
 ## `⨷ Deploy To Koyeb`  
