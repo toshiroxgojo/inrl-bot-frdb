@@ -16,13 +16,15 @@ let passErr = pass.PERR;
 let checkPass = Config.PASSWORD
 console.log(crtPass);
 console.log(checkPass);
+let fileName = "GneratedMeme.jpeg";
+
 inrl(
   {
     pattern: ["xxx"],
     desc: "to get randome *** images",
     sucReact: "🤌",
     category: ["all","18+"],
-    type : "extra"
+    type : "18+"
   },
   async (message, client) => {
 if(!message.client.isCreator && !message.isGroup){
@@ -94,507 +96,754 @@ const Message = {
  let dataforpack = ffpack();
  inrl({pattern: ['ffpack'], desc: Ln ,sucReact: "⚒️",  category: ["ff","all"], type : "extera" }, async (message, client) => { await client.sendMessage(message.from, { text : dataforpack },{ quoted: message })
   });
-  
- inrl({ pattern: ['ff01'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+   inrl({ pattern: ['ff01'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff1(message.client.text);
+        let ttinullimage = await ff1(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff02'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff02'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff2(message.client.text);
+        let ttinullimage = await ff2(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff03'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff03'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (message.client.text === '') return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (match === '') return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff3(message.client.text);
+        let ttinullimage = await ff3(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
     });
- inrl({ pattern: ['ff04'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff04'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff4(message.client.text);
+        let ttinullimage = await ff4(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
-
-        await client.sendMessage( message.from, Message,{ quoted: message })
-});
-  inrl({ pattern: ['ff05'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
-
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
-
-        var ttinullimage = ff5(message.client.text);
-
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff06'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff05'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff6(message.client.text);
+        let ttinullimage = await ff5(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff07'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff06'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff7(message.client.text);
+        let ttinullimage = await ff6(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff08'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff07'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff8(message.client.text);
+        let ttinullimage = await ff7(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff09'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff08'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff9(message.client.text);
+        let ttinullimage = await ff8(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff10'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff09'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff10(message.client.text);
+        let ttinullimage = await ff9(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ffff'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff10'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff11(message.client.text);
+        let ttinullimage = await ff10(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff12'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ffff'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff12(message.client.text);
+        let ttinullimage = await ff11(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff13'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff12'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff13(message.client.text);
+        let ttinullimage = await ff12(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff14'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff13'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff14(message.client.text);
+        let ttinullimage = await ff13(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff15'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff14'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff15(message.client.text);
+        let ttinullimage = await ff14(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff16'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff15'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff16(message.client.text);
+        let ttinullimage = await ff15(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff17'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff16'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff17(message.client.text);
+        let ttinullimage = await ff16(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff18'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff17'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff18(message.client.text);
+        let ttinullimage = await ff17(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff19'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff18'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff19(message.client.text);
+        let ttinullimage = await ff18(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff20'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff19'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff20(message.client.text);
+        let ttinullimage = await ff19(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff21'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff20'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff21(message.client.text);
+        let ttinullimage = await ff20(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff22'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff21'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff22(message.client.text);
+        let ttinullimage = await ff21(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff23'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff22'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff23(message.client.text);
+        let ttinullimage = await ff22(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff24'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff23'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff24(message.client.text);
+        let ttinullimage = await ff23(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff25'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff24'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff25(message.client.text);
+        let ttinullimage = await ff24(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff26'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff25'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff26(message.client.text);
+        let ttinullimage = await ff25(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff27'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff26'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff27(message.client.text);
+        let ttinullimage = await ff26(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-   inrl({ pattern: ['ff28'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff27'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff28(message.client.text);
+        let ttinullimage = await ff27(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff29'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+   inrl({ pattern: ['ff28'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff29(message.client.text);
+        let ttinullimage = await ff28(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff30'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff29'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff30(message.client.text);
+        let ttinullimage = await ff29(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff31'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff30'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff31(message.client.text);
+        let ttinullimage = await ff30(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff32'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff31'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff32(message.client.text);
+        let ttinullimage = await ff31(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff33'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff32'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff33(message.client.text);
+        let ttinullimage = await ff32(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff34'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff33'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff34(message.client.text);
+        let ttinullimage = await ff33(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff35'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff34'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff35(message.client.text);
+        let ttinullimage = await ff34(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff36'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff35'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff36(message.client.text);
+        let ttinullimage = await ff35(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff37'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff36'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff37(message.client.text);
+        let ttinullimage = await ff36(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff38'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff37'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff38(message.client.text);
+        let ttinullimage = await ff37(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff39'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff38'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff39(message.client.text);
+        let ttinullimage = await ff38(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff40'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff39'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff40(message.client.text);
+        let ttinullimage = await ff39(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
+
+        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
+});
+ inrl({ pattern: ['ff40'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
+
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+
+        let ttinullimage = await ff40(match);
+
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff41'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff41'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff41(message.client.text);
+        let ttinullimage = await ff41(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff42'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff42'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff42(message.client.text);
+        let ttinullimage = await ff42(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-inrl({ pattern: ['ff43'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+inrl({ pattern: ['ff43'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff43(message.client.text);
+        let ttinullimage = await ff43(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff44'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff44'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff44(message.client.text);
+        let ttinullimage = await ff44(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff45'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff45'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff45(message.client.text);
+        let ttinullimage = await ff45(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff46'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff46'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff46(message.client.text);
+        let ttinullimage = await ff46(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff47'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff47'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff47(message.client.text);
+        let ttinullimage = await ff47(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
-  inrl({ pattern: ['ff48'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+  inrl({ pattern: ['ff48'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff48(message.client.text);
+        let ttinullimage = await ff48(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff49'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff49'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff49(message.client.text);
+        let ttinullimage = await ff49(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
 });
- inrl({ pattern: ['ff50'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client) => {
+ inrl({ pattern: ['ff50'], desc: "to create ff logo",sucReact: "⚒️",  category: ["ff", "logo"], type : "free-fire" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = ff50(message.client.text);
+        let ttinullimage = await ff50(match);
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
  });
    inrl({pattern: ['apkmod','apk'], desc: "mode apk link",sucReact: "🌇",  category: ["apk","all"]}, async (message, client) => {
@@ -737,209 +986,278 @@ let animeimgdat = animepack();
   
   }));
   
-inrl({ pattern: ['anime1'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime1'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an1(message.client.text)
+        let ttinullimage = await an1(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});
     
-inrl({ pattern: ['anime2'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime2'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an2(message.client.text)
+        let ttinullimage = await an2(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
-
-        await client.sendMessage( message.from, Message,{ quoted: message })
-
-    }));
-        
-inrl({ pattern: ['anime3'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
-
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
-
-        var ttinullimage = an3(message.client.text)
-
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});
         
-inrl({ pattern: ['anime4'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime3'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an4(message.client.text)
+        let ttinullimage = await an3(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});
         
-inrl({ pattern: ['anime5'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime4'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an5(message.client.text)
+        let ttinullimage = await an4(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});
         
-inrl({ pattern: ['anime6'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime5'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an6(message.client.text)
+        let ttinullimage = await an5(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});
+        
+inrl({ pattern: ['anime6'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-inrl({ pattern: ['anime7'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        let ttinullimage = await an6(match)
 
-        var ttinullimage = an7(message.client.text)
-
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
-        
-inrl({ pattern: ['anime8'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+});
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+inrl({ pattern: ['anime7'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        var ttinullimage = an8(message.client.text)
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+        let ttinullimage = await an7(match)
 
-        await client.sendMessage( message.from, Message,{ quoted: message }) 
-
-    }));      
-        
-inrl({ pattern: ['anime9'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
-
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
-
-        var ttinullimage = an9(message.client.text)
-
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));        
+});
         
-inrl({ pattern: ['anime10'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime8'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an10(message.client.text)
+        let ttinullimage = await an8(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});      
         
-inrl({ pattern: ['anime11'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime9'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an11(message.client.text)
+        let ttinullimage = await an9(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
-
-        await client.sendMessage( message.from, Message,{ quoted: message })  
-
-    }));      
-        
-inrl({ pattern: ['anime12'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
-
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
-
-        var ttinullimage = an12(message.client.text)
-
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});        
+        
+inrl({ pattern: ['anime10'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-inrl({ pattern: ['anime13'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        let ttinullimage = await an10(match)
 
-        var ttinullimage = an13(message.client.text)
-
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});
         
-inrl({ pattern: ['anime14'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime11'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an14(message.client.text)
+        let ttinullimage = await an11(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));
+});      
         
-inrl({ pattern: ['anime15'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime12'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an15(message.client.text)
+        let ttinullimage = await an12(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
-        await client.sendMessage( message.from, Message,{ quoted: message }) 
+        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));  
+});
+
+inrl({ pattern: ['anime13'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
+
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+
+        let ttinullimage = await an13(match)
+
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
+
+        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
+});
         
-inrl({ pattern: ['anime16'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime14'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an16(message.client.text)
+        let ttinullimage = await an14(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
-        await client.sendMessage( message.from, Message,{ quoted: message }) 
+        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
 
-    }));      
+});
         
-inrl({ pattern: ['anime17'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, (async (message, client) => {
+inrl({ pattern: ['anime15'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-        if (!message.client.text) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
 
-        var ttinullimage = an17(message.client.text)
+        let ttinullimage = await an15(match)
 
-const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
 
-        await client.sendMessage( message.from, Message,{ quoted: message }) 
+        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+} 
+        
+    });  
+        
+inrl({ pattern: ['anime16'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
 
-    }));
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+
+        let ttinullimage = await an16(match)
+
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
+
+        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
+});      
+        
+inrl({ pattern: ['anime17'], desc: lnn ,sucReact: "🌚",  category: ["logo"], type : "anime" }, async (message, client, match) => {
+try {
+
+        if (!match) return await client.sendMessage(message.from, { text :ll},{ quoted: message })
+
+        let ttinullimage = await an17(match)
+
+const Message = { image: ttinullimage, caption: config.exif.cap,  };
+
+        await client.sendMessage( message.from, Message,{ quoted: message })
+} catch(e){
+m.reply(e.toString());
+}
+
+});
+    
     inrl(
   {
     pattern: ["bts"],
@@ -1030,13 +1348,12 @@ const text = message.client.text;
 
     if (!text) return await client.sendMessage( message.from, { text: 'Enter A weard'}, { quoted: message });
 
-        var ttinullimage = ansay(text);
+        let ttinullimage = ansay(text);
 
 const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
-
-    });
+});
 
     inrl({ pattern: ['ch'], fromMe: true, desc: 'just for fun' ,sucReact: "😹", category: ['all'], },  async (message, client) => {
 
@@ -1044,13 +1361,12 @@ const text = message.client.text;
 
             if (!text) return await client.sendMessage( message.from, { text: 'Enter A weard'}, { quoted: message });
 
-        var ttinullimage = ch(text);
+        let ttinullimage = ch(text);
 
 const Message = { image: { url:  ttinullimage }, caption: config.exif.cap,  };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
-
-    });
+});
 
     inrl({ pattern: ['tr'], fromMe: true, desc: 'funny trumb Twitter post' ,sucReact: "😹", category: ['all'],usage: '<word>',} , async (message, client) => {
 
@@ -1058,13 +1374,12 @@ const text = message.client.text;
 
      if (!text) return await client.sendMessage( message.from, { text: 'Enter A weard'}, { quoted: message });
 
-        var ttinullimage = trumb(text);
+        let ttinullimage = trumb(text);
 
 const Message = { image: { url:  ttinullimage }, caption: config.exif.cap, };
 
         await client.sendMessage( message.from, Message,{ quoted: message })
-
-    });
+});
 
 const maker = require("mumaker");
 inrl( { pattern: ["p1"], sucReact: "💗", category: ['logo'], usage: '<word>',type :'logo-menu' }, async (message, client) => {
@@ -1431,8 +1746,6 @@ config.api.textpro.takes1.map(logo => {
     .catch( async (err) => {  return await client.sendErrorMessage( message.from, err, message.key, message ); });
   });
 });
-
-
 inrl({pattern: ['inrl'], desc: "to check i cmds", sucReact: "🙀", category: ['all'],type : "quita"},   async (message, client) => {
 	  const txts =await inrlQuita();
 await client.sendMessage( message.from, { text:'```'+ "😇"+ txts+'```' },{ quoted: message });
