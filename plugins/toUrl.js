@@ -28,6 +28,7 @@ inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  ca
 }))
 
 inrl({ pattern: ['take'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"],type : "utility"}, async (message, client, match) => {
+try{
 if(message.quoted.stickerMessage){
 let pack, auth;
 if(match.includes(',')){
@@ -55,8 +56,11 @@ if(img.includes(' ')){ img = img.trim() }
 img = text.split(',')[2] ? text.split(',')[2] : img;
 let imgForaUdio = await BufferToFile(img,'./media/imagForAudio.jpg');
     await AudioMetaData(imgForaUdio, media, message, client);
-    return await fs.unlinkSync(imgForaUdio)
+    return await fs.unlinkSync(media);
   }
+}catch (e){
+m.reply(e.toString());
+}
 })
 inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"],type : "general"}, async (message, client) => {
            const text = message.client.text;
