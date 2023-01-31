@@ -60,19 +60,24 @@ inrl(
         type: 'whatsapp'
 	   },
 	async (message, client) => {
+try {
         const groupMetadata = message.isGroup ? await client.groupMetadata(message.from).catch(e => {}) : ''
-	    const participants = message.isGroup ? await groupMetadata.participants : ''
+	const participants = message.isGroup ? await groupMetadata.participants : ''
         let admins = message.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
-if(admins.includes(message.sender) && message.isGroup) {
+if(!message.quoted) return message.reply('reply to a group content');
+if(!message.isGroup) return message.reply('only works in group');
+if(!admins.includes(message.sender)) return message.reply('only for admins');
 return await client.sendMessage(message.from, {
-		    delete: {
-			remoteJid: message.from,
+		delete: {
+			remoteJid: message.key.remoteJid,
 			fromMe: message.quoted.fromMe,
 			id: message.quoted.id,
 			participant: message.quoted.sender
-            }
-     })
-}
+		}
+	})
+} catch (e){
+   message.reply(e);
+  }
 })
 inrl(
   {
