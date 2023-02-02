@@ -16,5 +16,7 @@ module.exports = async(msg, conn, m, store) => {
     })
   }
  //return m.reply(audio)
+if(mp3 !== undefined){
  return conn.sendMessage(m.from,{ audio: { url: mp3.trim() }, mimetype: "audio/mp4",ptt: true}, { quoted: m } );
+  }
 }
