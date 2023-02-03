@@ -19,12 +19,26 @@
 
 [Click Here To Scan](https://frendpage.vercel.app/)
 
+## `⨷ Deploy To Uffizzi` 
+
+```bash
+first you fork the repo and dit config.js!, add session id & your credits!
+```
+
+- [x] Login <details><summary>example</summary><img src="https://i.ibb.co/Y8n1hnk/7f6c49deeb42.jpg"></details>
+- [x] Select Repo<details><summary>example</summary><img src="https://i.ibb.co/42ppV9c/70fa4e474d5e.jpg"></details>
+- [x] configur <details><summary>example</summary><img src="https://i.ibb.co/c26hpgc/0fc10710ae83.jpg"></details>
+- [x] Deploy <details><summary>example</summary><img src="https://i.ibb.co/RydYv7s/881ac813427c.jpg"></details>
+- [x] Get app <details><summary>example</summary><img src="https://i.ibb.co/wwZG0YM/52300009ed1c.jpg"></details>
+- [x] Open app <details><summary>example</summary><img src="https://i.ibb.co/J7GTZq5/f5d7a68c7a2f.jpg"></details>
+- [x] Viwe Logs <details><summary>example</summary><img src="https://i.ibb.co/2yQTJPJ/7535df5f1de7.jpg"></details>
+
+  [Click here to deploy on Uffizzi](https://app.uffizzi.com/projects)
+<br>
+
 
 ## `⨷ Deploy To Railway` 
   
-
-- 👉 Copy this link and paste it on your browser Change username to your github username<br><br>
-
   [Click here to deploy on Railway](https://railway.app/new/template/K7RXq3?referralCode=koOK_D)
 <br>
 
