@@ -1,3 +1,4 @@
+
 const os = require("os");
 const got = require('got')
 const speed = require("performance-now");
@@ -21,9 +22,14 @@ for(i=0;i<categories.length;i++){
 }
 const sections = [{title: `${Config.BOT_INFO.split(',')[0]} list menu`, rows: rows}]
 const button = {
-        text: `select an categorie from here`,
+        text: `╭─❒「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」
+│⬡ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${Config.PERFIX}*  ⌟
+│⬡ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${Config.BOT_INFO.split(',')[0]}
+│⬡ 𝙐𝙨𝙚𝙧 : ${message.client.pushName}
+│⬡ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+╰─❒`,
         footer: Config.FOOTER,
-        buttonText: "click here to viwe categories",
+        buttonText: "list ⎙",
         sections,
 }
 return await client.sendMessage( message.from, button, { quoted: message});
@@ -44,11 +50,15 @@ inrl(
 	 }
 );
 inrl({ pattern: ['del'], desc: "to delete unwanted grp msg sended by bot",sucReact: "⚒️",  category: ["all"], type: 'whatsapp'}, async (message, client) => {
+try {
 if (!message.client.isCreator) return message.reply('only for owner!');
 if(!message.isGroup) return message.reply('this plugin only works in group!');
                 if (!message.quoted) return await client.sendMessage(message.from, { text :"replay to a group content"},{ quoted: message })
                 let { chat, fromMe, id } = message.quoted
                 return client.sendMessage(message.from, { delete: { remoteJid: message.chat, fromMe: message.quoted.fromMe, id: message.quoted.id, participant: message.quoted.sender }})
+} catch (e){
+message.reply(JSON.stringify(e))
+        }
     }
 );
 inrl(
@@ -76,7 +86,7 @@ return await client.sendMessage(message.from, {
 		}
 	})
 } catch (e){
-   message.reply(e);
+   message.reply(JSON.stringify(e))
   }
 })
 inrl(
@@ -130,14 +140,14 @@ let buttonMessage = {
                 },
             },
         };
-    await client.sendMessage(message.from, buttonMessage, { quoted: message });
+    return await client.sendMessage(message.from, buttonMessage, { quoted: message });
 });
 const bots = require("../lib/perfix");
 const Lang = bots.getString("_whats");
 let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat","inrl":"Inrl","ibot":"Ibot", "system": "System", 'fun': "Fun", '18+': "18+","ff:":"Ff", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo","photo": "Photo","sticker": "Sticker","anime": "Anime" }
 
 inrl({ pattern: ["menu"], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"], type: 'whatsapp'}, async (message, client) => {
- await send_menu(message, client);
+ return await send_menu(message, client);
 });
 bots.categories.map(category => {
   if (category == 'all') return;
@@ -187,7 +197,7 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'TEL;type=CELL;type=VOICE;waid='+Config.OWNER+':'+Config.OWNER+'\n' // WhatsApp ID + phone number
             + 'END:VCARD'
  inrl({pattern: ['owner'], desc: "to check whether", sucReact: "🥺", category: ['all'],type : 'utility' },   async (message, client) => {
- await client.sendMessage( message.from, { contacts:{ displayName:`${Config.BOT_INFO.split(",")[0]}`, contacts: [{ vcard }],}})
+return await client.sendMessage( message.from, { contacts:{ displayName:`${Config.BOT_INFO.split(",")[0]}`, contacts: [{ vcard }],}})
 });
 const GDM = "it sends good morning message";
 const GDN = "it sends Night message";
@@ -264,6 +274,7 @@ inrl(
          type : 'converter'
 	   },
 	async (message, client, match) => {
+	try {
 const text = message.client.text;
 if(!text){
 let NewText =`
@@ -271,7 +282,6 @@ Enter A Text Quary
 _ex_ : Enter a text like this *fancy 55,hi*
 1 Fᴀɴᴄʏ
 2 ʎɔuɐℲ
-3 F⃣ a⃣ n⃣  c⃣ y⃣
 4 fancy
 5 ʏɔᴎɒꟻ
 6 F̸̧̥̠͔̯̻̱̋̏̾͗̈́͝a̵̟̠̯̐n̷̡̤̪͓͖̹̯̙͂̊͋̊̈́̐͑̋̏c̴̯̒͆́y̶͖̘̹̦͆̎̑͗͝
@@ -281,7 +291,7 @@ _ex_ : Enter a text like this *fancy 55,hi*
 10 F̷a̷n̷c̷y̷
 11 F̲a̲n̲c̲y̲
 12 F̳a̳n̳c̳y̳
-13 F♥a♥n♥c♥y
+13 defult
 14 F͎a͎n͎c͎y͎
 15 F͓̽a͓̽n͓̽c͓̽y͓̽
 16 ☞︎♋︎■︎♍︎⍓︎
@@ -336,5 +346,8 @@ return await client.sendMessage(message.from, { text : NewText });
          Text = message.quoted.text || split[1] || "enter A text with number ex 31,text";
 let ThenText = await styletext(Text, Num)
 return await client.sendMessage(message.from, { text : ThenText });
+ } catch (e){
+ message.reply(JSON.stringify(e))
+        }
     }
 );
