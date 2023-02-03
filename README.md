@@ -22,7 +22,7 @@
 ## `⨷ Deploy To Uffizzi` 
 
 ```bash
-first you fork the repo and dit config.js!, add session id & your credits!
+first you fork the repo and edit config.js!, add session id & your credits!
 ```
 
 - [x] Login <details><summary>example</summary><img src="https://i.ibb.co/Y8n1hnk/7f6c49deeb42.jpg"></details>
