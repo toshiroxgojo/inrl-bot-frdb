@@ -31,7 +31,7 @@ inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  ca
 
 inrl({ pattern: ['take'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"],type : "utility"}, async (message, client, match) => {
 try{
-if(!message.quoted) return message.reply('reply to a sticker/audio');
+if(message.quoted == undefined || null) return message.reply('reply to a sticker/audio');
 if(message.quoted.stickerMessage){
 let pack, auth;
 if(match.includes(',')){
@@ -80,3 +80,4 @@ let md = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyi
 		return await fs.unlinkSync(encmedia)
 		}
 })
+//get Labs
