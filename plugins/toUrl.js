@@ -31,7 +31,7 @@ inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  ca
 
 inrl({ pattern: ['take'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"],type : "utility"}, async (message, client, match) => {
 try{
-if(!message.quoted.stickerMessage || !message.quoted.audioMessage) return message.reply('reply to asticker/audio');
+if(!message.quoted.stickerMessage && !message.quoted.audioMessage) return message.reply('reply to asticker/audio');
 if(message.quoted.stickerMessage){
 let pack, auth;
 if(match.includes(',')){
