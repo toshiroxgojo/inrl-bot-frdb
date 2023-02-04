@@ -11,24 +11,27 @@ inrl(
        type : "converter"
     },
 	   async (message, client) => {
-await sendUrl(message, client);
+	if(!message.client.isMedia) return message.reply('reply to image/sticker/video/audio');
+    return await sendUrl(message, client);
     }
 );
- inrl({pattern: ['tinyurl'], desc: "to convert url as small", sucReact: "😛", category: ['all'],type : "converter"},   async (message, client) => {
-
-           await tinyUrl(message, client);
+ inrl({pattern: ['tinyurl'], desc: "to convert url as small", sucReact: "😛", category: ['all'],type : "converter"},   async (message, client, match) => {
+           if(!match) return message.reply('need url, Example : tinyurl https://github.com/inrl-official');
+           return await tinyUrl(message, client);
 });
 inrl({ pattern: ['webss'], desc: "to get web screenshot",sucReact: "⚒️",  category: ["all"],type : "misc"}, async (message, client) => {
-
-        await webSs(message, client);
+        if(!match) return message.reply('need url, Example : webss https://github.com/inrl-official');
+        return await webSs(message, client);
 });
 
 inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  category: ["all"],type : "converter"}, (async (message, client) => {
-     await pdfGen(message, client);
+    if(!match) return message.reply('need url, Example : pdf https://github.com/inrl-official');
+    return await pdfGen(message, client);
 }))
 
 inrl({ pattern: ['take'], desc: "to change aduio metadata as image/title/description",sucReact: "⚒️",  category: ["all"],type : "utility"}, async (message, client, match) => {
 try{
+if(!message.quoted.stickerMessage || !message.quoted.audioMessage) return message.reply('reply to asticker/audio');
 if(message.quoted.stickerMessage){
 let pack, auth;
 if(match.includes(',')){
@@ -62,18 +65,18 @@ let imgForaUdio = await BufferToFile(img,'./media/imagForAudio.jpg');
 m.reply(e.toString());
 }
 })
-inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"],type : "general"}, async (message, client) => {
-           const text = message.client.text;
-	    if (!text) return message.send('send to emojis \n\n _ex_:❣️+🥵');
+inrl({pattern: ['emojimix'], desc: "two emojis to single sticker",sucReact: "🤌",  category: ["all"],type : "general"}, async (message, client, match) => {
+	    if (!match) return message.send('send to emojis \n\n _ex_:❣️+🥵');
+	    if(!match.includes('+')) return message.send('need two emojis, Example emojimix 🥺+😹');
 let emoji1,emoji2;
-if (text.includes('+')) {
-         var split = text.split('+');
+if (match.includes('+')) {
+         let split = match.split('+');
          emoji1 = split[0];
          emoji2 = split[1];
         }
 let md = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 		for (let res of md.results) {
-	        let encmedia = await client.sendImageAsSticker(message.from, res.url, message, { packname: Config.PACKNAME, author: Config.FOOTER, categories: res.tags })
-		await fs.unlinkSync(encmedia)
+	    let encmedia = await client.sendImageAsSticker(message.from, res.url, message, { packname: Config.PACKNAME, author: Config.FOOTER, categories: res.tags })
+		return await fs.unlinkSync(encmedia)
 		}
 })
