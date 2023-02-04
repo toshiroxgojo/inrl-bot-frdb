@@ -4,13 +4,13 @@ const fs = require('fs');
 const { readFile, writeFile } = require('fs/promises')
 inrl(
 	{
-		pattern: ['url'],
+       pattern: ['url'],
        desc: 'to convert image/sticker/video/audio to url',
        sucReact: "⛰️",
        category: ["all"],
        type : "converter"
     },
-	   async (message, client) => {
+	   async (message, client,match) => {
 	if(!message.client.isMedia) return message.reply('reply to image/sticker/video/audio');
     return await sendUrl(message, client);
     }
@@ -19,12 +19,12 @@ inrl(
            if(!match) return message.reply('need url, Example : tinyurl https://github.com/inrl-official');
            return await tinyUrl(message, client);
 });
-inrl({ pattern: ['webss'], desc: "to get web screenshot",sucReact: "⚒️",  category: ["all"],type : "misc"}, async (message, client) => {
+inrl({ pattern: ['webss'], desc: "to get web screenshot",sucReact: "⚒️",  category: ["all"],type : "misc"}, async (message, client, match) => {
         if(!match) return message.reply('need url, Example : webss https://github.com/inrl-official');
         return await webSs(message, client);
 });
 
-inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  category: ["all"],type : "converter"}, (async (message, client) => {
+inrl({ pattern: ['pdf'], desc: "to get pdf of a webpage",sucReact: "⚒️",  category: ["all"],type : "converter"}, (async (message, client, match) => {
     if(!match) return message.reply('need url, Example : pdf https://github.com/inrl-official');
     return await pdfGen(message, client);
 }))
